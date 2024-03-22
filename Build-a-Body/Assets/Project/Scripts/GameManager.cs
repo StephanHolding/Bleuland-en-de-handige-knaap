@@ -7,21 +7,25 @@ public class GameManager : SingletonTemplateMono<GameManager>
     {
         base.Awake();
         scanner = FindAnyObjectByType<NFCScanner>();
-        scanner.nfcChipScanned += OnNfcChipScanned;
+        scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
+
+
 
     private void OnDestroy()
     {
-        scanner.nfcChipScanned -= OnNfcChipScanned;
+        scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
 
-    public void OnNfcChipScanned(int index)
+    private void Scanner_OnNfcTagFound(string id, string payload)
     {
-        switch (index)
+        if (payload.StartsWith("scene="))
         {
-            case 1:
-                SceneHandler.instance.LoadScene("Heart Minigame");
-                break;
+            string sceneName = payload.Split('=', System.StringSplitOptions.RemoveEmptyEntries)[1];
+
+            ScreenLogger.Log("trying to load " + sceneName);
+
+            SceneHandler.instance.LoadScene(sceneName);
         }
     }
 
