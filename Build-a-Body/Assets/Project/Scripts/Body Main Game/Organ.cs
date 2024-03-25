@@ -7,7 +7,11 @@ public class Organ : Draggable
 
     public string organName;
 
+    [Header("PLACEHOLDER")]
+    public Sprite organRepresentation;
+
     private const float THRESHOLD = 1f;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -15,6 +19,9 @@ public class Organ : Draggable
         {
             organName = gameObject.name;
         }
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer.sprite = organRepresentation;
     }
 
 
@@ -22,5 +29,10 @@ public class Organ : Draggable
     public void SaveLocation()
     {
         targetPosition = transform.localPosition;
+    }
+
+    public bool IsInCorrectPosition()
+    {
+        return Vector2.Distance(transform.position, targetPosition) <= THRESHOLD;
     }
 }
