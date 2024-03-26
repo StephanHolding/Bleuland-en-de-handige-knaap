@@ -16,8 +16,8 @@ public class Heart : MonoBehaviour
     public Transform lowerBone;
 
     [Header("UI References")]
-    public Button stageOne;
-    public Button stageTwo;
+    public QuicktimeEvent stageOne;
+    public QuicktimeEvent stageTwo;
     public Image checkmark;
     public TextMeshProUGUI currentBpmText;
     public TextMeshProUGUI targetBpmText;
@@ -41,11 +41,12 @@ public class Heart : MonoBehaviour
 
     private void Awake()
     {
-        stageOne.onClick.AddListener(PumpIn);
-        stageTwo.onClick.AddListener(PumpOut);
+        stageOne.OnEventSuccess += PumpIn;
+        stageTwo.OnEventSuccess += PumpOut;
 
-        stageOne.gameObject.SetActive(true);
-        stageTwo.gameObject.SetActive(false);
+        stageOne.Enable();
+        stageTwo.Disable();
+        stageTwo.OnEventFailed += StartCardiacArrest;
     }
 
     private void Start()
@@ -62,11 +63,11 @@ public class Heart : MonoBehaviour
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            stageOne.onClick.Invoke();
+            stageOne.DebugPress();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            stageTwo.onClick.Invoke();
+            stageTwo.DebugPress();
         }
     }
 
@@ -80,8 +81,7 @@ public class Heart : MonoBehaviour
             StartCoroutine(PumpingRoutine(true, 0.9f, 1.2f));
             heartIn = true;
 
-            stageOne.gameObject.SetActive(false);
-            stageTwo.gameObject.SetActive(true);
+            stageTwo.EnableWithQuicktimeEvent(0.4f);
         }
     }
 
@@ -96,8 +96,7 @@ public class Heart : MonoBehaviour
             StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
             heartIn = false;
 
-            stageOne.gameObject.SetActive(true);
-            stageTwo.gameObject.SetActive(false);
+            stageOne.Enable();
 
             if (bpmTimes.Count > 1)
             {
@@ -220,7 +219,6 @@ public class Heart : MonoBehaviour
         }
 
         float average = totalDiff / bpmTimes.Count;
-        print(average);
 
         float averageBpm = 60 / average;
 
@@ -235,26 +233,31 @@ public class Heart : MonoBehaviour
 
     private void CheckInactivity()
     {
-        if (Time.time - timeAtLastPump > MAX_INACTIVITY_TIME)
+        if (!playerIsInactive)
         {
-            if (!playerIsInactive)
+            if (Time.time - timeAtLastPump > MAX_INACTIVITY_TIME)
             {
-                ResetProgression();
-                playerIsInactive = true;
-                bpmTimes.Clear();
-
-                cardicArrestAlarm.Play("Cardiac Arrest Alarm");
-                //TODO: play alarm audio
-
-                currentBpm = 0;
-                currentBpmText.text = currentBpm.ToString();
+                StartCardiacArrest();
+            }
+            else
+            {
+                cardicArrestAlarm.Play("Empty");
+                //TODO: stop alarm audio
             }
         }
-        else
-        {
-            cardicArrestAlarm.Play("Empty");
-            //TODO: stop alarm audio
-        }
+    }
+
+    private void StartCardiacArrest()
+    {
+        ResetProgression();
+        playerIsInactive = true;
+        bpmTimes.Clear();
+
+        cardicArrestAlarm.Play("Cardiac Arrest Alarm");
+        //TODO: play alarm audio
+
+        currentBpm = 0;
+        currentBpmText.text = currentBpm.ToString();
     }
 
 }
