@@ -32,6 +32,7 @@ public class Heart : MonoBehaviour
     private Coroutine pumpingRoutine;
     private int roundIndex;
     private List<float> bpmTimes = new List<float>();
+    private bool won;
 
 
     private const float PUMP_TIME = 0.25f;
@@ -58,7 +59,8 @@ public class Heart : MonoBehaviour
 
     public void Update()
     {
-        CheckInactivity();
+        if (!won)
+            CheckInactivity();
 
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -154,7 +156,7 @@ public class Heart : MonoBehaviour
         }
         else
         {
-            Debug.Log("WON!");
+            PlayerWon();
         }
     }
 
@@ -162,6 +164,8 @@ public class Heart : MonoBehaviour
     {
         targetBPM = Random.Range(ranges.x, ranges.y);
         targetBpmText.text = targetBPM.ToString();
+        ResetProgression();
+
         roundIndex++;
     }
 
@@ -249,6 +253,8 @@ public class Heart : MonoBehaviour
 
     private void StartCardiacArrest()
     {
+        if (won) return;
+
         ResetProgression();
         playerIsInactive = true;
         bpmTimes.Clear();
@@ -258,6 +264,13 @@ public class Heart : MonoBehaviour
 
         currentBpm = 0;
         currentBpmText.text = currentBpm.ToString();
+    }
+
+    private void PlayerWon()
+    {
+        won = true;
+        //TODO: Register Heart minigame as completed in Game Manager
+        SceneHandler.instance.LoadScene(0);
     }
 
 }
