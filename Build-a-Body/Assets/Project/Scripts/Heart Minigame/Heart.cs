@@ -99,7 +99,7 @@ public class Heart : MonoBehaviour
             stageOne.gameObject.SetActive(true);
             stageTwo.gameObject.SetActive(false);
 
-            if (bpmTimes.Count > 0)
+            if (bpmTimes.Count > 1)
             {
                 currentBpm = CalculateBPM();
                 currentBpmText.text = currentBpm.ToString();
@@ -120,19 +120,16 @@ public class Heart : MonoBehaviour
             }
             else
             {
-                if (winConditionTimer != null)
-                {
-                    StopCoroutine(winConditionTimer);
-                    winConditionTimer = null;
-                    ResetProgression();
-                }
+                ResetProgression();
             }
-
         }
     }
 
     private void ResetProgression()
     {
+        if (winConditionTimer != null)
+            StopCoroutine(winConditionTimer);
+        winConditionTimer = null;
         checkmark.fillAmount = 0;
     }
 
@@ -242,6 +239,7 @@ public class Heart : MonoBehaviour
         {
             if (!playerIsInactive)
             {
+                ResetProgression();
                 playerIsInactive = true;
                 bpmTimes.Clear();
 
