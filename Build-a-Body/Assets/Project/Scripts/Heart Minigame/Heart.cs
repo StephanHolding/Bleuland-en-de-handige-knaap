@@ -269,7 +269,7 @@ public class Heart : MonoBehaviour
     private void PlayerWon()
     {
         won = true;
-        //TODO: Register Heart minigame as completed in Game Manager
+        GameManager.instance.CompleteMinigame(GameManager.HEART_MINIGAME);
         SceneHandler.instance.LoadScene(0);
     }
 

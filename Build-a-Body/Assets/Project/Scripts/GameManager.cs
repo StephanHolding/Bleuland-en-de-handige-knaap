@@ -1,7 +1,18 @@
+using System.Collections.Generic;
+
 public class GameManager : SingletonTemplateMono<GameManager>
 {
 
+    private Dictionary<string, bool> minigameCompletion = new Dictionary<string, bool>
+    {
+        { HEART_MINIGAME, false }
+        //add more minigames later
+    };
+
     private NFCScanner scanner;
+
+    public const string HEART_MINIGAME = "Heart Minigame";
+
 
     protected override void Awake()
     {
@@ -10,7 +21,15 @@ public class GameManager : SingletonTemplateMono<GameManager>
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
 
+    public void CompleteMinigame(string miniGameName)
+    {
+        minigameCompletion[miniGameName] = true;
+    }
 
+    public bool IsMinigameCompleted(string minigameName)
+    {
+        return minigameCompletion[minigameName];
+    }
 
     private void OnDestroy()
     {
