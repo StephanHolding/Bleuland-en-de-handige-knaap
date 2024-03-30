@@ -36,7 +36,7 @@ public class Heart : MonoBehaviour
 
 
     private const float PUMP_TIME = 0.25f;
-    private const int BPM_RANGE = 10;
+    private const int BPM_RANGE = 100;
     private const int BPM_LIST_RANGE = 10;
     private const int MAX_INACTIVITY_TIME = 3;
 

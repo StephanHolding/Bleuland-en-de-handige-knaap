@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using ProjectHKU.UI;
 
 public class GameManager : SingletonTemplateMono<GameManager>
 {
@@ -13,6 +15,8 @@ public class GameManager : SingletonTemplateMono<GameManager>
 
     public const string HEART_MINIGAME = "Heart Minigame";
 
+    public string currentWinMinigame = "";
+    public bool placementFinish = true;
 
     protected override void Awake()
     {
@@ -21,8 +25,15 @@ public class GameManager : SingletonTemplateMono<GameManager>
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
 
+    public void debugMinigame(string minigameName)
+    {
+        Scanner_OnNfcTagFound("DEBUG", "scene=" + minigameName);
+    }
+
     public void CompleteMinigame(string miniGameName)
     {
+        currentWinMinigame = miniGameName;
+        placementFinish = false;
         minigameCompletion[miniGameName] = true;
     }
 
@@ -38,6 +49,7 @@ public class GameManager : SingletonTemplateMono<GameManager>
 
     private void Scanner_OnNfcTagFound(string id, string payload)
     {
+        if (!placementFinish) return;
         if (payload.StartsWith("scene="))
         {
             string sceneName = payload.Split('=', System.StringSplitOptions.RemoveEmptyEntries)[1];
