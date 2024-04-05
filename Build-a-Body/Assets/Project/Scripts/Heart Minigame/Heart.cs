@@ -16,8 +16,6 @@ public class Heart : MonoBehaviour
     public Transform lowerBone;
 
     [Header("UI References")]
-    public QuicktimeEvent stageOne;
-    public QuicktimeEvent stageTwo;
     public Image checkmark;
     public TextMeshProUGUI currentBpmText;
     public TextMeshProUGUI targetBpmText;
@@ -31,6 +29,7 @@ public class Heart : MonoBehaviour
     private float inactivityTime;
     private Coroutine winConditionTimer;
     private Coroutine pumpingRoutine;
+    private Coroutine waitForSecondPump;
     private int roundIndex;
     private List<float> bpmTimes = new List<float>();
     private bool won;
@@ -38,18 +37,9 @@ public class Heart : MonoBehaviour
 
     private const float PUMP_TIME = 0.25f;
     private const int BPM_RANGE = 5;
-    private const int BPM_LIST_RANGE = 10;
-    private const int MAX_INACTIVITY_TIME = 3;
-
-    private void Awake()
-    {
-        stageOne.OnEventSuccess += PumpIn;
-        stageTwo.OnEventSuccess += PumpOut;
-
-        stageOne.Enable();
-        stageTwo.Disable();
-        stageTwo.OnEventFailed += StartCardiacArrest;
-    }
+    private const int BPM_LIST_RANGE = 5;
+    private const float MAX_INACTIVITY_TIME = 1.5f;
+    private const float SECOND_PUMP_TIME = 1.5f;
 
     private void Start()
     {
@@ -66,14 +56,22 @@ public class Heart : MonoBehaviour
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            stageOne.DebugPress();
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            stageTwo.DebugPress();
+            HeartPressed();
         }
     }
 
+
+    public void HeartPressed()
+    {
+        if (!heartIn)
+        {
+            PumpIn();
+        }
+        else
+        {
+            PumpOut();
+        }
+    }
 
     public void PumpIn()
     {
@@ -81,12 +79,13 @@ public class Heart : MonoBehaviour
         {
             if (pumpingRoutine != null)
                 StopCoroutine(pumpingRoutine);
+
             StartCoroutine(PumpingRoutine(true, 0.9f, 1.2f));
             heartIn = true;
 
             inactivityTime = Time.time;
 
-            stageTwo.EnableWithQuicktimeEvent(0.6f);
+            waitForSecondPump = StartCoroutine(WaitForSecondPump());
         }
     }
 
@@ -94,14 +93,15 @@ public class Heart : MonoBehaviour
     {
         if (heartIn)
         {
+            if (waitForSecondPump != null)
+                StopCoroutine(waitForSecondPump);
+
             playerIsInactive = false;
 
             if (pumpingRoutine != null)
                 StopCoroutine(pumpingRoutine);
             StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
             heartIn = false;
-
-            stageOne.Enable();
 
             if (bpmTimes.Count > 1)
             {
@@ -113,7 +113,7 @@ public class Heart : MonoBehaviour
             inactivityTime = Time.time;
 
             bpmTimes.Add(timeAtLastPump);
-            if (bpmTimes.Count > 10)
+            if (bpmTimes.Count > BPM_LIST_RANGE)
             {
                 bpmTimes.RemoveAt(0);
             }
@@ -212,6 +212,13 @@ public class Heart : MonoBehaviour
 
         upperBone.transform.localScale = new Vector3(smallScaleTarget, upperBone.transform.localScale.y, smallScaleTarget);
         lowerBone.transform.localScale = new Vector3(bigScaleTarget, lowerBone.transform.localScale.y, bigScaleTarget);
+    }
+
+    private IEnumerator WaitForSecondPump()
+    {
+        yield return new WaitForSeconds(SECOND_PUMP_TIME);
+        heartIn = false;
+        StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
     }
 
     private int CalculateBPM()
