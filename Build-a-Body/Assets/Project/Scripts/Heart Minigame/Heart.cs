@@ -25,6 +25,7 @@ public class Heart : MonoBehaviour
     private int currentBpm;
     private float timeAtLastPump;
     private float inactivityTime;
+    private float winTimer;
     private Coroutine winConditionTimer;
     private Coroutine pumpingRoutine;
     private Coroutine waitForSecondPump;
@@ -53,6 +54,8 @@ public class Heart : MonoBehaviour
     {
         if (!won)
             CheckInactivity();
+
+        WinProgressionCheckmark();
 
         rangeBar.PlaceArrow(currentBpm);
 
@@ -119,16 +122,6 @@ public class Heart : MonoBehaviour
             {
                 bpmTimes.RemoveAt(0);
             }
-
-            if (WithinBPMRange())
-            {
-                if (winConditionTimer == null)
-                    winConditionTimer = StartCoroutine(WinConditionTimer());
-            }
-            else
-            {
-                ResetProgression();
-            }
         }
     }
 
@@ -139,19 +132,35 @@ public class Heart : MonoBehaviour
 
         winConditionTimer = null;
         checkmark.fillAmount = 0;
+        winTimer = 0;
     }
 
-    private IEnumerator WinConditionTimer()
+    private void WinProgressionCheckmark()
     {
-        float startTime = Time.time;
+        if (won) return;
 
-        while (Time.time - startTime < timeForWinCondition)
+        if (WithinBPMRange() && winTimer < timeForWinCondition)
         {
-            float diffPercentage = (Time.time - startTime) / timeForWinCondition;
-            checkmark.fillAmount = diffPercentage;
-            yield return new WaitForEndOfFrame();
+            winTimer += Time.deltaTime;
+            checkmark.fillAmount = winTimer / timeForWinCondition;
+            return;
+        }
+        else if (!WithinBPMRange() && winTimer > 0)
+        {
+            winTimer -= Time.deltaTime;
+            checkmark.fillAmount = winTimer / timeForWinCondition;
+            return;
         }
 
+        if (WithinBPMRange() && winTimer >= timeForWinCondition)
+        {
+            StartCoroutine(WinRound());
+        }
+    }
+
+    private IEnumerator WinRound()
+    {
+        won = true;
         checkmark.fillAmount = 1;
         //play win sound effect
 
@@ -172,7 +181,7 @@ public class Heart : MonoBehaviour
         targetBPM = Random.Range(ranges.x, ranges.y);
         rangeBar.SetGreenBarRange(BAR_MIN, BAR_MAX, targetBPM - BPM_RANGE, targetBPM + BPM_RANGE);
         ResetProgression();
-
+        won = false;
         roundIndex++;
     }
 
