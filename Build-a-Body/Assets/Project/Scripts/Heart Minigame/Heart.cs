@@ -28,6 +28,7 @@ public class Heart : MonoBehaviour
     private bool playerIsInactive;
     private int currentBpm;
     private float timeAtLastPump;
+    private float inactivityTime;
     private Coroutine winConditionTimer;
     private Coroutine pumpingRoutine;
     private int roundIndex;
@@ -36,7 +37,7 @@ public class Heart : MonoBehaviour
 
 
     private const float PUMP_TIME = 0.25f;
-    private const int BPM_RANGE = 100;
+    private const int BPM_RANGE = 5;
     private const int BPM_LIST_RANGE = 10;
     private const int MAX_INACTIVITY_TIME = 3;
 
@@ -83,7 +84,9 @@ public class Heart : MonoBehaviour
             StartCoroutine(PumpingRoutine(true, 0.9f, 1.2f));
             heartIn = true;
 
-            stageTwo.EnableWithQuicktimeEvent(0.4f);
+            inactivityTime = Time.time;
+
+            stageTwo.EnableWithQuicktimeEvent(0.6f);
         }
     }
 
@@ -107,6 +110,7 @@ public class Heart : MonoBehaviour
             }
 
             timeAtLastPump = Time.time;
+            inactivityTime = Time.time;
 
             bpmTimes.Add(timeAtLastPump);
             if (bpmTimes.Count > 10)
@@ -130,6 +134,7 @@ public class Heart : MonoBehaviour
     {
         if (winConditionTimer != null)
             StopCoroutine(winConditionTimer);
+
         winConditionTimer = null;
         checkmark.fillAmount = 0;
     }
@@ -239,7 +244,7 @@ public class Heart : MonoBehaviour
     {
         if (!playerIsInactive)
         {
-            if (Time.time - timeAtLastPump > MAX_INACTIVITY_TIME)
+            if (Time.time - inactivityTime > MAX_INACTIVITY_TIME)
             {
                 StartCardiacArrest();
             }
