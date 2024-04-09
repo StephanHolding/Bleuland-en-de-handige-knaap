@@ -16,5 +16,5 @@ MonoBehaviour:
     displayName: Jan Bleuland
     characterSprite: {fileID: 0}
     fontAsset: {fileID: 0}
-    talkingSpeed: 20
+    talkingSpeed: 15
     talkingSound: talk sound

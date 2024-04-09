@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,10 +16,9 @@ public class Heart : MonoBehaviour
 
     [Header("UI References")]
     public Image checkmark;
-    public TextMeshProUGUI currentBpmText;
-    public TextMeshProUGUI targetBpmText;
     public Animator cardicArrestAlarm;
 
+    private RangeBar rangeBar;
     private int targetBPM;
     private bool heartIn;
     private bool playerIsInactive;
@@ -38,11 +36,14 @@ public class Heart : MonoBehaviour
     private const float PUMP_TIME = 0.25f;
     private const int BPM_RANGE = 5;
     private const int BPM_LIST_RANGE = 5;
-    private const float MAX_INACTIVITY_TIME = 1.5f;
+    private const float MAX_INACTIVITY_TIME = 10;
     private const float SECOND_PUMP_TIME = 1.5f;
+    private const int BAR_MIN = 40;
+    private const int BAR_MAX = 130;
 
     private void Start()
     {
+        rangeBar = FindObjectOfType<RangeBar>();
         playerIsInactive = true;
         ChooseNewTargetBPM(roundRanges[roundIndex]);
         ResetProgression();
@@ -52,6 +53,8 @@ public class Heart : MonoBehaviour
     {
         if (!won)
             CheckInactivity();
+
+        rangeBar.PlaceArrow(currentBpm);
 
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -106,7 +109,6 @@ public class Heart : MonoBehaviour
             if (bpmTimes.Count > 1)
             {
                 currentBpm = CalculateBPM();
-                currentBpmText.text = currentBpm.ToString();
             }
 
             timeAtLastPump = Time.time;
@@ -168,7 +170,7 @@ public class Heart : MonoBehaviour
     private void ChooseNewTargetBPM(Vector2Int ranges)
     {
         targetBPM = Random.Range(ranges.x, ranges.y);
-        targetBpmText.text = targetBPM.ToString();
+        rangeBar.SetGreenBarRange(BAR_MIN, BAR_MAX, targetBPM - BPM_RANGE, targetBPM + BPM_RANGE);
         ResetProgression();
 
         roundIndex++;
@@ -275,7 +277,6 @@ public class Heart : MonoBehaviour
         //TODO: play alarm audio
 
         currentBpm = 0;
-        currentBpmText.text = currentBpm.ToString();
     }
 
     private void PlayerWon()
