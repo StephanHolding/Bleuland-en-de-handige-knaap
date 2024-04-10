@@ -4,6 +4,7 @@ using Ink.Runtime;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 namespace Dialogue
 {
@@ -194,14 +195,19 @@ namespace Dialogue
         private Dictionary<string, DialogueCharacter> allCharacters;
         private Dictionary<string, DialogueCommandBase> allCommands;
 
-        private void Start()
+        protected override void Awake()
         {
+            base.Awake();
             if (output == null)
                 FindOutput();
 
 
             AddAllCommands();
             LoadCharacters();
+        }
+
+        private void Start()
+        {
             if (playFirstStoryOnStart)
             {
                 StartNewStory(0);
@@ -244,6 +250,29 @@ namespace Dialogue
             StartDialogue();
         }
 
+        public static TextAsset LoadStoryFromResources(string assetName)
+        {
+            string path = "Ink Files";
+
+            switch (LocalizationSettings.SelectedLocale.Identifier.Code)
+            {
+                case "en":
+                    path += "/English/";
+                    break;
+                case "nl":
+                    path += "/Dutch/";
+                    break;
+                default:
+                    Debug.Log("Locale not found " + LocalizationSettings.SelectedLocale.Identifier.Code);
+                    break;
+
+            }
+
+            path += assetName;
+
+            return Resources.Load<TextAsset>(path);
+        }
+
         public void MakeChoice(int choiceIndex)
         {
             dialogueQueue.MakeChoice(choiceIndex);
@@ -263,7 +292,7 @@ namespace Dialogue
             {
                 allCharacters.Add(character.name, character);
             }
-            print(allCharacters.Count);
+
         }
 
         private void AddAllCommands()
