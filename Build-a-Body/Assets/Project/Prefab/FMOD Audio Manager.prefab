@@ -45,4 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  fmodEvents: []
+  fmodEvents:
+  - Guid:
+      Data1: 1250845049
+      Data2: 1094079805
+      Data3: 1021213833
+      Data4: 273607717
+    Path: event:/SFX/talk sound

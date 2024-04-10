@@ -1,8 +1,7 @@
 // Author: Chrysalis shiyuchongf@gmail.com
 
-using System.Collections;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -29,7 +28,8 @@ namespace ProjectHKU.UI
         // # Localization      #
         // #####################
         [Serializable]
-        public struct NamedTextAsset {
+        public struct NamedTextAsset
+        {
             public string key;
             public TextAsset value;
         }
@@ -43,10 +43,12 @@ namespace ProjectHKU.UI
         {
             get
             {
-                if (_localizationData == null){
+                if (_localizationData == null)
+                {
                     TextAsset locFile = localizationFiles[0].value;
-                    foreach(var file in localizationFiles){
-                        if(file.key == userLanguage)    locFile = file.value;
+                    foreach (var file in localizationFiles)
+                    {
+                        if (file.key == userLanguage) locFile = file.value;
                     }
                     _localizationData = LocalizationHandler.Load(locFile);
                 }
@@ -57,10 +59,10 @@ namespace ProjectHKU.UI
         // temporary
         public void Start()
         {
-            if (GameManager.instance.currentWinMinigame != "")
-                popup(GameManager.instance.currentWinMinigame + " Finish");
-            else
-                popup("GAME_START");
+            /*            if (GameManager.instance.currentWinMinigame != "")
+                            popup(GameManager.instance.currentWinMinigame + " Finish");
+                        else
+                            popup("GAME_START");*/
         }
 
         public void popup(string descID)
@@ -72,6 +74,6 @@ namespace ProjectHKU.UI
                 Debug.Log($"Localization missing: {descID}");
             ((Popup)ComponentsList["popup"]).SetText(descID);
         }
-    
+
     }
 }

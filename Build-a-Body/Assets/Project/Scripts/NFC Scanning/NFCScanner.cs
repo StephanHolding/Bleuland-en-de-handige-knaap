@@ -7,12 +7,20 @@ public class NFCScanner : MonoBehaviour
     public event Action<string, string> OnNfcTagFound;
 
     private bool tagFound = false;
-    private bool allowScanning = true;
+    private bool allowScanning = false;
 
     void Update()
     {
         if (allowScanning)
+        {
             Scan();
+
+            //DEBUGGING IN EDTOR ONLY:
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                OnNfcTagFound?.Invoke("1", "scene=Heart Minigame");
+            }
+        }
     }
 
     public void EnableBackgroundScanning()
