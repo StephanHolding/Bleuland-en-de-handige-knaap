@@ -59,6 +59,7 @@ namespace ProjectHKU.UI
         // temporary
         public void Start()
         {
+            if (Application.isEditor) Application.targetFrameRate = 24;
             /*            if (GameManager.instance.currentWinMinigame != "")
                             popup(GameManager.instance.currentWinMinigame + " Finish");
                         else
