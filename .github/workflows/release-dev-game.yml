@@ -11,17 +11,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3 # 更新至最新版本以确保兼容性
-        
-      - name: Setup Environment Variables
-        run: echo "GITHUB_TOKEN=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" >> $GITHUB_ENV
 
       - name: Create and Upload Release
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         with:
           files: ./Build-a-Body/Artifacts/GameBuild.zip
-          token: ${{ env.GITHUB_TOKEN }} # 使用 GitHub 自动提供的 Token
+          token: ${{ secrets.TOKEN_GITHUB }} # 使用 GitHub 自动提供的 Token
           tag_name: game-build-${{ github.run_number }}
           name: Game Build Release ${{ github.run_number }}
           draft: false
