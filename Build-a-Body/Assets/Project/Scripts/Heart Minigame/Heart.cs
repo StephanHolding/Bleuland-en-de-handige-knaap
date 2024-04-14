@@ -288,11 +288,14 @@ public class Heart : MonoBehaviour
         currentBpm = 0;
     }
 
+    [ContextMenu("Player Win")]
     private void PlayerWon()
     {
         won = true;
-        GameManager.instance.CompleteMinigame(GameManager.HEART_MINIGAME);
-        SceneHandler.instance.LoadScene(0);
+        if (GameStateManager.instance.IsGamestate<HeartMinigameState>())
+        {
+            GameStateManager.instance.PlayerCompletedTask();
+        }
     }
 
 }
