@@ -38,6 +38,15 @@ public class TouchscreenInputHandler : MonoBehaviour
         {
             DetectPinch();
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            OnPinchDetected(-0.1f);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            OnPinchDetected(0.1f);
+        }
     }
 
     private void DetectPinch()

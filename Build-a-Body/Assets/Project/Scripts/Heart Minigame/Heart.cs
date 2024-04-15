@@ -1,301 +1,80 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Heart : MonoBehaviour
 {
 
-    [Header("Properties")]
-    public int timeForWinCondition = 5;
-    public Vector2Int[] roundRanges;
+    private float pinchValueModifier = 50;
 
-    [Header("Bones")]
-    public Transform upperBone;
-    public Transform lowerBone;
-
-    [Header("UI References")]
-    public Image checkmark;
-    public Animator cardicArrestAlarm;
-
+    [SerializeField]
+    private float currentHoldingBlood;
     private RangeBar rangeBar;
-    private int targetBPM;
-    private bool heartIn;
-    private bool playerIsInactive;
-    private int currentBpm;
-    private float timeAtLastPump;
-    private float inactivityTime;
-    private float winTimer;
-    private Coroutine winConditionTimer;
-    private Coroutine pumpingRoutine;
-    private Coroutine waitForSecondPump;
-    private int roundIndex;
-    private List<float> bpmTimes = new List<float>();
-    private bool won;
+    private float arrowValue = 100;
+    private float arrowLoweringSpeed = 5;
+    private float accumulativePinchValue;
+    private float maxHoldingBlood = 15;
+    private const float HEART_SCALE_MIN = 0.8F;
+    private const float HEART_SCALE_MAX = 1.2F;
 
-
-    private const float PUMP_TIME = 0.25f;
-    private const int BPM_RANGE = 5;
-    private const int BPM_LIST_RANGE = 5;
-    private const float MAX_INACTIVITY_TIME = 10;
-    private const float SECOND_PUMP_TIME = 1.5f;
-    private const int BAR_MIN = 40;
-    private const int BAR_MAX = 130;
 
     private void Start()
     {
         rangeBar = FindObjectOfType<RangeBar>();
-        playerIsInactive = true;
-        ChooseNewTargetBPM(roundRanges[roundIndex]);
-        ResetProgression();
+        rangeBar.SetGreenBarRange(0, 100, 60, 70);
+
+        TouchscreenInputHandler.OnPinchDetected += Pinching;
     }
 
-    public void Update()
+    private void OnDestroy()
     {
-        if (!won)
-            CheckInactivity();
+        TouchscreenInputHandler.OnPinchDetected -= Pinching;
+    }
 
-        WinProgressionCheckmark();
+    private void Update()
+    {
+        UpdateArrow();
+    }
 
-        rangeBar.PlaceArrow(currentBpm);
+    private void Pinching(float pinchAmount)
+    {
+        accumulativePinchValue += pinchAmount;
+        accumulativePinchValue = Mathf.Clamp(accumulativePinchValue, 0, 1);
 
-        //DEBUG ONLY REMOVE LATER
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        LerpHeart();
+
+        if (pinchAmount > 0)
         {
-            HeartPressed();
+            TakeBloodIn();
+        }
+        else if (pinchAmount < 0)
+        {
+            PushBloodOut();
         }
     }
 
-
-    public void HeartPressed()
+    private void LerpHeart()
     {
-        if (!heartIn)
-        {
-            PumpIn();
-        }
-        else
-        {
-            PumpOut();
-        }
+        transform.localScale = Vector3.Lerp(new Vector3(HEART_SCALE_MIN, HEART_SCALE_MIN, HEART_SCALE_MIN), new Vector3(HEART_SCALE_MAX, HEART_SCALE_MAX, HEART_SCALE_MAX), accumulativePinchValue);
     }
 
-    public void PumpIn()
+    private void TakeBloodIn()
     {
-        if (!heartIn)
-        {
-            if (pumpingRoutine != null)
-                StopCoroutine(pumpingRoutine);
-
-            StartCoroutine(PumpingRoutine(true, 0.9f, 1.2f));
-            heartIn = true;
-
-            inactivityTime = Time.time;
-
-            waitForSecondPump = StartCoroutine(WaitForSecondPump());
-        }
+        currentHoldingBlood = Mathf.Lerp(0, maxHoldingBlood, accumulativePinchValue);
     }
 
-    public void PumpOut()
+    private void PushBloodOut()
     {
-        if (heartIn)
-        {
-            if (waitForSecondPump != null)
-                StopCoroutine(waitForSecondPump);
+        float newHoldingBlood = Mathf.Lerp(0, maxHoldingBlood, accumulativePinchValue);
+        float bloodDifference = currentHoldingBlood - newHoldingBlood;
 
-            playerIsInactive = false;
+        arrowValue += bloodDifference;
+        arrowValue = Mathf.Clamp(arrowValue, 0, 100);
 
-            if (pumpingRoutine != null)
-                StopCoroutine(pumpingRoutine);
-            StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
-            heartIn = false;
-
-            if (bpmTimes.Count > 1)
-            {
-                currentBpm = CalculateBPM();
-            }
-
-            timeAtLastPump = Time.time;
-            inactivityTime = Time.time;
-
-            bpmTimes.Add(timeAtLastPump);
-            if (bpmTimes.Count > BPM_LIST_RANGE)
-            {
-                bpmTimes.RemoveAt(0);
-            }
-        }
+        currentHoldingBlood = newHoldingBlood;
     }
 
-    private void ResetProgression()
+    private void UpdateArrow()
     {
-        if (winConditionTimer != null)
-            StopCoroutine(winConditionTimer);
-
-        winConditionTimer = null;
-        checkmark.fillAmount = 0;
-        winTimer = 0;
+        arrowValue -= arrowLoweringSpeed * Time.deltaTime;
+        rangeBar.PlaceArrow(arrowValue);
     }
-
-    private void WinProgressionCheckmark()
-    {
-        if (won) return;
-
-        if (WithinBPMRange() && winTimer < timeForWinCondition)
-        {
-            winTimer += Time.deltaTime;
-            checkmark.fillAmount = winTimer / timeForWinCondition;
-            return;
-        }
-        else if (!WithinBPMRange() && winTimer > 0)
-        {
-            winTimer -= Time.deltaTime;
-            checkmark.fillAmount = winTimer / timeForWinCondition;
-            return;
-        }
-
-        if (WithinBPMRange() && winTimer >= timeForWinCondition)
-        {
-            StartCoroutine(WinRound());
-        }
-    }
-
-    private IEnumerator WinRound()
-    {
-        won = true;
-        checkmark.fillAmount = 1;
-        //play win sound effect
-
-        yield return new WaitForSeconds(1);
-
-        if (!MinigameWon())
-        {
-            ChooseNewTargetBPM(roundRanges[roundIndex]);
-        }
-        else
-        {
-            PlayerWon();
-        }
-    }
-
-    private void ChooseNewTargetBPM(Vector2Int ranges)
-    {
-        targetBPM = Random.Range(ranges.x, ranges.y);
-        rangeBar.SetGreenBarRange(BAR_MIN, BAR_MAX, targetBPM - BPM_RANGE, targetBPM + BPM_RANGE);
-        ResetProgression();
-        won = false;
-        roundIndex++;
-    }
-
-    private bool MinigameWon()
-    {
-        return roundIndex >= roundRanges.Length;
-    }
-
-    private IEnumerator PumpingRoutine(bool upDown, float smallScaleTarget, float bigScaleTarget)
-    {
-        if (upDown)
-        {
-            while (lowerBone.localScale.x < bigScaleTarget)
-            {
-                lowerBone.localScale += new Vector3(Time.deltaTime, 0, Time.deltaTime) / PUMP_TIME;
-                yield return null;
-            }
-
-            while (upperBone.localScale.x > smallScaleTarget)
-            {
-                upperBone.localScale -= new Vector3(Time.deltaTime, 0, Time.deltaTime) / PUMP_TIME;
-                yield return null;
-            }
-        }
-        else if (!upDown)
-        {
-            while (lowerBone.localScale.x > bigScaleTarget)
-            {
-                lowerBone.localScale -= new Vector3(Time.deltaTime, 0, Time.deltaTime) / PUMP_TIME;
-                yield return null;
-            }
-
-            while (upperBone.localScale.x < smallScaleTarget)
-            {
-                upperBone.localScale += new Vector3(Time.deltaTime, 0, Time.deltaTime) / PUMP_TIME;
-                yield return null;
-            }
-        }
-
-        upperBone.transform.localScale = new Vector3(smallScaleTarget, upperBone.transform.localScale.y, smallScaleTarget);
-        lowerBone.transform.localScale = new Vector3(bigScaleTarget, lowerBone.transform.localScale.y, bigScaleTarget);
-    }
-
-    private IEnumerator WaitForSecondPump()
-    {
-        yield return new WaitForSeconds(SECOND_PUMP_TIME);
-        heartIn = false;
-        StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
-    }
-
-    private int CalculateBPM()
-    {
-        float totalDiff = 0;
-
-        for (int i = 0; i < bpmTimes.Count; i++)
-        {
-            if (i != 0)
-            {
-                float diff = (bpmTimes[i] - bpmTimes[i - 1]);
-                totalDiff += diff;
-            }
-        }
-
-        float average = totalDiff / bpmTimes.Count;
-
-        float averageBpm = 60 / average;
-
-
-        return Mathf.RoundToInt(averageBpm);
-    }
-
-    private bool WithinBPMRange()
-    {
-        return currentBpm >= targetBPM - BPM_RANGE && currentBpm <= targetBPM + BPM_RANGE;
-    }
-
-    private void CheckInactivity()
-    {
-        if (!playerIsInactive)
-        {
-            if (Time.time - inactivityTime > MAX_INACTIVITY_TIME)
-            {
-                StartCardiacArrest();
-            }
-            else
-            {
-                cardicArrestAlarm.Play("Empty");
-                //TODO: stop alarm audio
-            }
-        }
-    }
-
-    private void StartCardiacArrest()
-    {
-        if (won) return;
-
-        ResetProgression();
-        playerIsInactive = true;
-        bpmTimes.Clear();
-
-        cardicArrestAlarm.Play("Cardiac Arrest Alarm");
-        //TODO: play alarm audio
-
-        currentBpm = 0;
-    }
-
-    [ContextMenu("Player Win")]
-    private void PlayerWon()
-    {
-        won = true;
-        if (GameStateManager.instance.IsGamestate<HeartMinigameState>())
-        {
-            GameStateManager.instance.PlayerCompletedTask();
-        }
-    }
-
 }
