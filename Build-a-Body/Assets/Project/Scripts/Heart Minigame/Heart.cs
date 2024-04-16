@@ -30,15 +30,15 @@ public class Heart : MonoBehaviour
     private Coroutine pumpingRoutine;
     private Coroutine waitForSecondPump;
     private int roundIndex;
-    private List<float> bpmTimes = new List<float>();
+    public List<float> bpmTimes = new List<float>();
     private bool won;
 
 
     private const float PUMP_TIME = 0.25f;
     private const int BPM_RANGE = 5;
-    private const int BPM_LIST_RANGE = 5;
-    private const float MAX_INACTIVITY_TIME = 10;
-    private const float SECOND_PUMP_TIME = 1.5f;
+    private const int BPM_LIST_RANGE = 20;
+    private const float MAX_INACTIVITY_TIME = 2;
+    private const float SECOND_PUMP_TIME = 1f;
     private const int BAR_MIN = 40;
     private const int BAR_MAX = 130;
 
@@ -47,7 +47,13 @@ public class Heart : MonoBehaviour
         rangeBar = FindObjectOfType<RangeBar>();
         playerIsInactive = true;
         ChooseNewTargetBPM(roundRanges[roundIndex]);
+        rangeBar.ToggleShowArrowOnScreen(true);
         ResetProgression();
+
+        /*        for (int i = 0; i < BPM_LIST_RANGE; i++)
+                {
+                    bpmTimes.Add(i * 10);
+                }*/
     }
 
     public void Update()
@@ -62,7 +68,11 @@ public class Heart : MonoBehaviour
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            HeartPressed();
+            PumpIn();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            PumpOut();
         }
     }
 
@@ -109,11 +119,6 @@ public class Heart : MonoBehaviour
             StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
             heartIn = false;
 
-            if (bpmTimes.Count > 1)
-            {
-                currentBpm = CalculateBPM();
-            }
-
             timeAtLastPump = Time.time;
             inactivityTime = Time.time;
 
@@ -121,6 +126,11 @@ public class Heart : MonoBehaviour
             if (bpmTimes.Count > BPM_LIST_RANGE)
             {
                 bpmTimes.RemoveAt(0);
+            }
+
+            if (bpmTimes.Count > 1)
+            {
+                currentBpm = CalculateBPM();
             }
         }
     }
@@ -240,14 +250,21 @@ public class Heart : MonoBehaviour
         {
             if (i != 0)
             {
-                float diff = (bpmTimes[i] - bpmTimes[i - 1]);
+                float diff = bpmTimes[i] - bpmTimes[i - 1];
                 totalDiff += diff;
             }
         }
 
-        float average = totalDiff / bpmTimes.Count;
 
-        float averageBpm = 60 / average;
+        float average = totalDiff / (bpmTimes.Count - 1);
+
+        print(average);
+        float averageBpm;
+
+        if (average > 0)
+            averageBpm = 60 / average;
+        else
+            averageBpm = 0;
 
 
         return Mathf.RoundToInt(averageBpm);
