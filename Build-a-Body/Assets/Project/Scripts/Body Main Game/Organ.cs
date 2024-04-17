@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Organ : Draggable
@@ -8,29 +9,10 @@ public class Organ : Draggable
     public Vector3 targetCameraPosition;
 
     public string organID;
-    
+
 
     private const float DISTANCE_THRESHOLD = 1f;
     private const float ROTATION_THRESHOLD = 30f;
-
-    private void Awake()
-    {
-        if (OrganPlaceManager.instance.organDict.ContainsKey(organID))
-            OrganPlaceManager.instance.organDict[organID] = this;
-        else
-            OrganPlaceManager.instance.organDict.Add(organID, this);
-    }
-
-    public void Update()
-    {
-        base.Update();
-        if (!dragging && IsInCorrectPosition())
-        {
-            transform.position = targetPosition;
-            transform.rotation = targetOrientation;
-            OrganPlaceManager.instance.FinishPlacement(organID);
-        }
-    }
 
     [ContextMenu("Save Position")]
     public void SaveLocation()
@@ -41,7 +23,40 @@ public class Organ : Draggable
 
     public bool IsInCorrectPosition()
     {
-        return (transform.position - targetPosition).magnitude <= DISTANCE_THRESHOLD
-            && Mathf.Abs(transform.rotation.eulerAngles.y - targetOrientation.eulerAngles.y) <= ROTATION_THRESHOLD;
+        //removed rotation check for testing. add again later
+        //return (transform.position - targetPosition).magnitude <= DISTANCE_THRESHOLD && Mathf.Abs(transform.rotation.eulerAngles.y - targetOrientation.eulerAngles.y) <= ROTATION_THRESHOLD;
+
+        return Vector3.Distance(targetPosition, transform.position) <= DISTANCE_THRESHOLD;
+    }
+
+    protected override void OnDraggingEnd()
+    {
+        print("1");
+        if (IsInCorrectPosition())
+        {
+            print("2");
+            OrganPlacedCorrectly();
+        }
+    }
+
+    [ContextMenu("Override Organ Placing")]
+    private void OrganPlacedCorrectly()
+    {
+        transform.position = targetPosition;
+        transform.rotation = targetOrientation;
+        draggable = false;
+
+        if (GameStateManager.instance.IsGamestate<PlaceOrganState>())
+        {
+            List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
+
+            if (lockedOrgans == null)
+                lockedOrgans = new List<string>();
+
+            lockedOrgans.Add(organID);
+            Blackboard.Write(BlackboardKeys.LOCKED_ORGANS, lockedOrgans);
+
+            GameStateManager.instance.PlayerCompletedTask();
+        }
     }
 }

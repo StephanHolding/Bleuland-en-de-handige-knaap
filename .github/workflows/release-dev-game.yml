@@ -1,0 +1,28 @@
+name: Release Game Build
+
+on:
+  push:
+    branches:
+      - development
+      
+permissions:
+  contents: write
+  
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # 更新至最新版本以确保兼容性
+        
+      - name: Create and Upload Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: './Build-a-Body/Artifacts/GameBuild.zip'  # Path to file or directory to upload
+          token: ${{ secrets.GITHUB_TOKEN }}               # GitHub token with permissions to create releases
+          tag_name: game-build-${{ github.run_number }}    # Dynamic tag name based on the run number
+          name: Game Build Release ${{ github.run_number }} # Dynamic release name
+          draft: false                                     # Set to 'true' if you want a draft release
+          prerelease: false                                # Set to 'true' if the release is a prerelease
+          body: 'Description of the changes in this release.' # Description of the release
+          
