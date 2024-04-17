@@ -23,6 +23,7 @@ public class Heart : MonoBehaviour
     private bool heartIn;
     private bool playerIsInactive;
     private int currentBpm;
+    private float lerpedBpm;
     private float timeAtLastPump;
     private float inactivityTime;
     private float winTimer;
@@ -41,7 +42,8 @@ public class Heart : MonoBehaviour
     private const float SECOND_PUMP_TIME = 1f;
     private const int BAR_MIN = 40;
     private const int BAR_MAX = 130;
-
+    private const int LERP_SPEED = 5;
+    
     private void Start()
     {
         rangeBar = FindObjectOfType<RangeBar>();
@@ -63,8 +65,6 @@ public class Heart : MonoBehaviour
 
         WinProgressionCheckmark();
 
-        rangeBar.PlaceArrow(currentBpm);
-
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -74,6 +74,8 @@ public class Heart : MonoBehaviour
         {
             PumpOut();
         }
+        
+        LerpOutputBpm();
     }
 
 
@@ -305,6 +307,12 @@ public class Heart : MonoBehaviour
         currentBpm = 0;
     }
 
+    private void LerpOutputBpm()
+    {
+        lerpedBpm = Mathf.Lerp(lerpedBpm, currentBpm, Time.deltaTime * LERP_SPEED);
+        rangeBar.PlaceArrow( lerpedBpm);
+    }
+    
     [ContextMenu("Player Win")]
     private void PlayerWon()
     {

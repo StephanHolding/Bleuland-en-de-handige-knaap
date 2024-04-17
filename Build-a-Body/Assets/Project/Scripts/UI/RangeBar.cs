@@ -53,7 +53,7 @@ public class RangeBar : MonoBehaviour
 
         if (showArrowOnScreen)
         {
-            arrowValueText.text = value.ToString();
+            arrowValueText.text = Mathf.RoundToInt(value).ToString();
         }
     }
 
