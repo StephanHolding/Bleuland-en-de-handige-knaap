@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,22 +6,33 @@ public class PuzzlePiece : Draggable
     [System.Serializable]
     public class PieceDistance
     {
-        public PieceDistance(string pieceName, float distance)
+        public PieceDistance(string pieceName, Vector3 offsetToPiece)
         {
             this.pieceName = pieceName;
-            this.distance = distance;
+
+            this.offsetToPiece = offsetToPiece;
         }
-        
+
         public string pieceName;
-        public float distance;
+        public float distanceToPiece;
+        public Vector3 offsetToPiece;
     }
 
     [SerializeField]
     private PieceDistance[] allPieceDistances;
 
-    private const float DISTANCE_THRESHOLD = 0.5f;
-    
-    public bool IsAtCorrectRelativePosition()
+    public float snapThreshold = 0.25f;
+
+    protected override void OnDraggingEnd()
+    {
+
+        if (IsAtCorrectRelativePosition(out Vector3 snapToWorldPosition))
+        {
+            Snap(snapToWorldPosition);
+        }
+    }
+
+    public bool IsAtCorrectRelativePosition(out Vector3 snapToWorldPosition)
     {
         PuzzlePiece[] allPuzzlePieces = GameObject.FindObjectsOfType<PuzzlePiece>();
 
@@ -31,18 +41,19 @@ public class PuzzlePiece : Draggable
             if (piece != this)
             {
                 PieceDistance savedDistance = GetSavedDistance(piece.gameObject.name);
-                
-                float distanceToOtherPiece = Vector3.Distance(transform.position, piece.transform.position);
-                if (Mathf.Abs(distanceToOtherPiece - savedDistance.distance) > DISTANCE_THRESHOLD)
+
+                if (Vector3.Distance(transform.position, piece.transform.position + savedDistance.offsetToPiece) <= snapThreshold)
                 {
-                    return false;
+                    snapToWorldPosition = piece.transform.position + savedDistance.offsetToPiece;
+                    return true;
                 }
             }
         }
 
-        return true;
+        snapToWorldPosition = Vector3.zero;
+        return false;
     }
-    
+
     public void SaveDistanceToOtherPieces()
     {
         List<PieceDistance> toReturn = new List<PieceDistance>();
@@ -51,7 +62,7 @@ public class PuzzlePiece : Draggable
         {
             if (piece != this)
             {
-                toReturn.Add(new PieceDistance(piece.gameObject.name, Vector3.Distance(transform.position, piece.transform.position)));
+                toReturn.Add(new PieceDistance(piece.gameObject.name, transform.position - piece.transform.position));
             }
         }
 
@@ -69,5 +80,10 @@ public class PuzzlePiece : Draggable
         }
 
         return null;
+    }
+
+    private void Snap(Vector3 targetPosition)
+    {
+        transform.position = targetPosition;
     }
 }

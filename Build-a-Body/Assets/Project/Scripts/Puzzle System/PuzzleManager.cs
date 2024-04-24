@@ -10,6 +10,11 @@ public class PuzzleManager : MonoBehaviour
     private void Awake()
     {
         allPieces = FindObjectsOfType<PuzzlePiece>();
+
+        foreach (PuzzlePiece piece in allPieces)
+        {
+            piece.transform.position = transform.position;
+        }
     }
 
     [ContextMenu("Save Puzzle Piece Positions")]
@@ -39,7 +44,7 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (PuzzlePiece piece in allPieces)
         {
-            if (!piece.IsAtCorrectRelativePosition())
+            if (!piece.IsAtCorrectRelativePosition(out _))
             {
                 return false;
             }
