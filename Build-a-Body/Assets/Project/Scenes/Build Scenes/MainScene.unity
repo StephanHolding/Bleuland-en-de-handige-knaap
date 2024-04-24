@@ -792,6 +792,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[1].Path
+      value: event:/SFX/writing sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[1].Guid.Data1
+      value: 1716850949
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[1].Guid.Data2
+      value: 1090007151
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[1].Guid.Data3
+      value: -100903496
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[1].Guid.Data4
+      value: -1717916144
+      objectReference: {fileID: 0}
     - target: {fileID: 3192052720649528558, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
         type: 3}
       propertyPath: m_Name
@@ -1009,6 +1039,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Box - Speech
       objectReference: {fileID: 0}
+    - target: {fileID: 2217330104571489617, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.7010803
+      objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1047,7 +1082,7 @@ PrefabInstance:
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 287.1508
+      value: 574.345
       objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
@@ -1092,7 +1127,7 @@ PrefabInstance:
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -236.09534
+      value: -287.17746
       objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
