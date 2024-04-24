@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.046685614, g: 0.12211626, b: 0.3132075, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -150,8 +150,8 @@ Transform:
   m_GameObject: {fileID: 30597480}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.50795746, y: -6.053338, z: -6.1}
-  m_LocalScale: {x: 2724.2415, y: 4184.1504, z: 2128.1472}
+  m_LocalPosition: {x: -389.27206, y: 63.711998, z: -12.791}
+  m_LocalScale: {x: 15061.287, y: 23132.564, z: 11765.709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1527027636}
@@ -357,8 +357,8 @@ Transform:
   m_GameObject: {fileID: 165196770}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 623.1629, y: 430.44604, z: 38.044872}
+  m_LocalPosition: {x: -22.158, y: 9.5628, z: 139.14}
+  m_LocalScale: {x: 3445.2288, y: 2379.7712, z: 210.3355}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 80156715}
@@ -538,18 +538,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.528617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.528617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.528617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.80796
+      value: -271.51
       objectReference: {fileID: 0}
     - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.765338
+      value: 26.604
       objectReference: {fileID: 0}
     - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.921734
+      value: -144.49
       objectReference: {fileID: 0}
     - target: {fileID: 6976751269953933492, guid: cb382de2fa4ee3349acc012e654c5717,
         type: 3}
@@ -891,32 +906,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.7304485
+      value: 20.62422
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 769.0395
+      value: 4251.7246
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 769.0395
+      value: 4251.7246
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.69204
+      value: -572.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.1862764
+      value: 62.976
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.421734
+      value: -80.914
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7795bd2150185147bedc79c0b280b6a,
         type: 3}
