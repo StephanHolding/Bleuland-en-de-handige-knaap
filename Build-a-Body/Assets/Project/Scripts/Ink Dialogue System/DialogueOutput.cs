@@ -40,14 +40,16 @@ namespace Dialogue
         {
             if (isActive != toggle)
             {
-                uiText.transform.parent.gameObject.SetActive(toggle);
-                characterNameText.transform.parent.gameObject.SetActive(toggle);
+                transform.GetChild(0).gameObject.SetActive(toggle);
 
-                if (inputfield != null)
-                    inputfield.gameObject.SetActive(false);
+                /*                uiText.transform.parent.gameObject.SetActive(toggle);
+                                characterNameText.transform.parent.gameObject.SetActive(toggle);
 
-                DisableBackgroundGraphic();
-                HideChoiceUI();
+                                if (inputfield != null)
+                                    inputfield.gameObject.SetActive(false);
+
+                                DisableBackgroundGraphic();
+                                HideChoiceUI();*/
 
                 isActive = toggle;
             }

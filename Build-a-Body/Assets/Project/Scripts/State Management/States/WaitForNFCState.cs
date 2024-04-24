@@ -29,7 +29,7 @@ public class WaitForNFCState : GameState
         if (IsOrganName(payload))
         {
             organName = payload;
-            camController.GoTo("bookcase", StartBookAnimation);
+            camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);
         }
     }
 
@@ -40,6 +40,10 @@ public class WaitForNFCState : GameState
 
     private void LoadNextScene()
     {
+        SceneHandler.instance.OnSceneLoaded_Once += delegate
+        {
+            GameStateManager.instance.GoToGamestate<HeartMinigameState>();
+        };
         SceneHandler.instance.LoadScene("Puzzle");
     }
 

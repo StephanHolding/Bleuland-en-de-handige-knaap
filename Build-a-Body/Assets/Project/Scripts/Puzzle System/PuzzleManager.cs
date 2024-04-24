@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
@@ -32,7 +29,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (AreAllPiecesCorrect())
         {
-            print("Puzzle Finished");
+            GameStateManager.instance.PlayerCompletedTask();
         }
         else
         {

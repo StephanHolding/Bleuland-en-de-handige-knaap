@@ -34,20 +34,23 @@ public class CameraMovementController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        transform.position = target.position;
-        transform.rotation = target.rotation;
+        SnapToTarget(target);
 
         callback?.Invoke();
     }
 
 
     // Method to be called externally to move the camera to an object with a specified tag.
-    public void GoTo(string tagName, Action OnMoveFinished = null)
+    public void GoTo(string tagName, bool gradual = true, Action OnMoveFinished = null)
     {
         Transform targetObject = cameraTargets[tagName];
         if (targetObject != null)
         {
-            StartCoroutine(CameraLerp(targetObject, OnMoveFinished));
+            if (gradual)
+                StartCoroutine(CameraLerp(targetObject, OnMoveFinished));
+            else
+                SnapToTarget(targetObject);
+
         }
         else
         {
@@ -63,5 +66,11 @@ public class CameraMovementController : MonoBehaviour
             cameraTarget.Init();
             cameraTargets.Add(cameraTarget.targetTag, cameraTarget.targetTransform);
         }
+    }
+
+    private void SnapToTarget(Transform target)
+    {
+        transform.position = target.position;
+        transform.rotation = target.rotation;
     }
 }
