@@ -18,7 +18,7 @@ public class NFCScanner : MonoBehaviour
             //DEBUGGING IN EDTOR ONLY:
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                OnNfcTagFound?.Invoke("1", "scene=Heart Minigame");
+                OnNfcTagFound?.Invoke("1", "heart");
             }
         }
     }
