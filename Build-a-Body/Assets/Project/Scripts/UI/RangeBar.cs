@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class RangeBar : MonoBehaviour
@@ -5,14 +6,17 @@ public class RangeBar : MonoBehaviour
     private RectTransform redBar;
     private RectTransform greenBar;
     private RectTransform arrow;
+    private TextMeshProUGUI arrowValueText;
 
     private float savedMinValue, savedMaxValue;
+    private bool showArrowOnScreen;
 
     private void Awake()
     {
         redBar = transform.Find("Red Bar").GetComponent<RectTransform>();
         greenBar = transform.Find("Green Bar").GetComponent<RectTransform>();
         arrow = transform.Find("Arrow").GetComponent<RectTransform>();
+        arrowValueText = transform.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void SetGreenBarRange(float minValue, float maxValue, float greenMinValue, float greenMaxValue)
@@ -44,8 +48,18 @@ public class RangeBar : MonoBehaviour
             percentage = (value - savedMinValue) / (savedMaxValue - savedMinValue);
         }
 
-
         arrow.anchoredPosition = new Vector2(redBar.rect.x + redBar.rect.width * percentage, arrow.anchoredPosition.y);
+        arrowValueText.enabled = showArrowOnScreen;
+
+        if (showArrowOnScreen)
+        {
+            arrowValueText.text = value.ToString();
+        }
+    }
+
+    public void ToggleShowArrowOnScreen(bool toggle)
+    {
+        showArrowOnScreen = toggle;
     }
 
 }
