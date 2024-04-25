@@ -5,10 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/Build Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Project/Scenes/Build Scenes/Heart Minigame.unity
     guid: 3eb60c7e68cb8fb4893e6010e1a488d8
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 17fa53dcd10d1394caee3e9d0941c46e,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: b18748a543b8a3f44894b3c6a4e93729,
+      type: 2}

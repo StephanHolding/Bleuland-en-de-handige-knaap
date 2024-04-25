@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,46 +15,45 @@ public class Heart : MonoBehaviour
     public Transform lowerBone;
 
     [Header("UI References")]
-    public QuicktimeEvent stageOne;
-    public QuicktimeEvent stageTwo;
     public Image checkmark;
-    public TextMeshProUGUI currentBpmText;
-    public TextMeshProUGUI targetBpmText;
     public Animator cardicArrestAlarm;
 
+    private RangeBar rangeBar;
     private int targetBPM;
     private bool heartIn;
     private bool playerIsInactive;
     private int currentBpm;
     private float timeAtLastPump;
     private float inactivityTime;
+    private float winTimer;
     private Coroutine winConditionTimer;
     private Coroutine pumpingRoutine;
+    private Coroutine waitForSecondPump;
     private int roundIndex;
-    private List<float> bpmTimes = new List<float>();
+    public List<float> bpmTimes = new List<float>();
     private bool won;
 
 
     private const float PUMP_TIME = 0.25f;
     private const int BPM_RANGE = 5;
-    private const int BPM_LIST_RANGE = 10;
-    private const int MAX_INACTIVITY_TIME = 3;
-
-    private void Awake()
-    {
-        stageOne.OnEventSuccess += PumpIn;
-        stageTwo.OnEventSuccess += PumpOut;
-
-        stageOne.Enable();
-        stageTwo.Disable();
-        stageTwo.OnEventFailed += StartCardiacArrest;
-    }
+    private const int BPM_LIST_RANGE = 20;
+    private const float MAX_INACTIVITY_TIME = 2;
+    private const float SECOND_PUMP_TIME = 1f;
+    private const int BAR_MIN = 40;
+    private const int BAR_MAX = 130;
 
     private void Start()
     {
+        rangeBar = FindObjectOfType<RangeBar>();
         playerIsInactive = true;
         ChooseNewTargetBPM(roundRanges[roundIndex]);
+        rangeBar.ToggleShowArrowOnScreen(true);
         ResetProgression();
+
+        /*        for (int i = 0; i < BPM_LIST_RANGE; i++)
+                {
+                    bpmTimes.Add(i * 10);
+                }*/
     }
 
     public void Update()
@@ -63,17 +61,33 @@ public class Heart : MonoBehaviour
         if (!won)
             CheckInactivity();
 
+        WinProgressionCheckmark();
+
+        rangeBar.PlaceArrow(currentBpm);
+
         //DEBUG ONLY REMOVE LATER
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            stageOne.DebugPress();
+            PumpIn();
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            stageTwo.DebugPress();
+            PumpOut();
         }
     }
 
+
+    public void HeartPressed()
+    {
+        if (!heartIn)
+        {
+            PumpIn();
+        }
+        else
+        {
+            PumpOut();
+        }
+    }
 
     public void PumpIn()
     {
@@ -81,12 +95,13 @@ public class Heart : MonoBehaviour
         {
             if (pumpingRoutine != null)
                 StopCoroutine(pumpingRoutine);
+
             StartCoroutine(PumpingRoutine(true, 0.9f, 1.2f));
             heartIn = true;
 
             inactivityTime = Time.time;
 
-            stageTwo.EnableWithQuicktimeEvent(0.6f);
+            waitForSecondPump = StartCoroutine(WaitForSecondPump());
         }
     }
 
@@ -94,6 +109,9 @@ public class Heart : MonoBehaviour
     {
         if (heartIn)
         {
+            if (waitForSecondPump != null)
+                StopCoroutine(waitForSecondPump);
+
             playerIsInactive = false;
 
             if (pumpingRoutine != null)
@@ -101,31 +119,18 @@ public class Heart : MonoBehaviour
             StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
             heartIn = false;
 
-            stageOne.Enable();
-
-            if (bpmTimes.Count > 1)
-            {
-                currentBpm = CalculateBPM();
-                currentBpmText.text = currentBpm.ToString();
-            }
-
             timeAtLastPump = Time.time;
             inactivityTime = Time.time;
 
             bpmTimes.Add(timeAtLastPump);
-            if (bpmTimes.Count > 10)
+            if (bpmTimes.Count > BPM_LIST_RANGE)
             {
                 bpmTimes.RemoveAt(0);
             }
 
-            if (WithinBPMRange())
+            if (bpmTimes.Count > 1)
             {
-                if (winConditionTimer == null)
-                    winConditionTimer = StartCoroutine(WinConditionTimer());
-            }
-            else
-            {
-                ResetProgression();
+                currentBpm = CalculateBPM();
             }
         }
     }
@@ -137,19 +142,35 @@ public class Heart : MonoBehaviour
 
         winConditionTimer = null;
         checkmark.fillAmount = 0;
+        winTimer = 0;
     }
 
-    private IEnumerator WinConditionTimer()
+    private void WinProgressionCheckmark()
     {
-        float startTime = Time.time;
+        if (won) return;
 
-        while (Time.time - startTime < timeForWinCondition)
+        if (WithinBPMRange() && winTimer < timeForWinCondition)
         {
-            float diffPercentage = (Time.time - startTime) / timeForWinCondition;
-            checkmark.fillAmount = diffPercentage;
-            yield return new WaitForEndOfFrame();
+            winTimer += Time.deltaTime;
+            checkmark.fillAmount = winTimer / timeForWinCondition;
+            return;
+        }
+        else if (!WithinBPMRange() && winTimer > 0)
+        {
+            winTimer -= Time.deltaTime;
+            checkmark.fillAmount = winTimer / timeForWinCondition;
+            return;
         }
 
+        if (WithinBPMRange() && winTimer >= timeForWinCondition)
+        {
+            StartCoroutine(WinRound());
+        }
+    }
+
+    private IEnumerator WinRound()
+    {
+        won = true;
         checkmark.fillAmount = 1;
         //play win sound effect
 
@@ -168,9 +189,9 @@ public class Heart : MonoBehaviour
     private void ChooseNewTargetBPM(Vector2Int ranges)
     {
         targetBPM = Random.Range(ranges.x, ranges.y);
-        targetBpmText.text = targetBPM.ToString();
+        rangeBar.SetGreenBarRange(BAR_MIN, BAR_MAX, targetBPM - BPM_RANGE, targetBPM + BPM_RANGE);
         ResetProgression();
-
+        won = false;
         roundIndex++;
     }
 
@@ -214,6 +235,13 @@ public class Heart : MonoBehaviour
         lowerBone.transform.localScale = new Vector3(bigScaleTarget, lowerBone.transform.localScale.y, bigScaleTarget);
     }
 
+    private IEnumerator WaitForSecondPump()
+    {
+        yield return new WaitForSeconds(SECOND_PUMP_TIME);
+        heartIn = false;
+        StartCoroutine(PumpingRoutine(false, 1.1f, 0.8f));
+    }
+
     private int CalculateBPM()
     {
         float totalDiff = 0;
@@ -222,14 +250,21 @@ public class Heart : MonoBehaviour
         {
             if (i != 0)
             {
-                float diff = (bpmTimes[i] - bpmTimes[i - 1]);
+                float diff = bpmTimes[i] - bpmTimes[i - 1];
                 totalDiff += diff;
             }
         }
 
-        float average = totalDiff / bpmTimes.Count;
 
-        float averageBpm = 60 / average;
+        float average = totalDiff / (bpmTimes.Count - 1);
+
+        print(average);
+        float averageBpm;
+
+        if (average > 0)
+            averageBpm = 60 / average;
+        else
+            averageBpm = 0;
 
 
         return Mathf.RoundToInt(averageBpm);
@@ -268,14 +303,16 @@ public class Heart : MonoBehaviour
         //TODO: play alarm audio
 
         currentBpm = 0;
-        currentBpmText.text = currentBpm.ToString();
     }
 
+    [ContextMenu("Player Win")]
     private void PlayerWon()
     {
         won = true;
-        GameManager.instance.CompleteMinigame(GameManager.HEART_MINIGAME);
-        SceneHandler.instance.LoadScene(0);
+        if (GameStateManager.instance.IsGamestate<HeartMinigameState>())
+        {
+            GameStateManager.instance.PlayerCompletedTask();
+        }
     }
 
 }

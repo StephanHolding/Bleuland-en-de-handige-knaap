@@ -12,40 +12,82 @@ public class Draggable : MonoBehaviour
     {
         if (draggable)
         {
-            if(Input.touchSupported && !Application.isEditor)
+            if (Input.touchSupported && !Application.isEditor)
             {
-                if (Input.touchCount>1) // rotate
+                if (Input.touchCount > 0)
                 {
-                    dragging = true;
-                    Touch touch = Input.GetTouch(0);
-                    transform.rotation *= Quaternion.Euler(0, touch.deltaPosition.x, 0);
+                    if (!dragging)
+                    {
+                        OnDraggingStart();
+                        dragging = true;
+                    }
+
+                    if (Input.touchCount == 1)
+                    {
+                        Touch touch = Input.GetTouch(0);
+                        Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, Mathf.Abs(Camera.main.transform.position.z)));
+                        transform.position = new Vector3(screenToWorld.x, screenToWorld.y, transform.position.z);
+                    }
+                    else //touchcount is larger than 1
+                    {
+                        Touch touch = Input.GetTouch(0);
+                        transform.rotation *= Quaternion.Euler(0, touch.deltaPosition.x, 0);
+                    }
                 }
-                else if (Input.touchCount == 1) // locate
+                else //touchcount is 0 or negative
                 {
-                    dragging = true;
-                    Touch touch = Input.GetTouch(0);
-                    transform.position = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, Mathf.Abs(Camera.main.transform.position.z)));
+                    if (dragging)
+                    {
+                        OnDraggingEnd();
+                        dragging = false;
+                    }
                 }
-                else
-                    dragging = false;
             }
-            else
+            else //DEBUG IN EDITOR ONLY
             {
                 if (Input.GetMouseButton(0)) // left
                 {
-                    dragging = true;
-                    transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
+                    if (!dragging)
+                    {
+                        OnDraggingStart();
+                        dragging = true;
+                    }
+
+                    Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
+                    transform.position = new Vector3(screenToWorld.x, screenToWorld.y, transform.position.z);
                 }
                 else if (Input.GetMouseButton(1)) // right
                 {
-                    dragging = true;
+                    if (!dragging)
+                    {
+                        OnDraggingStart();
+                        dragging = true;
+                    }
+
                     transform.rotation *= Quaternion.Euler(0, lastCursorPosition.x - Input.mousePosition.x, 0);
                 }
                 else
-                    dragging = false;
+                {
+                    if (dragging)
+                    {
+                        OnDraggingEnd();
+                        dragging = false;
+                    }
+                }
+
                 lastCursorPosition = Input.mousePosition;
             }
         }
+    }
+
+    protected virtual void OnDraggingStart()
+    {
+
+    }
+
+    protected virtual void OnDraggingEnd()
+    {
+
     }
 
 }
