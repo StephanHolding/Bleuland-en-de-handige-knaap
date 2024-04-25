@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{38c11766-7ef6-452e-9168-91516daff593}">
+		<property name="assetPath">
+			<value>Pencil Write/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f71ec785-5a18-4646-aef8-4d816c6d064f}</destination>
+		</relationship>
+	</object>
+</objects>

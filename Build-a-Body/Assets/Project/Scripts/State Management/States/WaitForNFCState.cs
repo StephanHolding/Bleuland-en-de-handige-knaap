@@ -4,10 +4,16 @@ public class WaitForNFCState : GameState
 {
 
     private NFCScanner scanner;
+    private AnimatedBook book;
+    private CameraMovementController camController;
+    private string organName;
 
     public override void OnStateEnter()
     {
         scanner = GameObject.FindObjectOfType<NFCScanner>();
+        book = GameObject.FindObjectOfType<AnimatedBook>();
+        camController = Camera.main.GetComponent<CameraMovementController>();
+
         scanner.EnableBackgroundScanning();
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
@@ -20,23 +26,29 @@ public class WaitForNFCState : GameState
 
     private void Scanner_OnNfcTagFound(string id, string payload)
     {
-        if (payload.StartsWith("scene="))
+        if (IsOrganName(payload))
         {
-            string sceneName = payload.Split('=', System.StringSplitOptions.RemoveEmptyEntries)[1];
-
-            ScreenLogger.Log("trying to load " + sceneName);
-
-            switch (sceneName)
-            {
-                case "Heart Minigame":
-                    SceneHandler.instance.OnSceneLoaded_Once += delegate
-                    {
-                        GameStateManager.instance.GoToGamestate<HeartMinigameState>();
-                    };
-                    break;
-            }
-
-            SceneHandler.instance.LoadScene(sceneName);
+            organName = payload;
+            camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);
         }
+    }
+
+    private void StartBookAnimation()
+    {
+        book.StartOpeningAnimation(LoadNextScene);
+    }
+
+    private void LoadNextScene()
+    {
+        SceneHandler.instance.OnSceneLoaded_Once += delegate
+        {
+            GameStateManager.instance.GoToGamestate<HeartMinigameState>();
+        };
+        SceneHandler.instance.LoadScene("Puzzle");
+    }
+
+    private bool IsOrganName(string payload)
+    {
+        return payload == "heart" || payload == "lungs";
     }
 }

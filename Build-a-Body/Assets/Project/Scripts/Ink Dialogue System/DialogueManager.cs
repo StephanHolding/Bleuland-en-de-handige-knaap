@@ -353,6 +353,10 @@ namespace Dialogue
                     FMODAudioManager.instance.StopAll();
                 }
             }));
+            AddCommand(new DialogueCommand<string>("camera", delegate (string targetTag)
+            {
+                Camera.main.transform.GetComponent<CameraMovementController>()?.GoTo(targetTag);
+            }));
         }
 
         private void AddCommand(DialogueCommandBase toAdd)

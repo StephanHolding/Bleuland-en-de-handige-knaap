@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovementController : MonoBehaviour
 {
-    public float moveSpeed = 5.0f; // The speed at which the camera moves.
-    public float rotationSpeed = 20.0f;
+    public float moveTime = 2;
 
     private Dictionary<string, Transform> cameraTargets = new Dictionary<string, Transform>();
     private Transform target; // The transform component of the target object.
@@ -14,25 +15,42 @@ public class CameraMovementController : MonoBehaviour
         FillTargetDictionary();
     }
 
-    void Update()
+    private IEnumerator CameraLerp(Transform target, Action callback)
     {
-        if (target != null)
+        float lerp = 0;
+
+        Vector3 originalPos = transform.position;
+        Quaternion originalRot = transform.rotation;
+
+        while (lerp < 1)
         {
-            // Smoothly move the camera to the desired position.
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, target.position, moveSpeed * Time.deltaTime);
-            Quaternion smoothedRotation = Quaternion.Lerp(transform.rotation, target.rotation, rotationSpeed * Time.deltaTime);
+            lerp += Time.deltaTime * moveTime;
+
+            Vector3 smoothedPosition = Vector3.Lerp(originalPos, target.position, Mathf.SmoothStep(0, 1, lerp));
+            Quaternion smoothedRotation = Quaternion.Lerp(originalRot, target.rotation, Mathf.SmoothStep(0, 1, lerp));
             transform.position = smoothedPosition;
             transform.rotation = smoothedRotation;
+
+            yield return new WaitForEndOfFrame();
         }
+
+        SnapToTarget(target);
+
+        callback?.Invoke();
     }
 
+
     // Method to be called externally to move the camera to an object with a specified tag.
-    public void GoTo(string tagName)
+    public void GoTo(string tagName, bool gradual = true, Action OnMoveFinished = null)
     {
         Transform targetObject = cameraTargets[tagName];
         if (targetObject != null)
         {
-            target = targetObject; // Set the target transform if the object is found.
+            if (gradual)
+                StartCoroutine(CameraLerp(targetObject, OnMoveFinished));
+            else
+                SnapToTarget(targetObject);
+
         }
         else
         {
@@ -45,7 +63,14 @@ public class CameraMovementController : MonoBehaviour
         CameraTarget[] targets = GameObject.FindObjectsOfType<CameraTarget>();
         foreach (CameraTarget cameraTarget in targets)
         {
+            cameraTarget.Init();
             cameraTargets.Add(cameraTarget.targetTag, cameraTarget.targetTransform);
         }
+    }
+
+    private void SnapToTarget(Transform target)
+    {
+        transform.position = target.position;
+        transform.rotation = target.rotation;
     }
 }
