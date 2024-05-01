@@ -20,6 +20,10 @@ public class NFCScanner : MonoBehaviour
             {
                 OnNfcTagFound?.Invoke("1", "heart");
             }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                OnNfcTagFound?.Invoke("2", "lungs");
+            }
         }
     }
 

@@ -44,7 +44,11 @@ public class WaitForNFCState : GameState
         {
             GameStateManager.instance.GoToGamestate<HeartMinigameState>();
         };
-        SceneHandler.instance.LoadScene("Puzzle");
+
+        if (organName == "heart")
+            SceneHandler.instance.LoadScene("Heart Puzzle");
+        else if (organName == "lungs")
+            SceneHandler.instance.LoadScene("Lungs Puzzle");
     }
 
     private bool IsOrganName(string payload)
