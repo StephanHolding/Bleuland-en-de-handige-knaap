@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a952f1e3-dd48-492e-952b-0c3e172a382b}">
+		<property name="assetPath">
+			<value>autumn-waltz-174280.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>159.94775510204082</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f71ec785-5a18-4646-aef8-4d816c6d064f}</destination>
+		</relationship>
+	</object>
+</objects>

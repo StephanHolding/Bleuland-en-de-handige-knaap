@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ca2113de-7138-4795-9e1b-d1b10201b437}">
+		<property name="assetPath">
+			<value>aristocratic-spin-waltz-191526.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>94.772244897959183</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f71ec785-5a18-4646-aef8-4d816c6d064f}</destination>
+		</relationship>
+	</object>
+</objects>

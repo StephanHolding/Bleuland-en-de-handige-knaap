@@ -40,15 +40,26 @@ public class WaitForNFCState : GameState
 
     private void LoadNextScene()
     {
-        SceneHandler.instance.OnSceneLoaded_Once += delegate
+        switch (organName)
         {
-            GameStateManager.instance.GoToGamestate<HeartMinigameState>();
-        };
+            case "heart":
 
-        if (organName == "heart")
-            SceneHandler.instance.LoadScene("Heart Puzzle");
-        else if (organName == "lungs")
-            SceneHandler.instance.LoadScene("Lungs Puzzle");
+                SceneHandler.instance.OnSceneLoaded_Once += delegate
+                {
+                    GameStateManager.instance.GoToGamestate<HeartMinigameState>();
+                };
+                SceneHandler.instance.LoadScene("Heart Puzzle");
+
+                break;
+
+            case "lungs":
+                SceneHandler.instance.OnSceneLoaded_Once += delegate
+                {
+                    GameStateManager.instance.GoToGamestate<LungsMinigameState>();
+                };
+                SceneHandler.instance.LoadScene("Lungs Puzzle");
+                break;
+        }
     }
 
     private bool IsOrganName(string payload)

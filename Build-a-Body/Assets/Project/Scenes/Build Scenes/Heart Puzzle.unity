@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -56}
+  m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 383.099, y: 104.4978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65705468
@@ -471,31 +471,34 @@ MonoBehaviour:
   - pieceName: Heart Puzzle Piece (13)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
+  - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (11)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
+  - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -1344,34 +1347,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -1904,34 +1910,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
+  - pieceName: Heart Puzzle Piece (13)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (11)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
+  - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -2218,34 +2227,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -2349,21 +2361,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Reversed Puzzle Piece Note (1)
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
-    offsetToPiece: {x: 2.0549998, y: 0.375, z: 0}
-  - pieceName: Puzzle Piece
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (13)
     distanceToPiece: 0
-    offsetToPiece: {x: 0.92899996, y: 0.44799995, z: 0}
-  - pieceName: Puzzle Piece (2)
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
-    offsetToPiece: {x: 2.709, y: 4.558, z: 0}
-  - pieceName: Puzzle Piece (3)
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.27100003, y: 5.848, z: 0}
-  - pieceName: Puzzle Piece (1)
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.28100002, y: 2.318, z: 0}
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (12)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (1)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
   snapThreshold: 0.75
 --- !u!120 &1147094787
 LineRenderer:
@@ -3095,34 +3125,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
+  - pieceName: Heart Puzzle Piece (11)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -3353,34 +3386,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -3567,34 +3603,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -3816,34 +3855,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -4328,36 +4370,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (13)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (8)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0.679}
+  - pieceName: Heart Puzzle Piece (7)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (12)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
+  - pieceName: Heart Puzzle Piece (9)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0.679}
   snapThreshold: 0.25
 --- !u!212 &1547843713
 SpriteRenderer:
@@ -4629,34 +4674,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
@@ -5761,34 +5809,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (11)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: -0.679}
+  - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25

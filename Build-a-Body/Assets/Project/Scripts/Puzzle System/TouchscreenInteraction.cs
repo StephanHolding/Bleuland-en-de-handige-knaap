@@ -32,19 +32,23 @@ public class TouchscreenInteraction : MonoBehaviour
     private void Shoot2DRaycast()
     {
         RaycastHit2D[] hits = Physics2D.GetRayIntersectionAll(mainCam.ScreenPointToRay(Input.mousePosition));
-        List<Draggable> draggables = new List<Draggable>();
-        foreach (RaycastHit2D hit in hits)
-        {
-            Draggable draggable = hit.transform.GetComponent<Draggable>();
-            if (draggable != null)
-            {
-                draggables.Add(draggable);
-            }
-        }
 
-        Draggable highestDraggable = GetHighestLayerNumber(draggables);
-        currentlyInteracting = highestDraggable;
-        currentlyInteracting.OnInteract(Input.mousePosition);
+        if (hits.Length > 0)
+        {
+            List<Draggable> draggables = new List<Draggable>();
+            foreach (RaycastHit2D hit in hits)
+            {
+                Draggable draggable = hit.transform.GetComponent<Draggable>();
+                if (draggable != null)
+                {
+                    draggables.Add(draggable);
+                }
+            }
+
+            Draggable highestDraggable = GetHighestLayerNumber(draggables);
+            currentlyInteracting = highestDraggable;
+            currentlyInteracting.OnInteract(Input.mousePosition);
+        }
     }
 
     private Draggable GetHighestLayerNumber(List<Draggable> draggables)

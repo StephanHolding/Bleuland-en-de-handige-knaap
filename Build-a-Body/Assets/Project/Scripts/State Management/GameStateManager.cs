@@ -44,8 +44,9 @@ public class GameStateManager : SingletonTemplateMono<GameStateManager>
     {
         AddStateToDictionary(new IntroState());
         AddStateToDictionary(new WaitForNFCState());
-        AddStateToDictionary(new HeartMinigameState());
+        AddStateToDictionary(new LungsMinigameState());
         AddStateToDictionary(new PlaceOrganState());
+        AddStateToDictionary(new HeartMinigameState());
     }
 
     private void AddStateToDictionary(GameState newState)

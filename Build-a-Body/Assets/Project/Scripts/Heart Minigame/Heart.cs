@@ -309,7 +309,7 @@ public class Heart : MonoBehaviour
     private void PlayerWon()
     {
         won = true;
-        if (GameStateManager.instance.IsGamestate<HeartMinigameState>())
+        if (GameStateManager.instance.IsGamestate<LungsMinigameState>())
         {
             GameStateManager.instance.PlayerCompletedTask();
         }

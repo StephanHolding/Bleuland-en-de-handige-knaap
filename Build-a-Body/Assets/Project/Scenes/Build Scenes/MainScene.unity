@@ -623,12 +623,17 @@ PrefabInstance:
     - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
         type: 3}
       propertyPath: fmodEvents.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
         type: 3}
       propertyPath: fmodEvents.Array.data[1].Path
       value: event:/SFX/writing sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[2].Path
+      value: event:/Music/puzzle bg
       objectReference: {fileID: 0}
     - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
         type: 3}
@@ -649,6 +654,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fmodEvents.Array.data[1].Guid.Data4
       value: -1717916144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[2].Guid.Data1
+      value: -113403786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[2].Guid.Data2
+      value: 1280588725
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[2].Guid.Data3
+      value: 1908379521
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585724528209613636, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
+        type: 3}
+      propertyPath: fmodEvents.Array.data[2].Guid.Data4
+      value: -14077359
       objectReference: {fileID: 0}
     - target: {fileID: 3192052720649528558, guid: 3f3b7aeb54656c24b80dc2ed451a8f3a,
         type: 3}
