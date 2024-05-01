@@ -96,6 +96,9 @@ public class PuzzlePiece : Draggable
 
     public override int GetLayerInfo()
     {
-        return spriteRenderer.sortingOrder;
+        if (spriteRenderer != null)
+            return spriteRenderer.sortingOrder;
+        else
+            return 0;
     }
 }
