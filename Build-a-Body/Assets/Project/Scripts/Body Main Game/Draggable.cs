@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -17,7 +16,15 @@ public class Draggable : MonoBehaviour
         }
     }
 
-    protected void OnMouseDown()
+    protected virtual void OnDraggingStart()
+    {
+    }
+
+    protected virtual void OnDraggingEnd()
+    {
+    }
+
+    public virtual void OnInteract(Vector2 screenPosition)
     {
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
         offset = transform.position - worldPoint;
@@ -25,17 +32,14 @@ public class Draggable : MonoBehaviour
         OnDraggingStart();
     }
 
-    protected void OnMouseUp()
+    public virtual void OnDeinteract()
     {
         dragging = false;
         OnDraggingEnd();
     }
 
-    protected virtual void OnDraggingStart()
+    public virtual int GetLayerInfo()
     {
-    }
-
-    protected virtual void OnDraggingEnd()
-    {
+        return 0;
     }
 }

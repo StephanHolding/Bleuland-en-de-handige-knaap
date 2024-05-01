@@ -23,6 +23,13 @@ public class PuzzlePiece : Draggable
 
     public float snapThreshold = 0.25f;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     protected override void OnDraggingEnd()
     {
 
@@ -85,5 +92,10 @@ public class PuzzlePiece : Draggable
     private void Snap(Vector3 targetPosition)
     {
         transform.position = targetPosition;
+    }
+
+    public override int GetLayerInfo()
+    {
+        return spriteRenderer.sortingOrder;
     }
 }

@@ -10,7 +10,8 @@ public class PuzzleManager : MonoBehaviour
 
         foreach (PuzzlePiece piece in allPieces)
         {
-            piece.transform.position = transform.position;
+            Vector2 unitCircle = Random.insideUnitCircle;
+            piece.transform.position = transform.position + new Vector3(unitCircle.x, unitCircle.y, 0);
         }
     }
 
