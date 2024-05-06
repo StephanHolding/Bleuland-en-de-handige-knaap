@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMOD_AudioManagement;
 using Ink.Runtime;
 using System.Collections;
@@ -28,6 +29,7 @@ namespace Dialogue
         private bool canSkip = true;
         private DialogueCharacter currentCharacter;
         private Button inputfieldSubmitButton;
+        private EventInstance talkingSoundReference;
         private bool isActive;
 
         private void Awake()
@@ -171,11 +173,24 @@ namespace Dialogue
 
                 uiText.text += toAdd;
 
-                if (toAdd != ' ')
+                if (dialogueOverrides.playSoundEachCharacter)
                 {
-                    if (!string.IsNullOrEmpty(dialogueOverrides.talkingSound))
-                        FMODAudioManager.instance.PlayOneShot(dialogueOverrides.talkingSound);
+                    if (toAdd != ' ')
+                    {
+                        if (!string.IsNullOrEmpty(dialogueOverrides.talkingSound))
+                            FMODAudioManager.instance.PlayOneShot(dialogueOverrides.talkingSound);
+                    }
                 }
+                else
+                {
+                    if (!FMODAudioManager.IsPlaying(talkingSoundReference))
+                    {
+                        if (!string.IsNullOrEmpty(dialogueOverrides.talkingSound))
+                            talkingSoundReference = FMODAudioManager.instance.Play(dialogueOverrides.talkingSound);
+                    }
+                }
+
+
 
                 yield return new WaitForSeconds(waitTime);
             }

@@ -14,6 +14,7 @@ namespace Dialogue
             public TMP_FontAsset fontAsset;
             public float talkingSpeed;
             public string talkingSound;
+            public bool playSoundEachCharacter;
         }
 
         public DialogueCharacterSettings characterSettings;

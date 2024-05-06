@@ -124,6 +124,12 @@ namespace FMOD_AudioManagement
             instance.setParameterByNameWithLabel(parameterName, value);
         }
 
+        public static bool IsPlaying(EventInstance instance)
+        {
+            instance.getPlaybackState(out PLAYBACK_STATE state);
+            return state == PLAYBACK_STATE.PLAYING;
+        }
+
     }
 
 }

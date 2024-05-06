@@ -7,6 +7,7 @@ public class AnimatedBook : MonoBehaviour
 
     public float lerpSpeed;
     public float animationSpeed;
+    public float backwardsMovement;
 
     private Animator anim;
 
@@ -18,12 +19,16 @@ public class AnimatedBook : MonoBehaviour
     public void StartOpeningAnimation(Action animationFinishedCallback)
     {
         StartCoroutine(LerpTowardsCamera(animationFinishedCallback));
-        anim.SetFloat("speed", animationSpeed);
-        anim.Play("Book open");
     }
 
     private IEnumerator LerpTowardsCamera(Action animationFinishedCallback)
     {
+
+        yield return StartCoroutine(PickOutOfBookcase());
+
+        anim.SetFloat("speed", animationSpeed);
+        anim.Play("Book open");
+
         float lerp = 0;
         Transform bookTarget = Camera.main.transform.GetChild(0).transform;
         Vector3 originalPos = transform.position;
@@ -41,6 +46,17 @@ public class AnimatedBook : MonoBehaviour
         }
 
         animationFinishedCallback?.Invoke();
+    }
+
+    private IEnumerator PickOutOfBookcase()
+    {
+        float moved = 0;
+        while (moved < backwardsMovement)
+        {
+            moved += Time.deltaTime * (lerpSpeed * 2);
+            transform.Translate(new Vector3(0, 0, -Time.deltaTime * (lerpSpeed * 2)), Space.Self);
+            yield return new WaitForEndOfFrame();
+        }
     }
 
 }

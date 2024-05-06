@@ -494,7 +494,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -1373,7 +1373,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -1936,7 +1936,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -2253,7 +2253,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -2387,7 +2387,7 @@ MonoBehaviour:
     offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: -0.679}
+    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
@@ -3151,7 +3151,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -3412,7 +3412,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -3629,7 +3629,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -3881,7 +3881,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -4372,37 +4372,37 @@ MonoBehaviour:
   allPieceDistances:
   - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (13)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (11)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0.679}
+    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &1547843713
 SpriteRenderer:
@@ -4465,7 +4465,7 @@ Transform:
   m_GameObject: {fileID: 1547843710}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0.679}
+  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4511,7 +4511,7 @@ Transform:
   m_GameObject: {fileID: 1685642651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.98, y: -3.89, z: 0.12564673}
+  m_LocalPosition: {x: -1.5, y: -2.56, z: 0.12564673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4703,7 +4703,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -5838,7 +5838,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: -0.679}
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
@@ -6049,12 +6049,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 1288261075}
   - {fileID: 1497212069}
-  - {fileID: 1147094788}
   - {fileID: 268930874}
   - {fileID: 1685642653}
   - {fileID: 1991937210}
   - {fileID: 1747004994}
   - {fileID: 242865351}
+  - {fileID: 1147094788}
   - {fileID: 1547843714}
   - {fileID: 1466042420}
   - {fileID: 68490996}

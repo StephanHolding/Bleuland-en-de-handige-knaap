@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cb45d97ac8a2041b158c4127c2ed36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
+  dontDestroyOnLoad: 1
   fmodEvents:
   - Guid:
       Data1: 1250845049
@@ -52,3 +52,21 @@ MonoBehaviour:
       Data3: 1021213833
       Data4: 273607717
     Path: event:/SFX/talk sound
+  - Guid:
+      Data1: 1716850949
+      Data2: 1090007151
+      Data3: -100903496
+      Data4: -1717916144
+    Path: event:/SFX/writing sound
+  - Guid:
+      Data1: -113403786
+      Data2: 1280588725
+      Data3: 1908379521
+      Data4: -14077359
+    Path: event:/Music/puzzle bg
+  - Guid:
+      Data1: 1135235969
+      Data2: 1193745794
+      Data3: 1649080239
+      Data4: -371112251
+    Path: event:/SFX/Puzzle snap

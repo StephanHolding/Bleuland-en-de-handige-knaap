@@ -1,3 +1,4 @@
+using FMOD_AudioManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -92,6 +93,8 @@ public class PuzzlePiece : Draggable
     private void Snap(Vector3 targetPosition)
     {
         transform.position = targetPosition;
+
+        FMODAudioManager.instance.PlayOneShot("Puzzle snap");
     }
 
     public override int GetLayerInfo()

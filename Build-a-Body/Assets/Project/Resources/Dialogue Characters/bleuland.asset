@@ -18,3 +18,4 @@ MonoBehaviour:
     fontAsset: {fileID: 11400000, guid: 92eff32d83b78744682fcc1d159fd4f6, type: 2}
     talkingSpeed: 25
     talkingSound: writing sound
+    playSoundEachCharacter: 0
