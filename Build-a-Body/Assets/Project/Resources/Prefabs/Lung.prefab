@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7811775589478964360}
+  - component: {fileID: 2594053848016120922}
   m_Layer: 0
   m_Name: Lung
   m_TagString: Untagged
@@ -24,9 +25,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182713481345416778}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7092528, y: 0.08166938, z: -0.6993356, w: 0.03493414}
+  m_LocalRotation: {x: 0.7092526, y: 0.08167462, z: -0.69933504, w: 0.034934904}
   m_LocalPosition: {x: -3.9599283, y: 1.7120595, z: -1.8065543}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0884, y: 1.0884, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3323102117957160146}
@@ -36,7 +37,24 @@ Transform:
   - {fileID: 4571543780726401338}
   - {fileID: 2134888447449751530}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 170.573, y: 88.872, z: -3.893982}
+--- !u!114 &2594053848016120922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182713481345416778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30228d058513e8142aa7341b7ae9a387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 1
+  targetPosition: {x: -2.551, y: 2.81, z: -1.328}
+  targetOrientation: {x: 0.70506114, y: 0.112243064, z: -0.69717246, w: 0.065122925}
+  targetCameraPosition: {x: 0, y: 0, z: 0}
+  organID: 
 --- !u!1 &2603450111647703566
 GameObject:
   m_ObjectHideFlags: 0

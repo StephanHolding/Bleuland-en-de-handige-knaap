@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    public bool draggable;
+    public bool draggable = true;
 
     protected bool dragging;
     private Vector3 offset;
