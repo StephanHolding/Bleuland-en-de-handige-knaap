@@ -97,7 +97,7 @@ public class PuzzlePiece : Draggable
         transform.position = targetPosition;
 
         FMODAudioManager.instance.PlayOneShot("Puzzle snap");
-        //  ParticleEffectHandler.instance.PlayParticle("Snap",)
+        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", polygonCollider.bounds.center, Quaternion.identity);
     }
 
     public override int GetLayerInfo()
