@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Organ : Draggable
+public class Organ : Draggable3D
 {
 
     public Vector3 targetPosition;
@@ -58,5 +58,10 @@ public class Organ : Draggable
 
             GameStateManager.instance.PlayerCompletedTask();
         }
+    }
+
+    public override int GetLayerInfo()
+    {
+        return 0;
     }
 }

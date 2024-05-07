@@ -39,10 +39,18 @@ public class OrganSpawner : MonoBehaviour
         //again, same name as the gameobject in prefabs
         string lastFinishedMinigame = Blackboard.Read<string>(BlackboardKeys.LAST_FINISHED_MINIGAME);
         GameObject prefab = Resources.Load<GameObject>("Prefabs/" + lastFinishedMinigame);
-        GameObject spawnedObject = Instantiate(prefab, transform.position, prefab.transform.rotation);
+        Organ prefabComponent = prefab.GetComponent<Organ>();
+        GameObject spawnedObject = Instantiate(prefab, new Vector3(transform.position.x, prefabComponent.targetPosition.y, transform.position.z), prefab.transform.rotation);
         Organ spawnedComponent = spawnedObject.GetComponent<Organ>();
 
         spawnedComponent.draggable = true;
+    }
+
+    [ContextMenu(" spawn heart")]
+    private void SpawnHeart()
+    {
+        Blackboard.Write(BlackboardKeys.LAST_FINISHED_MINIGAME, "Heart");
+        SpawnMoveableOrgans();
     }
 
     /*    public void Update()

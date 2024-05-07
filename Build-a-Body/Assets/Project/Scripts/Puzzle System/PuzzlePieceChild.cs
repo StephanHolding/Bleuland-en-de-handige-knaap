@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PuzzlePieceChild : Draggable
+public class PuzzlePieceChild : Draggable2D
 {
 
     private PuzzlePiece piece;

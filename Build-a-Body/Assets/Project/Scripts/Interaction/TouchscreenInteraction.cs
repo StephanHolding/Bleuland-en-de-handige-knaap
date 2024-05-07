@@ -17,6 +17,7 @@ public class TouchscreenInteraction : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot2DRaycast();
+            Shoot3DRaycast();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -51,6 +52,20 @@ public class TouchscreenInteraction : MonoBehaviour
         }
     }
 
+
+    private void Shoot3DRaycast()
+    {
+        if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+        {
+            print(1);
+            Draggable draggable = hit.transform.GetComponent<Draggable>();
+            if (draggable != null)
+            {
+                currentlyInteracting = draggable;
+                currentlyInteracting.OnInteract(Input.mousePosition);
+            }
+        }
+    }
     private Draggable GetHighestLayerNumber(List<Draggable> draggables)
     {
         int currentHighestNumber = -1;

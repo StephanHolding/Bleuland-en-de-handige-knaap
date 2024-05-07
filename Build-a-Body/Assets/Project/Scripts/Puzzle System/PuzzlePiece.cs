@@ -2,7 +2,7 @@ using FMOD_AudioManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzlePiece : Draggable
+public class PuzzlePiece : Draggable2D
 {
     [System.Serializable]
     public class PieceDistance
