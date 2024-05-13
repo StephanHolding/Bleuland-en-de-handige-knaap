@@ -57,7 +57,7 @@ public class PlaceOrganState : GameState
                     DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("HEART_PLACED"), delegate { GameStateManager.instance.GoToGamestate<WaitForNFCState>(); });
                     break;
                 case "Lungs":
-                    DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("LUNGS_PLACED"), delegate { organSpawner.SpawnMoveableOrgans(); });
+                    DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("LUNGS_PLACED"), delegate { GameStateManager.instance.GoToGamestate<WaitForNFCState>(); });
                     break;
             }
         }

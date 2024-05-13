@@ -639,7 +639,7 @@ MonoBehaviour:
   targetPosition: {x: -2.322, y: 2.9155, z: -1.239}
   targetOrientation: {x: -0.7642584, y: -0.25524002, z: 0.57172585, w: 0.1545679}
   targetCameraPosition: {x: 0, y: 0, z: 0}
-  organID: 
+  organID: Heart
 --- !u!135 &9055151297243250784
 SphereCollider:
   m_ObjectHideFlags: 0
