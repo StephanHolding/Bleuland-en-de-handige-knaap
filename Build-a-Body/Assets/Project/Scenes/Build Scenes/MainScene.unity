@@ -1897,16 +1897,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Box - Speech
       objectReference: {fileID: 0}
-    - target: {fileID: 7657303765370795686, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_EffectDistance.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7657303765370795686, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_EffectDistance.y
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1946,21 +1936,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 460.05005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.91163
-      objectReference: {fileID: 0}
-    - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.91163
-      objectReference: {fileID: 0}
-    - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.91163
       objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
@@ -2021,36 +1996,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_overflowMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9214654646661587334, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -38.69995
-      objectReference: {fileID: 0}
-    - target: {fileID: 9214654646661587334, guid: 07700ec4caef18949ba5835f39f22216,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 34.300003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3002,7 +2947,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e8c94187da8788942b24856fe24e2f49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

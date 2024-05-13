@@ -129,7 +129,6 @@ namespace FMOD_AudioManagement
             instance.getPlaybackState(out PLAYBACK_STATE state);
             return state == PLAYBACK_STATE.PLAYING;
         }
-
     }
 
 }

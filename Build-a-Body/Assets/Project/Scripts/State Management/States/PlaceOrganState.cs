@@ -1,4 +1,5 @@
 using Dialogue;
+using FMOD_AudioManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class PlaceOrganState : GameState
 {
     private OrganSpawner organSpawner;
     private CameraMovementController camController;
+    private string lastCompletedMinigame;
 
     private const int ORGAN_AMOUNT_FOR_COMPLETION = 2;
 
@@ -14,9 +16,22 @@ public class PlaceOrganState : GameState
         organSpawner = GameObject.FindObjectOfType<OrganSpawner>();
         camController = Camera.main.GetComponent<CameraMovementController>();
 
+        FMODAudioManager.instance.Play("main bg");
+
         organSpawner.SpawnLockedOrgans();
         camController.GoTo("bookcase", gradual: false);
-        DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("HEART_COMPLETED"), delegate { organSpawner.SpawnMoveableOrgans(); });
+
+        lastCompletedMinigame = Blackboard.Read<string>(BlackboardKeys.LAST_FINISHED_MINIGAME);
+
+        switch (lastCompletedMinigame)
+        {
+            case "Heart":
+                DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("HEART_COMPLETED"), delegate { organSpawner.SpawnMoveableOrgans(); });
+                break;
+            case "Lungs":
+                DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("LUNGS_COMPLETED"), delegate { organSpawner.SpawnMoveableOrgans(); });
+                break;
+        }
     }
 
     public override void PlayerCompletedTask()
@@ -36,7 +51,15 @@ public class PlaceOrganState : GameState
         }
         else
         {
-            DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("HEART_PLACED"), delegate { GameStateManager.instance.GoToGamestate<WaitForNFCState>(); });
+            switch (lastCompletedMinigame)
+            {
+                case "Heart":
+                    DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("HEART_PLACED"), delegate { GameStateManager.instance.GoToGamestate<WaitForNFCState>(); });
+                    break;
+                case "Lungs":
+                    DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("LUNGS_PLACED"), delegate { organSpawner.SpawnMoveableOrgans(); });
+                    break;
+            }
         }
     }
 }
