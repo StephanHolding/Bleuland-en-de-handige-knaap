@@ -26,6 +26,6 @@ Ah... jammer, dan zal ik het een andere keer moeten proberen.
 
 Nou [player_name], het is maar eens tijd dat ik weer verder ga.
 Bedankt voor je hulp, en fijne middag!
-Tot ziens! #loadscene Exitscene
+Tot ziens! #loadscene Title_Screen
 
 -> END

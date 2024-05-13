@@ -39,15 +39,7 @@ public class PlaceOrganState : GameState
         List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
         if (lockedOrgans.Count >= ORGAN_AMOUNT_FOR_COMPLETION)
         {
-            DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("GAME_END"), delegate
-            {
-                SceneHandler.instance.OnSceneLoaded_Once += delegate
-                {
-                    GameStateManager.instance.GoToGamestate<IntroState>();
-                };
-
-                SceneHandler.instance.LoadScene(0);
-            });
+            DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("GAME_END"));
         }
         else
         {
