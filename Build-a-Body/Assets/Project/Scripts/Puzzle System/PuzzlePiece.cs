@@ -25,12 +25,12 @@ public class PuzzlePiece : Draggable2D
     public float snapThreshold = 0.25f;
 
     private SpriteRenderer spriteRenderer;
-    private PolygonCollider2D polygonCollider;
+    private Collider2D collider;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        polygonCollider = GetComponent<PolygonCollider2D>();
+        collider = GetComponent<Collider2D>();
     }
 
     protected override void OnDraggingEnd()
@@ -97,7 +97,7 @@ public class PuzzlePiece : Draggable2D
         transform.position = targetPosition;
 
         FMODAudioManager.instance.PlayOneShot("Puzzle snap");
-        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", polygonCollider.bounds.center, Quaternion.identity);
+        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", collider.bounds.center, Quaternion.identity);
     }
 
     public override int GetLayerInfo()

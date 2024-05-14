@@ -15,6 +15,6 @@ public class LungsMinigameState : GameState
         {
             GameStateManager.instance.GoToGamestate<PlaceOrganState>();
         };
-        SceneHandler.instance.LoadScene(0);
+        SceneHandler.instance.LoadScene("Main_Scene");
     }
 }

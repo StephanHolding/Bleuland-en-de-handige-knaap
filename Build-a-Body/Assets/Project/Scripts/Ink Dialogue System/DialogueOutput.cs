@@ -44,14 +44,14 @@ namespace Dialogue
             {
                 transform.GetChild(0).gameObject.SetActive(toggle);
 
-                /*                uiText.transform.parent.gameObject.SetActive(toggle);
-                                characterNameText.transform.parent.gameObject.SetActive(toggle);
+                uiText.transform.parent.gameObject.SetActive(toggle);
+                characterNameText.transform.parent.gameObject.SetActive(toggle);
 
-                                if (inputfield != null)
-                                    inputfield.gameObject.SetActive(false);
+                if (inputfield != null)
+                    inputfield.gameObject.SetActive(false);
 
-                                DisableBackgroundGraphic();
-                                HideChoiceUI();*/
+                DisableBackgroundGraphic();
+                HideChoiceUI();
 
                 isActive = toggle;
             }
@@ -216,6 +216,11 @@ namespace Dialogue
         {
             if (graphicSpace != null)
                 graphicSpace.gameObject.SetActive(false);
+        }
+
+        public void InputfieldOnInputChangedSoundEffect()
+        {
+            FMODAudioManager.instance.PlayOneShot("writing sound");
         }
 
     }

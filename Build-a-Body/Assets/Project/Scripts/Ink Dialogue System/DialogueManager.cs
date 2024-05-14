@@ -308,6 +308,8 @@ namespace Dialogue
             }));
             AddCommand(new DialogueCommand<string>("inputfield", delegate (string variableName)
             {
+                //Story is locked from DialogueInput class
+
                 output.ActivateInputfield(delegate (string arg0)
                 {
                     DialogueBlackboard.SetVariable(variableName, arg0);

@@ -55,7 +55,7 @@ MonoBehaviour:
   targetPosition: {x: -2.551, y: 2.81, z: -1.328}
   targetOrientation: {x: 0.70506114, y: 0.112243064, z: -0.69717246, w: 0.065122925}
   targetCameraPosition: {x: 0, y: 0, z: 0}
-  organID: 
+  organID: Lungs
 --- !u!65 &6123631342235009114
 BoxCollider:
   m_ObjectHideFlags: 0

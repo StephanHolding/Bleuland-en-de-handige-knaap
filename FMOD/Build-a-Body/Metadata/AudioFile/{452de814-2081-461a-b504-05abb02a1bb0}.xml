@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{452de814-2081-461a-b504-05abb02a1bb0}">
+		<property name="assetPath">
+			<value>Cello Suite - Bach [COPYRIGHT FREE].mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>137.97877551020409</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f71ec785-5a18-4646-aef8-4d816c6d064f}</destination>
+		</relationship>
+	</object>
+</objects>

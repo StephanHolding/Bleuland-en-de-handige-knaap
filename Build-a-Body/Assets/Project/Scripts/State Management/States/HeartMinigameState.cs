@@ -15,6 +15,6 @@ public class HeartMinigameState : GameState
         {
             GameStateManager.instance.GoToGamestate<PlaceOrganState>();
         };
-        SceneHandler.instance.LoadScene(0);
+        SceneHandler.instance.LoadScene("Main_Scene");
     }
 }

@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638511912935284597
+  lastModified: 638512061974550485
   FileSizes:
   - Name: Desktop
     Value: 22528
@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 195
+--- !u!114 &-3467672754560160621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/main bg
+  m_EditorClassIdentifier: 
+  Path: event:/Music/main bg
+  Guid:
+    Data1: -1013522186
+    Data2: 1340465606
+    Data3: -348631891
+    Data4: -959053552
+  Banks:
+  - {fileID: 1081184419095334253}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 137978
 --- !u!114 &-2313193111049683425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +116,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638489419651008955
+  lastModified: 638512009024852951
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -109,10 +136,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638511912935065158
+  lastModified: 638512061974280863
   FileSizes:
   - Name: Desktop
-    Value: 1012
+    Value: 1062
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -136,12 +163,13 @@ MonoBehaviour:
   - {fileID: -3614433778913573411}
   - {fileID: 6371022008463490835}
   - {fileID: 8246422358893413792}
+  - {fileID: -3467672754560160621}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2313193111049683425}
   StringsBanks:
   - {fileID: -1162286593148318676}
-  cacheTime: 638511912935284597
+  cacheTime: 638512061974550485
   cacheVersion: 131617
 --- !u!114 &1081184419095334253
 MonoBehaviour:
@@ -158,10 +186,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638511912935274600
+  lastModified: 638512061974540516
   FileSizes:
   - Name: Desktop
-    Value: 1472192
+    Value: 3219744
   Exists: 1
 --- !u!114 &6371022008463490835
 MonoBehaviour:

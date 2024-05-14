@@ -48,7 +48,7 @@ public class WaitForNFCState : GameState
                 {
                     GameStateManager.instance.GoToGamestate<HeartMinigameState>();
                 };
-                SceneHandler.instance.LoadScene("Heart Puzzle");
+                SceneHandler.instance.LoadScene("Heart_Puzzle");
 
                 break;
 
@@ -57,7 +57,7 @@ public class WaitForNFCState : GameState
                 {
                     GameStateManager.instance.GoToGamestate<LungsMinigameState>();
                 };
-                SceneHandler.instance.LoadScene("Lungs Puzzle");
+                SceneHandler.instance.LoadScene("Lungs_Puzzle");
                 break;
         }
     }

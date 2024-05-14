@@ -57,7 +57,6 @@ public class TouchscreenInteraction : MonoBehaviour
     {
         if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         {
-            print(1);
             Draggable draggable = hit.transform.GetComponent<Draggable>();
             if (draggable != null)
             {

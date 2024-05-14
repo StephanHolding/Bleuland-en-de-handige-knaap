@@ -70,3 +70,9 @@ MonoBehaviour:
       Data3: 1649080239
       Data4: -371112251
     Path: event:/SFX/Puzzle snap
+  - Guid:
+      Data1: -1013522186
+      Data2: 1340465606
+      Data3: -348631891
+      Data4: -959053552
+    Path: event:/Music/main bg

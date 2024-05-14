@@ -1,4 +1,5 @@
 using Dialogue;
+using FMOD_AudioManagement;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -12,6 +13,7 @@ public class IntroState : GameState
         camController = Camera.main.transform.GetComponent<CameraMovementController>();
         camController.GoTo("overview");
 
+        FMODAudioManager.instance.Play("main bg");
 
         Debug.Log("Current localization: " + LocalizationSettings.SelectedLocale.Identifier.Code);
 
