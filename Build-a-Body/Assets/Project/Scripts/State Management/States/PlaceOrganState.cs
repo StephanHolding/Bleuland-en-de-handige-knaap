@@ -23,6 +23,7 @@ public class PlaceOrganState : GameState
 
         lastCompletedMinigame = Blackboard.Read<string>(BlackboardKeys.LAST_FINISHED_MINIGAME);
 
+
         switch (lastCompletedMinigame)
         {
             case "Heart":

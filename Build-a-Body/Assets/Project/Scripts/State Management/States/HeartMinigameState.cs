@@ -11,6 +11,10 @@ public class HeartMinigameState : GameState
     {
         Blackboard.Write(BlackboardKeys.LAST_FINISHED_MINIGAME, "Heart");
 
+        byte finishedOrgans = Blackboard.Read<byte>(BlackboardKeys.FINISHED_ORGANS);
+        finishedOrgans |= 1 << (int)BlackboardKeys.OrganBitIndex.Heart;
+        Blackboard.Write(BlackboardKeys.FINISHED_ORGANS, finishedOrgans);
+
         SceneHandler.instance.OnSceneLoaded_Once += delegate
         {
             GameStateManager.instance.GoToGamestate<PlaceOrganState>();

@@ -674,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 702140373}
   serializedVersion: 2
   m_LocalRotation: {x: 0.50000006, y: -0.49999994, z: 0.50000054, w: 0.49999955}
-  m_LocalPosition: {x: -2.49, y: 6.34, z: -1.36}
+  m_LocalPosition: {x: -2.3, y: 6.16, z: -1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -832,7 +832,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 2.2
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -856,15 +856,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946723833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.056821164, y: -0.39160863, z: 0.02422618, w: 0.91805625}
-  m_LocalPosition: {x: 3.6977959, y: 4.2050047, z: -3.909552}
+  m_LocalRotation: {x: 0.0071934867, y: -0.4181984, z: 0.003044562, w: 0.90832216}
+  m_LocalPosition: {x: 4.59, y: 3.09, z: -3.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 919030213}
   - {fileID: 582298026}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.895, y: -49.444, z: -0.028}
 --- !u!114 &946723838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,6 +1917,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 136.004
       objectReference: {fileID: 0}
+    - target: {fileID: 6169417981732015047, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6186670174531720514, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1977,11 +1982,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfa45ae757d9a634eb66774dffcb051f, type: 2}
+    - target: {fileID: 8409233725167691485, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8426822795763189246, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3cbdcc8976d5e664bb1e308f86eb7d3f, type: 2}
+    - target: {fileID: 8554284060967371061, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9103388358052567267, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2035,6 +2050,6 @@ SceneRoots:
   - {fileID: 1566017473}
   - {fileID: 177584310}
   - {fileID: 1049854563}
-  - {fileID: 946723837}
   - {fileID: 43570854}
+  - {fileID: 946723837}
   - {fileID: 1333501196}

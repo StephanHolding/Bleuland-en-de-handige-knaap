@@ -11,7 +11,7 @@ public class Organ : Draggable3D
     public string organID;
 
 
-    private const float DISTANCE_THRESHOLD = 1f;
+    private const float DISTANCE_THRESHOLD = 0.1f;
     private const float ROTATION_THRESHOLD = 30f;
 
     [ContextMenu("Save Position")]
@@ -19,6 +19,14 @@ public class Organ : Draggable3D
     {
         targetPosition = transform.position;
         targetOrientation = transform.rotation;
+    }
+
+    protected override void OnDraggingEnd()
+    {
+        if (IsInCorrectPosition())
+        {
+            OnOrganPlacedCorrectly();
+        }
     }
 
     public bool IsInCorrectPosition()
@@ -29,18 +37,8 @@ public class Organ : Draggable3D
         return Vector3.Distance(targetPosition, transform.position) <= DISTANCE_THRESHOLD;
     }
 
-    protected override void OnDraggingEnd()
-    {
-        print("1");
-        if (IsInCorrectPosition())
-        {
-            print("2");
-            OrganPlacedCorrectly();
-        }
-    }
-
     [ContextMenu("Override Organ Placing")]
-    private void OrganPlacedCorrectly()
+    private void OnOrganPlacedCorrectly()
     {
         transform.position = targetPosition;
         transform.rotation = targetOrientation;

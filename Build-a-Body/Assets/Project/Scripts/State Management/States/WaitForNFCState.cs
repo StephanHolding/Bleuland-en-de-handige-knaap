@@ -28,8 +28,11 @@ public class WaitForNFCState : GameState
     {
         if (IsOrganName(payload))
         {
-            organName = payload;
-            camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);
+            if (CanPlayMinigame(payload))
+            {
+                organName = payload;
+                camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);
+            }
         }
     }
 
@@ -65,5 +68,21 @@ public class WaitForNFCState : GameState
     private bool IsOrganName(string payload)
     {
         return payload == "heart" || payload == "lungs";
+    }
+
+    private bool CanPlayMinigame(string payload)
+    {
+        byte finishedOrgans = Blackboard.Read<byte>(BlackboardKeys.FINISHED_ORGANS);
+
+        if (payload == "heart")
+        {
+            return (finishedOrgans & (1 << (int)BlackboardKeys.OrganBitIndex.Heart)) == 0;
+        }
+        else if (payload == "lungs")
+        {
+            return (finishedOrgans & (1 << (int)BlackboardKeys.OrganBitIndex.Lungs)) == 0;
+        }
+
+        return false;
     }
 }

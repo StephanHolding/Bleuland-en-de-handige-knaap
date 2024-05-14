@@ -4,7 +4,7 @@ public abstract class Draggable3D : Draggable
 {
     public override void OnInteract(Vector2 screenPosition)
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
+        Vector3 worldPoint = CreatePointOnPlane();
         offset = transform.position - worldPoint;
         dragging = true;
         OnDraggingStart();
@@ -18,7 +18,19 @@ public abstract class Draggable3D : Draggable
 
     public override void Dragging()
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
-        transform.position = new Vector3(worldPoint.x, transform.position.y, worldPoint.z) + new Vector3(offset.x, 0, offset.z);
+        transform.position = CreatePointOnPlane() + offset;
+    }
+
+    private Vector3 CreatePointOnPlane()
+    {
+        Plane plane = new Plane(Vector3.up, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (plane.Raycast(ray, out float enter))
+        {
+            Vector3 raypoint = ray.GetPoint(enter);
+            return raypoint;
+        }
+
+        return Vector3.zero;
     }
 }

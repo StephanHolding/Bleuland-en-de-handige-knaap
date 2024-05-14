@@ -43,6 +43,13 @@ public static class Blackboard
 
 public static class BlackboardKeys
 {
+    public enum OrganBitIndex
+    {
+        Heart = 0,
+        Lungs = 1
+    }
+
     public const string LAST_FINISHED_MINIGAME = "lfm";
     public const string LOCKED_ORGANS = "lo";
+    public const string FINISHED_ORGANS = "fo";
 }
