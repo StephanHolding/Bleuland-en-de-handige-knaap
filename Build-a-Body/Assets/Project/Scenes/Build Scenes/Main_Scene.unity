@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 3c297511d083c044c9d4d837e77b27bb,
+  m_LightingDataAsset: {fileID: 112000000, guid: 95aaea01960169c4893d1369919e49d4,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 432a02030085fc344aba323ed14193a1,
     type: 2}
@@ -2174,6 +2174,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8b0bf7a6d391b6048b21cefa804bb3b0, type: 2}
+    - target: {fileID: 6635985513048673133, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49f121f9c0b4c654a80acb1fe9923d27, type: 2}
+    - target: {fileID: 6635985513048673133, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e36c311aea055b54ea380c1f17b3acb3, type: 2}
+    - target: {fileID: 6635985513048673133, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93960d451f6b7044b8cea8ce5c40d231, type: 2}
     - target: {fileID: 7228470266666855114, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2193,6 +2208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -113.361
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510977018180015466, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7746205981258140423, guid: 08d19f25fbf2d3142b15d34c7a2a6835,
         type: 3}
