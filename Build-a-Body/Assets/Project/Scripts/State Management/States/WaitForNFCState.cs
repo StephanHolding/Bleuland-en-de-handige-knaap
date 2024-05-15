@@ -8,11 +8,17 @@ public class WaitForNFCState : GameState
     private CameraMovementController camController;
     private string organName;
 
+    private GameObject cheatButtons;
+
     public override void OnStateEnter()
     {
         scanner = GameObject.FindObjectOfType<NFCScanner>();
         book = GameObject.FindObjectOfType<AnimatedBook>();
         camController = Camera.main.GetComponent<CameraMovementController>();
+
+        cheatButtons = GameObject.Find("CHEAT BUTTONS");
+
+        cheatButtons.transform.GetChild(0).gameObject.SetActive(true);
 
         scanner.EnableBackgroundScanning();
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
@@ -30,6 +36,8 @@ public class WaitForNFCState : GameState
         {
             if (CanPlayMinigame(payload))
             {
+                cheatButtons.transform.GetChild(0).gameObject.SetActive(false);
+
                 organName = payload;
                 camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);
             }

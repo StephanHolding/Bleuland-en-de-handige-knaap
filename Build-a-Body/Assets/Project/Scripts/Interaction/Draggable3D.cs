@@ -24,7 +24,7 @@ public abstract class Draggable3D : Draggable
     private Vector3 CreatePointOnPlane()
     {
         Plane plane = new Plane(Vector3.up, transform.position);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(TouchscreenInteraction.GetScreenInputPosition());
         if (plane.Raycast(ray, out float enter))
         {
             Vector3 raypoint = ray.GetPoint(enter);

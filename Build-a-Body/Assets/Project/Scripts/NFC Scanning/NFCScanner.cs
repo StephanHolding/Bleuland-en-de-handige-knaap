@@ -15,16 +15,22 @@ public class NFCScanner : MonoBehaviour
         {
             Scan();
 
-            //DEBUGGING IN EDTOR ONLY:
+            //DEBUGGING ONLY, REMOVE IN FINAL BUILD !!
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                OnNfcTagFound?.Invoke("1", "heart");
+                OverrideNFCScan("heart");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                OnNfcTagFound?.Invoke("2", "lungs");
+                OverrideNFCScan("lungs");
             }
         }
+    }
+
+    //DEBUGGING ONLY, REMOVE IN FINAL BUILD !!
+    public void OverrideNFCScan(string result)
+    {
+        OnNfcTagFound?.Invoke("1", result);
     }
 
     public void EnableBackgroundScanning()
