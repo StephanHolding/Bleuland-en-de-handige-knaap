@@ -1,5 +1,5 @@
 # 使用官方的 Node.js 18 运行时镜像作为基础镜像
-FROM node:18.17.1
+FROM node:18.17.1-alpine
 
 # 创建并设置工作目录
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # 暴露应用程序运行的端口
-EXPOSE 3000
+EXPOSE 3030
 
 # 运行应用程序
 CMD ["npm", "start"]
