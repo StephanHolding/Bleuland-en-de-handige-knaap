@@ -43,6 +43,8 @@ public class OrganSpawner : MonoBehaviour
         GameObject spawnedObject = Instantiate(prefab, new Vector3(transform.position.x, prefabComponent.targetPosition.y, transform.position.z), prefab.transform.rotation);
         Organ spawnedComponent = spawnedObject.GetComponent<Organ>();
 
+        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", spawnedObject.transform.position, spawnedComponent.transform.rotation);
+
         spawnedComponent.draggable = true;
     }
 
