@@ -105,6 +105,6 @@ public class PuzzlePiece : Draggable2D
         if (spriteRenderer != null)
             return spriteRenderer.sortingOrder;
         else
-            return 0;
+            return 99;
     }
 }

@@ -468,31 +468,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (5)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (4)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -542,8 +542,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: 05ba085b5be597e4a8394ac69d7aea97, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 182c6b2afd197f545ab294d384273841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -563,13 +563,225 @@ Transform:
   m_GameObject: {fileID: 68490992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 615513070}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &70001875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70001876}
+  - component: {fileID: 70001879}
+  - component: {fileID: 70001878}
+  - component: {fileID: 70001877}
+  m_Layer: 0
+  m_Name: 13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70001876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70001875}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825970639}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70001877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70001875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7202ae4c053dcd54eb7ffb271b596d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 0
+--- !u!60 &70001878
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70001875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21.599998, y: 38.399998}
+    newSize: {x: 21.599998, y: 38.399998}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.4062499, y: -1.5562499}
+      - {x: 1.4062499, y: -0.84374994}
+      - {x: 1.3124999, y: -0.67499995}
+      - {x: 1.2937499, y: -0.525}
+      - {x: 1.3499999, y: -0.37499997}
+      - {x: 1.2187499, y: -0.2625}
+      - {x: 1.18125, y: -0.2625}
+      - {x: 1.14375, y: -0.28124997}
+      - {x: 0.88124996, y: 0.20624998}
+      - {x: 0.65624994, y: 0.58124995}
+      - {x: 0.45, y: 0.88124996}
+      - {x: 0.41249996, y: 0.8249999}
+      - {x: 0.09374999, y: 1.2562499}
+      - {x: -0.1125, y: 1.7437499}
+      - {x: -0.18749999, y: 1.9124999}
+      - {x: -0.50624996, y: 2.45625}
+      - {x: -0.88124996, y: 3.1499999}
+      - {x: -0.9937499, y: 3.3562498}
+      - {x: -0.97499996, y: 3.5437498}
+      - {x: -1.1062499, y: 3.8812497}
+      - {x: -1.2187499, y: 3.8812497}
+      - {x: -1.36875, y: 3.8249998}
+      - {x: -2.08125, y: 3.7499998}
+      - {x: -2.6625, y: 3.7312498}
+      - {x: -3.0562499, y: 3.6937497}
+      - {x: -3.1687498, y: 3.6562498}
+      - {x: -3.1687498, y: 3.50625}
+      - {x: -3.1499999, y: 3.3562498}
+      - {x: -2.94375, y: 2.7375}
+      - {x: -2.8687499, y: 2.56875}
+      - {x: -2.8124998, y: 2.4374998}
+      - {x: -2.475, y: 1.7437499}
+      - {x: -2.38125, y: 1.5749999}
+      - {x: -2.2124999, y: 1.2562499}
+      - {x: -1.9874998, y: 0.88124996}
+      - {x: -1.8562499, y: 0.65624994}
+      - {x: -1.18125, y: -0.48749998}
+      - {x: -0.9187499, y: -0.88124996}
+      - {x: -0.80625, y: -0.97499996}
+      - {x: -0.54375, y: -1.2375}
+      - {x: -0.1125, y: -1.7624999}
+      - {x: -0.074999996, y: -1.8562499}
+      - {x: 0.16874999, y: -2.1}
+      - {x: 0.61875, y: -2.1}
+      - {x: 0.80625, y: -2.0624998}
+      - {x: 1.0875, y: -1.8562499}
+      - {x: 1.3499999, y: -1.6312499}
+    - - {x: 3.0375, y: 5.0249996}
+      - {x: 3.0562499, y: 5.0812497}
+      - {x: 3.0562499, y: 5.1749997}
+      - {x: 2.8124998, y: 5.6624994}
+      - {x: 2.6249998, y: 5.9437494}
+      - {x: 2.4374998, y: 6.075}
+      - {x: 2.2312498, y: 6.075}
+      - {x: 1.7812499, y: 5.8687496}
+      - {x: 0.48749998, y: 5.8124995}
+      - {x: 0.33749998, y: 5.6812496}
+      - {x: -0.14999999, y: 5.2124996}
+      - {x: -0.14999999, y: 5.1375}
+      - {x: -0.037499998, y: 5.1}
+      - {x: 0.20624998, y: 5.1187496}
+      - {x: 0.58124995, y: 5.04375}
+      - {x: 0.80625, y: 4.95}
+      - {x: 1.2187499, y: 4.5375}
+      - {x: 1.2937499, y: 4.5375}
+      - {x: 1.6499999, y: 4.66875}
+      - {x: 1.9499999, y: 4.7812495}
+      - {x: 2.3999999, y: 4.9125}
+      - {x: 2.4937499, y: 4.95}
+  m_UseDelaunayMesh: 0
+--- !u!212 &70001879
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70001875}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: f73611d6286566f46b15b1aaa1cf9339, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21.599998, y: 38.399998}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &122454226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,541 +1434,6 @@ Transform:
   - {fileID: 181346614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &475519852
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 475519856}
-  - component: {fileID: 475519855}
-  - component: {fileID: 475519854}
-  - component: {fileID: 475519853}
-  m_Layer: 0
-  m_Name: Heart Puzzle Piece (13)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!60 &475519853
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475519852}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21.599998, y: 38.399998}
-    newSize: {x: 5.58, y: 3.06}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.6187499, y: -17.887499}
-      - {x: -3.6937497, y: -17.86875}
-      - {x: -3.7499998, y: -17.887499}
-      - {x: -3.7687497, y: -17.606249}
-      - {x: -3.7874997, y: -17.11875}
-      - {x: -3.8062499, y: -16.593748}
-      - {x: -3.8249998, y: -15.993749}
-      - {x: -3.8437498, y: -14.962499}
-      - {x: -3.8624997, y: -14.943749}
-      - {x: -3.8624997, y: -9.99375}
-      - {x: -3.8812497, y: -8.5125}
-      - {x: -3.8624997, y: -8.49375}
-      - {x: -3.8624997, y: -8.249999}
-      - {x: -3.8437498, y: -7.1812496}
-      - {x: -3.8249998, y: -6.4124994}
-      - {x: -3.7687497, y: -5.325}
-      - {x: -3.7499998, y: -4.8937497}
-      - {x: -3.7499998, y: -4.1249995}
-      - {x: -3.6187499, y: -3.8249998}
-      - {x: -3.6187499, y: -3.5624998}
-      - {x: -3.6374998, y: -3.50625}
-      - {x: -3.7687497, y: -3.2812498}
-      - {x: -3.8812497, y: -3.0937498}
-      - {x: -4.2, y: -2.7375}
-      - {x: -4.4062495, y: -2.6062498}
-      - {x: -4.7062497, y: -2.3999999}
-      - {x: -4.9312496, y: -2.2875}
-      - {x: -5.1187496, y: -2.2499998}
-      - {x: -5.3999996, y: -2.2499998}
-      - {x: -5.4374995, y: -2.2875}
-      - {x: -5.6249995, y: -2.55}
-      - {x: -5.6624994, y: -3.1124997}
-      - {x: -5.7562494, y: -4.4999995}
-      - {x: -5.8312497, y: -6.1499996}
-      - {x: -5.8499994, y: -6.6749997}
-      - {x: -5.8499994, y: -12.131249}
-      - {x: -5.8312497, y: -13.124999}
-      - {x: -5.79375, y: -14.681249}
-      - {x: -5.7562494, y: -15.899999}
-      - {x: -5.7, y: -17.418749}
-      - {x: -5.6624994, y: -18.093748}
-      - {x: -5.325, y: -18.58125}
-      - {x: -5.04375, y: -18.656248}
-      - {x: -4.5562496, y: -18.656248}
-      - {x: -4.0499997, y: -18.543749}
-      - {x: -3.7124999, y: -18.262499}
-      - {x: -3.6187499, y: -17.906248}
-  m_UseDelaunayMesh: 0
---- !u!114 &475519854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475519852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd870851496e64e9327c8e93c7e97f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggable: 1
-  allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
---- !u!212 &475519855
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475519852}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: dcc9303e4c7972b4eb69be9c6ce6a7a4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.58, y: 3.06}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &475519856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475519852}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
-  m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &615513069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 615513070}
-  - component: {fileID: 615513072}
-  - component: {fileID: 615513071}
-  - component: {fileID: 615513073}
-  m_Layer: 0
-  m_Name: 5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &615513070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615513069}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 68490996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &615513071
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615513069}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21.599998, y: 38.399998}
-    newSize: {x: 21.599998, y: 38.399998}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.24374999, y: -2.3062499}
-      - {x: -0.28124997, y: -2.2124999}
-      - {x: -0.525, y: -1.9124999}
-      - {x: -0.6375, y: -1.5562499}
-      - {x: -0.7125, y: -0.97499996}
-      - {x: -0.74999994, y: -0.35625}
-      - {x: -0.7312499, y: -0.33749998}
-      - {x: -0.65624994, y: 0.37499997}
-      - {x: -0.525, y: 1.14375}
-      - {x: -0.45, y: 1.4812499}
-      - {x: -0.31875, y: 1.8749999}
-      - {x: -0.14999999, y: 2.2499998}
-      - {x: 0.037499998, y: 2.6062498}
-      - {x: 0.50624996, y: 3.2437499}
-      - {x: 0.78749996, y: 3.5249999}
-      - {x: 1.33125, y: 3.8812497}
-      - {x: 1.6874999, y: 4.0874996}
-      - {x: 1.7249999, y: 4.0874996}
-      - {x: 2.2124999, y: 4.25625}
-      - {x: 2.2875, y: 4.29375}
-      - {x: 2.8687499, y: 4.29375}
-      - {x: 2.9062498, y: 4.3124995}
-      - {x: 2.9249997, y: 4.35}
-      - {x: 3.6374998, y: 4.35}
-      - {x: 3.8249998, y: 4.29375}
-      - {x: 4.2374997, y: 4.3124995}
-      - {x: 4.2374997, y: 4.35}
-      - {x: 5.2124996, y: 4.35}
-      - {x: 5.2124996, y: 4.3124995}
-      - {x: 7.2562494, y: 4.3124995}
-      - {x: 7.6124997, y: 4.3312497}
-      - {x: 8.193749, y: 4.3687496}
-      - {x: 8.41875, y: 4.3875}
-      - {x: 8.9625, y: 4.4249997}
-      - {x: 9.131249, y: 4.44375}
-      - {x: 9.787499, y: 4.48125}
-      - {x: 10.0125, y: 4.48125}
-      - {x: 10.10625, y: 4.63125}
-      - {x: 10.10625, y: 5.38125}
-      - {x: 10.049999, y: 5.475}
-      - {x: 9.974999, y: 5.6249995}
-      - {x: 9.881249, y: 5.7}
-      - {x: 9.693749, y: 5.6812496}
-      - {x: 8.943749, y: 5.56875}
-      - {x: 8.381249, y: 5.5312495}
-      - {x: 8.362499, y: 5.5125}
-      - {x: 6.8062496, y: 5.5125}
-      - {x: 6.7874994, y: 5.5312495}
-      - {x: 6.16875, y: 5.5499997}
-      - {x: 5.5125, y: 5.5874996}
-      - {x: 5.1562495, y: 5.60625}
-      - {x: 4.6499996, y: 5.6249995}
-      - {x: 4.0125, y: 5.6437497}
-      - {x: 3.5249999, y: 5.6812496}
-      - {x: 2.0437498, y: 5.6812496}
-      - {x: 1.7437499, y: 5.6624994}
-      - {x: 1.1999999, y: 5.5874996}
-      - {x: 1.0312499, y: 5.5499997}
-      - {x: 0.61875, y: 5.4374995}
-      - {x: -0.05625, y: 5.19375}
-      - {x: -0.50624996, y: 4.7625}
-      - {x: -0.59999996, y: 4.66875}
-      - {x: -0.7125, y: 4.4624996}
-      - {x: -0.8249999, y: 4.1249995}
-      - {x: -0.9187499, y: 4.0312495}
-      - {x: -1.14375, y: 3.9374998}
-      - {x: -1.1249999, y: 3.7312498}
-      - {x: -1.33125, y: 3.50625}
-      - {x: -1.4437499, y: 3.5437498}
-      - {x: -1.6499999, y: 3.3374999}
-      - {x: -2.1374998, y: 2.6812499}
-      - {x: -2.3437498, y: 2.3437498}
-      - {x: -2.56875, y: 1.9874998}
-      - {x: -2.85, y: 1.36875}
-      - {x: -2.9812498, y: 0.84374994}
-      - {x: -3.0562499, y: 0.46874997}
-      - {x: -3.0937498, y: 0.18749999}
-      - {x: -3.13125, y: -0.225}
-      - {x: -3.1499999, y: -0.65624994}
-      - {x: -3.1499999, y: -1.1062499}
-      - {x: -3.13125, y: -1.33125}
-      - {x: -3.0937498, y: -1.8187499}
-      - {x: -3.0562499, y: -1.9124999}
-      - {x: -2.9999998, y: -1.9874998}
-      - {x: -2.7937498, y: -2.19375}
-      - {x: -2.55, y: -2.3999999}
-      - {x: -2.3062499, y: -2.5312498}
-      - {x: -1.9874998, y: -2.6625}
-      - {x: -1.7437499, y: -2.7375}
-      - {x: -1.4812499, y: -2.7937498}
-      - {x: -0.8249999, y: -2.7937498}
-      - {x: -0.41249996, y: -2.6625}
-      - {x: -0.2625, y: -2.6062498}
-      - {x: -0.24374999, y: -2.3999999}
-    - - {x: -2.0624998, y: -2.4937499}
-      - {x: -2.19375, y: -2.45625}
-      - {x: -2.2124999, y: -2.4937499}
-      - {x: -1.8749999, y: -2.6249998}
-      - {x: -1.7249999, y: -2.6249998}
-      - {x: -1.7812499, y: -2.5874999}
-    - - {x: -0.46874997, y: -2.3062499}
-      - {x: -0.50624996, y: -2.2312498}
-      - {x: -0.48749998, y: -2.2875}
-      - {x: -0.48749998, y: -2.3437498}
-      - {x: -0.46874997, y: -2.38125}
-      - {x: -0.48749998, y: -2.3999999}
-      - {x: -0.46874997, y: -2.4187498}
-    - - {x: -2.94375, y: -1.8562499}
-      - {x: -2.9624999, y: -1.7812499}
-      - {x: -2.9812498, y: -1.7624999}
-      - {x: -2.9249997, y: -1.70625}
-      - {x: -2.8687499, y: -1.6874999}
-      - {x: -2.8687499, y: -1.6687499}
-      - {x: -2.9249997, y: -1.7249999}
-      - {x: -2.94375, y: -1.7812499}
-      - {x: -2.94375, y: -1.8562499}
-      - {x: -2.8874998, y: -1.9312499}
-      - {x: -2.8874998, y: -1.9124999}
-    - - {x: -2.94375, y: 0.2625}
-      - {x: -2.94375, y: 0.43124998}
-      - {x: -2.9249997, y: 0.45}
-      - {x: -2.9249997, y: 0.525}
-      - {x: -2.9062498, y: 0.54375}
-      - {x: -2.9062498, y: 0.59999996}
-      - {x: -2.8874998, y: 0.61875}
-      - {x: -2.8874998, y: 0.69374996}
-      - {x: -2.8687499, y: 0.7125}
-      - {x: -2.8687499, y: 0.78749996}
-      - {x: -2.85, y: 0.80625}
-      - {x: -2.85, y: 0.9}
-      - {x: -2.8124998, y: 0.95624995}
-      - {x: -2.6812499, y: 1.2937499}
-      - {x: -2.38125, y: 1.9874998}
-      - {x: -2.3625, y: 2.08125}
-      - {x: -2.6062498, y: 1.6312499}
-      - {x: -2.6625, y: 1.4812499}
-      - {x: -2.7375, y: 1.2562499}
-      - {x: -2.7375, y: 1.1999999}
-      - {x: -2.7749999, y: 1.1249999}
-      - {x: -2.7749999, y: 1.0687499}
-      - {x: -2.8124998, y: 0.9937499}
-      - {x: -2.8312497, y: 0.8249999}
-      - {x: -2.85, y: 0.80625}
-      - {x: -2.85, y: 0.74999994}
-      - {x: -2.8687499, y: 0.7312499}
-      - {x: -2.8687499, y: 0.67499995}
-      - {x: -2.8874998, y: 0.65624994}
-      - {x: -2.8874998, y: 0.58124995}
-      - {x: -2.9062498, y: 0.56249994}
-      - {x: -2.9062498, y: 0.48749998}
-      - {x: -2.9249997, y: 0.46874997}
-      - {x: -2.9249997, y: 0.39374998}
-      - {x: -2.94375, y: 0.37499997}
-      - {x: -2.94375, y: 0.29999998}
-      - {x: -2.9624999, y: 0.28124997}
-      - {x: -2.9812498, y: 0.16874999}
-      - {x: -3.0375, y: -0.13125}
-      - {x: -3.0187497, y: -0.24374999}
-      - {x: -2.9999998, y: -0.225}
-    - - {x: 5.7, y: 4.4249997}
-      - {x: 7.4437494, y: 4.4249997}
-      - {x: 7.0499997, y: 4.44375}
-      - {x: 7.0312495, y: 4.4249997}
-      - {x: 6.0374994, y: 4.4249997}
-      - {x: 6.0187497, y: 4.44375}
-  m_UseDelaunayMesh: 0
---- !u!212 &615513072
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615513069}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: faa1d1b5c8e6b3646be69fb5294cb445, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 21.599998, y: 38.399998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &615513073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615513069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7202ae4c053dcd54eb7ffb271b596d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggable: 0
 --- !u!1 &631536179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,31 +1587,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (5)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (7)
+    distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -1984,8 +1661,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: a25ce43762a411344a1457240e4390fd, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: 21300000, guid: eac105448c0d785458e497c583983ff7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2005,7 +1682,7 @@ Transform:
   m_GameObject: {fileID: 631536179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2227,7 +1904,7 @@ GameObject:
   - component: {fileID: 825970637}
   - component: {fileID: 825970636}
   m_Layer: 0
-  m_Name: Heart Puzzle Piece (11)
+  m_Name: Heart Puzzle Piece (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2430,39 +2107,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (5)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.06, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: 0.02, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &825970638
 SpriteRenderer:
@@ -2504,7 +2181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 0e1fd11ead4048044945f31797356707, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2525,7 +2202,319 @@ Transform:
   m_GameObject: {fileID: 825970635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0, z: 0}
+  m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 70001876}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1020181672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020181676}
+  - component: {fileID: 1020181675}
+  - component: {fileID: 1020181674}
+  - component: {fileID: 1020181673}
+  m_Layer: 0
+  m_Name: Heart Puzzle Piece (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1020181673
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020181672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21.599998, y: 38.399998}
+    newSize: {x: 5.58, y: 3.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.46874997, y: 4.2187495}
+      - {x: -0.35625, y: 4.3875}
+      - {x: -0.29999998, y: 4.4999995}
+      - {x: -0.16874999, y: 4.6499996}
+      - {x: -0.1125, y: 4.7437496}
+      - {x: -0.13125, y: 4.9874997}
+      - {x: -0.037499998, y: 5.1187496}
+      - {x: -0.037499998, y: 5.1375}
+      - {x: -0.074999996, y: 5.1749997}
+      - {x: -0.16874999, y: 5.1749997}
+      - {x: -0.37499997, y: 5.38125}
+      - {x: -0.74999994, y: 5.7}
+      - {x: -0.9937499, y: 5.8687496}
+      - {x: -1.0312499, y: 5.9624996}
+      - {x: -1.4999999, y: 6.1874995}
+      - {x: -1.7624999, y: 6.2999997}
+      - {x: -2.08125, y: 6.4124994}
+      - {x: -2.5874999, y: 6.5624995}
+      - {x: -3.0562499, y: 6.6749997}
+      - {x: -3.2624998, y: 6.7124996}
+      - {x: -3.2812498, y: 6.7874994}
+      - {x: -3.4874997, y: 6.8624997}
+      - {x: -3.6562498, y: 6.8624997}
+      - {x: -4.3312497, y: 7.0125}
+      - {x: -5.325, y: 7.2}
+      - {x: -5.5499997, y: 7.2374997}
+      - {x: -6.16875, y: 7.3124995}
+      - {x: -6.5624995, y: 7.3499994}
+      - {x: -6.8437495, y: 7.3687496}
+      - {x: -7.4249997, y: 7.3687496}
+      - {x: -7.4249997, y: 7.3874993}
+      - {x: -7.7812495, y: 7.3874993}
+      - {x: -7.7812495, y: 7.3687496}
+      - {x: -8.456249, y: 7.3687496}
+      - {x: -8.737499, y: 7.3499994}
+      - {x: -9.35625, y: 7.3312497}
+      - {x: -9.487499, y: 7.2187495}
+      - {x: -9.61875, y: 6.9937496}
+      - {x: -9.61875, y: 6.7687497}
+      - {x: -9.412499, y: 6.2437496}
+      - {x: -9.35625, y: 6.1312494}
+      - {x: -9.318749, y: 6.0937495}
+      - {x: -8.662499, y: 6.0937495}
+      - {x: -8.662499, y: 6.0562496}
+      - {x: -8.549999, y: 6.0562496}
+      - {x: -8.30625, y: 6.0374994}
+      - {x: -7.9499993, y: 6.0374994}
+      - {x: -7.4624996, y: 5.9999995}
+      - {x: -6.5062494, y: 5.8875}
+      - {x: -6.2625, y: 5.8499994}
+      - {x: -6.0562496, y: 5.8124995}
+      - {x: -5.56875, y: 5.7187495}
+      - {x: -5.23125, y: 5.6437497}
+      - {x: -5.0249996, y: 5.56875}
+      - {x: -4.7062497, y: 5.5125}
+      - {x: -4.06875, y: 5.3624997}
+      - {x: -2.9999998, y: 5.0624995}
+      - {x: -2.8874998, y: 5.0249996}
+      - {x: -2.4187498, y: 4.85625}
+      - {x: -2.38125, y: 4.85625}
+      - {x: -1.7249999, y: 4.5187497}
+      - {x: -1.2187499, y: 4.0125}
+      - {x: -1.1249999, y: 3.8812497}
+      - {x: -0.88124996, y: 3.7687497}
+      - {x: -0.74999994, y: 3.7687497}
+      - {x: -0.65624994, y: 3.8062499}
+      - {x: -0.54375, y: 3.8999999}
+      - {x: -0.45, y: 4.0874996}
+    - - {x: -3.8812497, y: 5.4937496}
+      - {x: -3.9749997, y: 5.475}
+      - {x: -4.0499997, y: 5.475}
+      - {x: -4.06875, y: 5.4937496}
+      - {x: -4.1249995, y: 5.4937496}
+      - {x: -4.1437497, y: 5.5125}
+      - {x: -4.2, y: 5.5125}
+      - {x: -4.2187495, y: 5.5312495}
+      - {x: -4.2749996, y: 5.5312495}
+      - {x: -4.29375, y: 5.5499997}
+      - {x: -4.3875, y: 5.5499997}
+      - {x: -4.44375, y: 5.5874996}
+      - {x: -4.4999995, y: 5.5874996}
+      - {x: -4.5187497, y: 5.60625}
+      - {x: -4.6124997, y: 5.6249995}
+      - {x: -4.63125, y: 5.6812496}
+      - {x: -5.7, y: 5.9062495}
+      - {x: -5.9437494, y: 5.8875}
+      - {x: -4.6874995, y: 5.5499997}
+      - {x: -4.575, y: 5.60625}
+      - {x: -4.4999995, y: 5.60625}
+      - {x: -4.48125, y: 5.5874996}
+      - {x: -4.4249997, y: 5.5874996}
+      - {x: -4.4062495, y: 5.56875}
+      - {x: -4.3124995, y: 5.5499997}
+      - {x: -4.25625, y: 5.5499997}
+      - {x: -4.2374997, y: 5.5312495}
+      - {x: -4.1812496, y: 5.5312495}
+      - {x: -4.1625, y: 5.5125}
+      - {x: -4.0125, y: 5.4937496}
+      - {x: -3.8249998, y: 5.3999996}
+      - {x: -3.7687497, y: 5.38125}
+      - {x: -3.6749997, y: 5.38125}
+    - - {x: -5.2875, y: 7.0499997}
+      - {x: -5.3062496, y: 7.0687494}
+      - {x: -5.4937496, y: 7.0687494}
+      - {x: -5.5125, y: 7.0874996}
+      - {x: -5.79375, y: 7.1249995}
+      - {x: -6.16875, y: 7.1812496}
+      - {x: -6.2625, y: 7.1812496}
+      - {x: -6.2812495, y: 7.2}
+      - {x: -6.4124994, y: 7.2}
+      - {x: -6.4312496, y: 7.2187495}
+      - {x: -6.5999994, y: 7.2374997}
+      - {x: -7.2, y: 7.3124995}
+      - {x: -7.6124997, y: 7.2749996}
+      - {x: -6.6937494, y: 7.2187495}
+      - {x: -6.6562495, y: 7.2187495}
+      - {x: -6.4124994, y: 7.2}
+      - {x: -6.2625, y: 7.2}
+      - {x: -6.2437496, y: 7.1812496}
+      - {x: -6.0562496, y: 7.1812496}
+      - {x: -6.0374994, y: 7.1624994}
+      - {x: -5.9062495, y: 7.1437497}
+      - {x: -5.3624997, y: 7.0687494}
+      - {x: -5.2687497, y: 7.0687494}
+      - {x: -5.2499995, y: 7.0499997}
+      - {x: -5.1375, y: 7.0499997}
+      - {x: -5.1187496, y: 7.0312495}
+      - {x: -5.04375, y: 7.0312495}
+      - {x: -5.0249996, y: 7.0125}
+      - {x: -4.95, y: 7.0312495}
+      - {x: -5.1562495, y: 7.0312495}
+      - {x: -5.1749997, y: 7.0499997}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1020181674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020181672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd870851496e64e9327c8e93c7e97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 1
+  allPieceDistances:
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (8)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (12)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (7)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (2)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (1)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  snapThreshold: 0.25
+--- !u!212 &1020181675
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020181672}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: faa1d1b5c8e6b3646be69fb5294cb445, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.58, y: 3.06}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1020181676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020181672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2707,7 +2696,7 @@ Transform:
   m_GameObject: {fileID: 1084080916}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.40898848, z: 0}
+  m_LocalPosition: {x: 0.46, y: 0.40898848, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2746,39 +2735,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
+  - pieceName: Heart Puzzle Piece (5)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+    offsetToPiece: {x: 0.06, y: 1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (2)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (6)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   - pieceName: Heart Puzzle Piece (9)
     distanceToPiece: 0
-    offsetToPiece: {x: -0.0031507164, y: 1.6210117, z: 0}
+    offsetToPiece: {x: 0.08, y: 1.61, z: 0}
   snapThreshold: 0.75
 --- !u!120 &1147094787
 LineRenderer:
@@ -2894,7 +2883,7 @@ Transform:
   m_GameObject: {fileID: 1147094785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 2.03, z: 0}
+  m_LocalPosition: {x: 0.08, y: 1.61, z: 0}
   m_LocalScale: {x: 0.59296966, y: 0.59296966, z: 0.59296966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2933,7 +2922,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.8839247, y: 1.8930906}
+  m_Offset: {x: 2.3305743, y: 2.0222597}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2944,7 +2933,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3021502, y: 1.208967}
+  m_Size: {x: 2.8077922, y: 0.9506283}
   m_EdgeRadius: 0
 --- !u!1 &1165831369
 GameObject:
@@ -3216,7 +3205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 28fe05644afbd3745ac866a835999727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3510,31 +3499,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
   - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -3584,8 +3573,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: eac105448c0d785458e497c583983ff7, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: c4785e3af60e64741b2441f8d2e09ace, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3605,268 +3594,7 @@ Transform:
   m_GameObject: {fileID: 1309293659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
-  m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1459689304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1459689308}
-  - component: {fileID: 1459689307}
-  - component: {fileID: 1459689306}
-  - component: {fileID: 1459689305}
-  m_Layer: 0
-  m_Name: Heart Puzzle Piece (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!60 &1459689305
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459689304}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21.599998, y: 38.399998}
-    newSize: {x: 5.58, y: 3.06}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 5.9437494, y: 1.0687499}
-      - {x: 8.025, y: 1.0687499}
-      - {x: 8.04375, y: 1.05}
-      - {x: 9.35625, y: 0.93749994}
-      - {x: 9.525, y: 1.05}
-      - {x: 9.674999, y: 1.2937499}
-      - {x: 9.674999, y: 1.425}
-      - {x: 9.487499, y: 1.8}
-      - {x: 9.3375, y: 1.9874998}
-      - {x: 8.531249, y: 2.0624998}
-      - {x: 7.9874997, y: 2.1}
-      - {x: 7.4437494, y: 2.1187499}
-      - {x: 6.4687495, y: 2.1187499}
-      - {x: 5.41875, y: 2.08125}
-      - {x: 4.66875, y: 2.00625}
-      - {x: 4.1812496, y: 1.9312499}
-      - {x: 3.4125, y: 1.8187499}
-      - {x: 3.0937498, y: 1.7624999}
-      - {x: 2.9624999, y: 1.6312499}
-      - {x: 2.8874998, y: 1.4624999}
-      - {x: 2.8874998, y: 1.0124999}
-      - {x: 3.0562499, y: 0.76874995}
-      - {x: 3.3749998, y: 0.76874995}
-      - {x: 3.6937497, y: 0.86249995}
-      - {x: 4.5187497, y: 0.95624995}
-      - {x: 5.9249997, y: 1.05}
-    - - {x: 3.5437498, y: 2.3999999}
-      - {x: 3.5249999, y: 2.4937499}
-      - {x: 3.6749997, y: 2.4374998}
-      - {x: 3.8624997, y: 2.4937499}
-      - {x: 4.29375, y: 2.6062498}
-      - {x: 4.63125, y: 2.6625}
-      - {x: 4.8749995, y: 2.7375}
-      - {x: 5.325, y: 2.8312497}
-      - {x: 5.4937496, y: 2.8687499}
-      - {x: 6.6375, y: 2.9999998}
-      - {x: 8.006249, y: 2.9999998}
-      - {x: 8.287499, y: 2.9812498}
-      - {x: 8.737499, y: 2.94375}
-      - {x: 9.506249, y: 2.85}
-      - {x: 9.581249, y: 2.9062498}
-      - {x: 9.581249, y: 2.94375}
-      - {x: 9.54375, y: 2.9812498}
-      - {x: 9.299999, y: 3.0187497}
-      - {x: 8.98125, y: 3.0562499}
-      - {x: 8.437499, y: 3.1124997}
-      - {x: 8.174999, y: 3.13125}
-      - {x: 7.8187494, y: 3.1499999}
-      - {x: 7.3124995, y: 3.1687498}
-      - {x: 8.49375, y: 3.1687498}
-      - {x: 8.5125, y: 3.1499999}
-      - {x: 8.849999, y: 3.13125}
-      - {x: 9.6375, y: 3.0187497}
-      - {x: 9.749999, y: 2.9999998}
-      - {x: 9.9, y: 3.0937498}
-      - {x: 9.9, y: 3.3937497}
-      - {x: 9.80625, y: 3.6749997}
-      - {x: 9.6375, y: 3.9562497}
-      - {x: 9.05625, y: 3.9937499}
-      - {x: 8.7, y: 4.0125}
-      - {x: 8.1375, y: 4.0312495}
-      - {x: 7.3312497, y: 4.0312495}
-      - {x: 6.7499995, y: 4.0125}
-      - {x: 6.2812495, y: 3.9749997}
-      - {x: 5.5874996, y: 3.8999999}
-      - {x: 5.3437495, y: 3.8624997}
-      - {x: 4.7625, y: 3.7687497}
-      - {x: 3.9562497, y: 3.6}
-      - {x: 3.8062499, y: 3.5812497}
-      - {x: 3.1124997, y: 3.3749998}
-      - {x: 2.5312498, y: 3.2062497}
-      - {x: 2.4374998, y: 3.1499999}
-      - {x: 2.3625, y: 2.9999998}
-      - {x: 2.3625, y: 2.6062498}
-      - {x: 2.4374998, y: 2.45625}
-      - {x: 2.475, y: 2.4187498}
-      - {x: 2.64375, y: 2.2312498}
-      - {x: 2.7749999, y: 2.1562498}
-      - {x: 3.0749998, y: 2.1562498}
-      - {x: 3.1499999, y: 2.175}
-      - {x: 3.3749998, y: 2.4187498}
-      - {x: 3.4687498, y: 2.38125}
-  m_UseDelaunayMesh: 0
---- !u!114 &1459689306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459689304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd870851496e64e9327c8e93c7e97f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggable: 1
-  allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
-  - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (10)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (6)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (9)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
---- !u!212 &1459689307
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459689304}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: f73611d6286566f46b15b1aaa1cf9339, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.58, y: 3.06}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1459689308
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459689304}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3885,7 +3613,7 @@ GameObject:
   - component: {fileID: 1466042418}
   - component: {fileID: 1466042417}
   m_Layer: 0
-  m_Name: Heart Puzzle Piece (1)
+  m_Name: Heart Puzzle Piece (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3988,31 +3716,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -4062,7 +3790,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8620ba248ccb12640a36ed70a66838f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4083,11 +3811,10 @@ Transform:
   m_GameObject: {fileID: 1466042416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1820776319}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1483613502
@@ -4240,31 +3967,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -4314,8 +4041,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 3ea94b208b06db346846711464fb1659, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: c91d9ea8d9677ea408b9d2f1f24b314b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4335,7 +4062,7 @@ Transform:
   m_GameObject: {fileID: 1483613502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4472,7 +4199,7 @@ GameObject:
   - component: {fileID: 1547843712}
   - component: {fileID: 1547843711}
   m_Layer: 0
-  m_Name: Heart Puzzle Piece (0)
+  m_Name: Heart Puzzle Piece (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4755,28 +4482,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
@@ -4829,7 +4556,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 323e7f94d19952e4195f075392568e62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4850,7 +4577,7 @@ Transform:
   m_GameObject: {fileID: 1547843710}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4902,6 +4629,219 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694160654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694160655}
+  - component: {fileID: 1694160658}
+  - component: {fileID: 1694160657}
+  - component: {fileID: 1694160656}
+  m_Layer: 0
+  m_Name: 14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694160655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694160654}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1734649717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1694160656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694160654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7202ae4c053dcd54eb7ffb271b596d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 0
+--- !u!60 &1694160657
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694160654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21.599998, y: 38.399998}
+    newSize: {x: 21.599998, y: 38.399998}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.4062499, y: -1.5562499}
+      - {x: 1.4062499, y: -0.84374994}
+      - {x: 1.3124999, y: -0.67499995}
+      - {x: 1.2937499, y: -0.525}
+      - {x: 1.3499999, y: -0.37499997}
+      - {x: 1.2187499, y: -0.2625}
+      - {x: 1.18125, y: -0.2625}
+      - {x: 1.14375, y: -0.28124997}
+      - {x: 0.88124996, y: 0.20624998}
+      - {x: 0.65624994, y: 0.58124995}
+      - {x: 0.45, y: 0.88124996}
+      - {x: 0.41249996, y: 0.8249999}
+      - {x: 0.09374999, y: 1.2562499}
+      - {x: -0.1125, y: 1.7437499}
+      - {x: -0.18749999, y: 1.9124999}
+      - {x: -0.50624996, y: 2.45625}
+      - {x: -0.88124996, y: 3.1499999}
+      - {x: -0.9937499, y: 3.3562498}
+      - {x: -0.97499996, y: 3.5437498}
+      - {x: -1.1062499, y: 3.8812497}
+      - {x: -1.2187499, y: 3.8812497}
+      - {x: -1.36875, y: 3.8249998}
+      - {x: -2.08125, y: 3.7499998}
+      - {x: -2.6625, y: 3.7312498}
+      - {x: -3.0562499, y: 3.6937497}
+      - {x: -3.1687498, y: 3.6562498}
+      - {x: -3.1687498, y: 3.50625}
+      - {x: -3.1499999, y: 3.3562498}
+      - {x: -2.94375, y: 2.7375}
+      - {x: -2.8687499, y: 2.56875}
+      - {x: -2.8124998, y: 2.4374998}
+      - {x: -2.475, y: 1.7437499}
+      - {x: -2.38125, y: 1.5749999}
+      - {x: -2.2124999, y: 1.2562499}
+      - {x: -1.9874998, y: 0.88124996}
+      - {x: -1.8562499, y: 0.65624994}
+      - {x: -1.18125, y: -0.48749998}
+      - {x: -0.9187499, y: -0.88124996}
+      - {x: -0.80625, y: -0.97499996}
+      - {x: -0.54375, y: -1.2375}
+      - {x: -0.1125, y: -1.7624999}
+      - {x: -0.074999996, y: -1.8562499}
+      - {x: 0.16874999, y: -2.1}
+      - {x: 0.61875, y: -2.1}
+      - {x: 0.80625, y: -2.0624998}
+      - {x: 1.0875, y: -1.8562499}
+      - {x: 1.3499999, y: -1.6312499}
+    - - {x: 3.0375, y: 5.0249996}
+      - {x: 3.0562499, y: 5.0812497}
+      - {x: 3.0562499, y: 5.1749997}
+      - {x: 2.8124998, y: 5.6624994}
+      - {x: 2.6249998, y: 5.9437494}
+      - {x: 2.4374998, y: 6.075}
+      - {x: 2.2312498, y: 6.075}
+      - {x: 1.7812499, y: 5.8687496}
+      - {x: 0.48749998, y: 5.8124995}
+      - {x: 0.33749998, y: 5.6812496}
+      - {x: -0.14999999, y: 5.2124996}
+      - {x: -0.14999999, y: 5.1375}
+      - {x: -0.037499998, y: 5.1}
+      - {x: 0.20624998, y: 5.1187496}
+      - {x: 0.58124995, y: 5.04375}
+      - {x: 0.80625, y: 4.95}
+      - {x: 1.2187499, y: 4.5375}
+      - {x: 1.2937499, y: 4.5375}
+      - {x: 1.6499999, y: 4.66875}
+      - {x: 1.9499999, y: 4.7812495}
+      - {x: 2.3999999, y: 4.9125}
+      - {x: 2.4937499, y: 4.95}
+  m_UseDelaunayMesh: 0
+--- !u!212 &1694160658
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694160654}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: dcc9303e4c7972b4eb69be9c6ce6a7a4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21.599998, y: 38.399998}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1734649713
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,34 +4999,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (9)
@@ -5133,8 +5073,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: c4785e3af60e64741b2441f8d2e09ace, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 9ea21597fce42f34583956ba2f2fb4e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5154,10 +5094,11 @@ Transform:
   m_GameObject: {fileID: 1734649713}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1694160655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747004990
@@ -5265,389 +5206,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1820776318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1820776319}
-  - component: {fileID: 1820776321}
-  - component: {fileID: 1820776320}
-  - component: {fileID: 1820776322}
-  m_Layer: 0
-  m_Name: 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1820776319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820776318}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1466042420}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1820776320
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820776318}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21.599998, y: 38.399998}
-    newSize: {x: 21.599998, y: 38.399998}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -2.64375, y: 2.1562498}
-      - {x: -2.6999998, y: 2.3999999}
-      - {x: -2.7187498, y: 2.5874999}
-      - {x: -2.7749999, y: 2.94375}
-      - {x: -2.8124998, y: 3.1499999}
-      - {x: -2.85, y: 3.1687498}
-      - {x: -2.9062498, y: 3.1499999}
-      - {x: -2.9062498, y: 3.0937498}
-      - {x: -2.8874998, y: 3.0375}
-      - {x: -2.8874998, y: 2.9999998}
-      - {x: -2.8687499, y: 2.94375}
-      - {x: -2.8687499, y: 2.8687499}
-      - {x: -2.8687499, y: 2.94375}
-      - {x: -2.8874998, y: 2.9624999}
-      - {x: -2.8874998, y: 2.9999998}
-      - {x: -2.9062498, y: 3.0562499}
-      - {x: -3.0562499, y: 3.6749997}
-      - {x: -3.1124997, y: 4.1249995}
-      - {x: -3.13125, y: 4.5187497}
-      - {x: -3.1124997, y: 4.5375}
-      - {x: -3.0375, y: 5.04375}
-      - {x: -2.9812498, y: 5.1375}
-      - {x: -2.9249997, y: 5.2687497}
-      - {x: -2.7375, y: 5.475}
-      - {x: -2.2124999, y: 5.5874996}
-      - {x: -1.8187499, y: 5.6624994}
-      - {x: -1.2375, y: 5.6812496}
-      - {x: -1.1062499, y: 5.7}
-      - {x: -0.93749994, y: 5.7374997}
-      - {x: -0.50624996, y: 5.8312497}
-      - {x: -0.16874999, y: 5.98125}
-      - {x: 0.46874997, y: 6.2999997}
-      - {x: 0.74999994, y: 6.4874997}
-      - {x: 1.14375, y: 6.8999996}
-      - {x: 1.1999999, y: 6.9749994}
-      - {x: 1.3124999, y: 7.1437497}
-      - {x: 1.5937499, y: 7.6499996}
-      - {x: 1.7249999, y: 7.8749995}
-      - {x: 2.0249999, y: 8.174999}
-      - {x: 2.45625, y: 8.5875}
-      - {x: 2.6625, y: 8.7}
-      - {x: 3.4687498, y: 8.999999}
-      - {x: 3.9187498, y: 9.093749}
-      - {x: 4.1437497, y: 9.131249}
-      - {x: 4.4624996, y: 9.16875}
-      - {x: 4.725, y: 9.187499}
-      - {x: 5.0624995, y: 9.206249}
-      - {x: 5.1, y: 9.224999}
-      - {x: 6.1874995, y: 9.224999}
-      - {x: 6.2062497, y: 9.206249}
-      - {x: 6.7124996, y: 9.187499}
-      - {x: 7.4249997, y: 9.131249}
-      - {x: 8.156249, y: 8.9625}
-      - {x: 8.812499, y: 8.831249}
-      - {x: 9.15, y: 8.737499}
-      - {x: 9.43125, y: 8.68125}
-      - {x: 9.562499, y: 8.624999}
-      - {x: 9.54375, y: 8.549999}
-      - {x: 9.674999, y: 8.362499}
-      - {x: 9.768749, y: 8.343749}
-      - {x: 9.862499, y: 8.343749}
-      - {x: 9.956249, y: 8.381249}
-      - {x: 10.143749, y: 8.549999}
-      - {x: 10.2, y: 8.68125}
-      - {x: 10.36875, y: 9.037499}
-      - {x: 10.3875, y: 9.224999}
-      - {x: 10.406249, y: 9.318749}
-      - {x: 10.406249, y: 9.73125}
-      - {x: 10.36875, y: 9.825}
-      - {x: 10.143749, y: 10.0125}
-      - {x: 9.674999, y: 10.031249}
-      - {x: 9.6375, y: 10.10625}
-      - {x: 9.468749, y: 10.124999}
-      - {x: 8.662499, y: 10.275}
-      - {x: 8.193749, y: 10.331249}
-      - {x: 7.6312494, y: 10.406249}
-      - {x: 7.10625, y: 10.4625}
-      - {x: 6.6937494, y: 10.499999}
-      - {x: 6.45, y: 10.537499}
-      - {x: 5.23125, y: 10.537499}
-      - {x: 4.9874997, y: 10.499999}
-      - {x: 4.575, y: 10.4625}
-      - {x: 4.2, y: 10.406249}
-      - {x: 3.6937497, y: 10.331249}
-      - {x: 3.5249999, y: 10.275}
-      - {x: 3.1499999, y: 10.18125}
-      - {x: 2.8874998, y: 10.143749}
-      - {x: 2.7375, y: 10.2}
-      - {x: 2.5874999, y: 10.4625}
-      - {x: 2.475, y: 10.55625}
-      - {x: 2.175, y: 11.249999}
-      - {x: 2.2124999, y: 11.343749}
-      - {x: 2.19375, y: 11.418749}
-      - {x: 1.9124999, y: 11.812499}
-      - {x: 1.8937498, y: 11.906249}
-      - {x: 1.6687499, y: 12.224999}
-      - {x: 1.5374999, y: 12.449999}
-      - {x: 1.1999999, y: 13.068749}
-      - {x: 1.1999999, y: 13.106249}
-      - {x: 0.88124996, y: 13.856249}
-      - {x: 0.7125, y: 14.324999}
-      - {x: 0.50624996, y: 14.887499}
-      - {x: 0.18749999, y: 15.749999}
-      - {x: 0.13125, y: 15.937499}
-      - {x: -0.29999998, y: 16.89375}
-      - {x: -0.43124998, y: 17.2125}
-      - {x: -0.48749998, y: 17.26875}
-      - {x: -0.525, y: 17.26875}
-      - {x: -0.54375, y: 17.2125}
-      - {x: -0.50624996, y: 17.137499}
-      - {x: -0.48749998, y: 17.11875}
-      - {x: -0.46874997, y: 17.025}
-      - {x: -0.43124998, y: 16.9875}
-      - {x: -0.41249996, y: 16.89375}
-      - {x: -0.29999998, y: 16.6125}
-      - {x: 0.018749999, y: 15.843749}
-      - {x: 0.16874999, y: 15.431249}
-      - {x: 0.28124997, y: 15.149999}
-      - {x: 0.29999998, y: 15.149999}
-      - {x: 0.33749998, y: 14.999999}
-      - {x: 0.225, y: 15.224999}
-      - {x: 0.225, y: 15.262499}
-      - {x: 0.037499998, y: 15.787499}
-      - {x: -0.14999999, y: 16.199999}
-      - {x: -0.35625, y: 16.74375}
-      - {x: -0.43124998, y: 16.89375}
-      - {x: -0.45, y: 16.9875}
-      - {x: -0.48749998, y: 17.043749}
-      - {x: -0.48749998, y: 17.08125}
-      - {x: -0.54375, y: 17.193748}
-      - {x: -0.54375, y: 17.231249}
-      - {x: -0.525, y: 17.418749}
-      - {x: -0.56249994, y: 17.49375}
-      - {x: -0.67499995, y: 17.606249}
-      - {x: -0.9187499, y: 18.24375}
-      - {x: -1.1062499, y: 18.412498}
-      - {x: -1.275, y: 18.468748}
-      - {x: -1.6874999, y: 18.468748}
-      - {x: -1.8374999, y: 18.39375}
-      - {x: -2.08125, y: 18.24375}
-      - {x: -2.19375, y: 18.1125}
-      - {x: -2.1374998, y: 17.887499}
-      - {x: -1.9874998, y: 17.699999}
-      - {x: -1.8, y: 17.249998}
-      - {x: -1.5937499, y: 16.781248}
-      - {x: -1.3124999, y: 16.05}
-      - {x: -1.1249999, y: 15.618749}
-      - {x: -0.93749994, y: 15.112499}
-      - {x: -0.88124996, y: 14.924999}
-      - {x: -0.78749996, y: 14.662499}
-      - {x: -0.43124998, y: 13.724999}
-      - {x: -0.2625, y: 13.293749}
-      - {x: -0.18749999, y: 13.124999}
-      - {x: -0.09374999, y: 13.031249}
-      - {x: 0.37499997, y: 11.906249}
-      - {x: 0.61875, y: 11.381249}
-      - {x: 0.80625, y: 11.025}
-      - {x: 0.86249995, y: 10.93125}
-      - {x: 1.05, y: 10.593749}
-      - {x: 1.1999999, y: 10.349999}
-      - {x: 1.3499999, y: 10.124999}
-      - {x: 1.4999999, y: 9.91875}
-      - {x: 1.6499999, y: 9.674999}
-      - {x: 1.5562499, y: 9.468749}
-      - {x: 1.18125, y: 8.812499}
-      - {x: 0.93749994, y: 8.456249}
-      - {x: 0.54375, y: 7.9312496}
-      - {x: -0.05625, y: 7.3124995}
-      - {x: -0.45, y: 7.2187495}
-      - {x: -0.54375, y: 7.1437497}
-      - {x: -1.2937499, y: 7.0874996}
-      - {x: -1.6687499, y: 7.0499997}
-      - {x: -1.8749999, y: 7.0125}
-      - {x: -2.3062499, y: 6.8999996}
-      - {x: -2.6249998, y: 6.8624997}
-      - {x: -2.8124998, y: 6.7687497}
-      - {x: -2.9999998, y: 6.8062496}
-      - {x: -3.1124997, y: 7.0312495}
-      - {x: -3.31875, y: 7.3124995}
-      - {x: -3.50625, y: 7.4999995}
-      - {x: -3.4499998, y: 7.5374994}
-      - {x: -3.4499998, y: 7.5562496}
-      - {x: -3.6374998, y: 7.8374996}
-      - {x: -4.0125, y: 8.268749}
-      - {x: -4.06875, y: 8.287499}
-      - {x: -4.2, y: 8.1375}
-      - {x: -4.5562496, y: 7.6687493}
-      - {x: -4.7625, y: 7.4812493}
-      - {x: -4.7437496, y: 7.3124995}
-      - {x: -4.48125, y: 7.0499997}
-      - {x: -4.3312497, y: 6.7124996}
-      - {x: -4.3124995, y: 6.3749995}
-      - {x: -4.3124995, y: 6.1874995}
-      - {x: -4.44375, y: 6.0187497}
-      - {x: -4.5375, y: 5.8687496}
-      - {x: -4.7437496, y: 5.1749997}
-      - {x: -4.7999997, y: 4.8937497}
-      - {x: -4.81875, y: 4.7625}
-      - {x: -4.8374996, y: 4.575}
-      - {x: -4.8374996, y: 4.4999995}
-      - {x: -4.81875, y: 4.06875}
-      - {x: -4.7999997, y: 3.8062499}
-      - {x: -4.6499996, y: 3.0937498}
-      - {x: -4.44375, y: 2.5124998}
-      - {x: -4.3687496, y: 2.2875}
-      - {x: -4.3312497, y: 2.2312498}
-      - {x: -4.29375, y: 2.08125}
-      - {x: -4.2374997, y: 1.9312499}
-      - {x: -4.2, y: 1.9312499}
-      - {x: -4.0499997, y: 1.8374999}
-      - {x: -3.9749997, y: 1.7624999}
-      - {x: -3.7312498, y: 1.6499999}
-      - {x: -3.6, y: 1.6125}
-      - {x: -3.1874998, y: 1.6125}
-      - {x: -3.0749998, y: 1.6312499}
-      - {x: -2.7749999, y: 1.8187499}
-      - {x: -2.6625, y: 1.9124999}
-    - - {x: -2.75625, y: 2.00625}
-      - {x: -2.7749999, y: 2.1562498}
-      - {x: -2.7937498, y: 1.9874998}
-      - {x: -2.7749999, y: 1.9874998}
-    - - {x: 9.693749, y: 8.531249}
-      - {x: 9.787499, y: 8.456249}
-      - {x: 9.881249, y: 8.474999}
-      - {x: 9.862499, y: 8.474999}
-    - - {x: 2.1562498, y: 11.081249}
-      - {x: 2.0624998, y: 11.174999}
-      - {x: 2.0624998, y: 11.268749}
-      - {x: 1.7437499, y: 11.924999}
-      - {x: 1.6687499, y: 11.999999}
-      - {x: 1.70625, y: 11.887499}
-      - {x: 2.00625, y: 11.30625}
-      - {x: 2.1562498, y: 11.025}
-      - {x: 2.175, y: 11.04375}
-    - - {x: 2.2124999, y: 11.231249}
-      - {x: 2.26875, y: 11.249999}
-      - {x: 2.26875, y: 11.30625}
-      - {x: 2.2124999, y: 11.324999}
-      - {x: 2.175, y: 11.287499}
-  m_UseDelaunayMesh: 0
---- !u!212 &1820776321
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820776318}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: 182c6b2afd197f545ab294d384273841, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 21.599998, y: 38.399998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1820776322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820776318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7202ae4c053dcd54eb7ffb271b596d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggable: 0
 --- !u!1 &1838809597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,7 +5219,7 @@ GameObject:
   - component: {fileID: 1838809599}
   - component: {fileID: 1838809601}
   m_Layer: 0
-  m_Name: 6
+  m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5836,8 +5394,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 9ea21597fce42f34583956ba2f2fb4e6, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: 21300000, guid: 3ea94b208b06db346846711464fb1659, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5996,6 +5554,317 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901069086}
   m_CullTransparentMesh: 1
+--- !u!1 &1977878164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977878168}
+  - component: {fileID: 1977878167}
+  - component: {fileID: 1977878166}
+  - component: {fileID: 1977878165}
+  m_Layer: 0
+  m_Name: Heart Puzzle Piece (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1977878165
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977878164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21.599998, y: 38.399998}
+    newSize: {x: 5.58, y: 3.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.46874997, y: 4.2187495}
+      - {x: -0.35625, y: 4.3875}
+      - {x: -0.29999998, y: 4.4999995}
+      - {x: -0.16874999, y: 4.6499996}
+      - {x: -0.1125, y: 4.7437496}
+      - {x: -0.13125, y: 4.9874997}
+      - {x: -0.037499998, y: 5.1187496}
+      - {x: -0.037499998, y: 5.1375}
+      - {x: -0.074999996, y: 5.1749997}
+      - {x: -0.16874999, y: 5.1749997}
+      - {x: -0.37499997, y: 5.38125}
+      - {x: -0.74999994, y: 5.7}
+      - {x: -0.9937499, y: 5.8687496}
+      - {x: -1.0312499, y: 5.9624996}
+      - {x: -1.4999999, y: 6.1874995}
+      - {x: -1.7624999, y: 6.2999997}
+      - {x: -2.08125, y: 6.4124994}
+      - {x: -2.5874999, y: 6.5624995}
+      - {x: -3.0562499, y: 6.6749997}
+      - {x: -3.2624998, y: 6.7124996}
+      - {x: -3.2812498, y: 6.7874994}
+      - {x: -3.4874997, y: 6.8624997}
+      - {x: -3.6562498, y: 6.8624997}
+      - {x: -4.3312497, y: 7.0125}
+      - {x: -5.325, y: 7.2}
+      - {x: -5.5499997, y: 7.2374997}
+      - {x: -6.16875, y: 7.3124995}
+      - {x: -6.5624995, y: 7.3499994}
+      - {x: -6.8437495, y: 7.3687496}
+      - {x: -7.4249997, y: 7.3687496}
+      - {x: -7.4249997, y: 7.3874993}
+      - {x: -7.7812495, y: 7.3874993}
+      - {x: -7.7812495, y: 7.3687496}
+      - {x: -8.456249, y: 7.3687496}
+      - {x: -8.737499, y: 7.3499994}
+      - {x: -9.35625, y: 7.3312497}
+      - {x: -9.487499, y: 7.2187495}
+      - {x: -9.61875, y: 6.9937496}
+      - {x: -9.61875, y: 6.7687497}
+      - {x: -9.412499, y: 6.2437496}
+      - {x: -9.35625, y: 6.1312494}
+      - {x: -9.318749, y: 6.0937495}
+      - {x: -8.662499, y: 6.0937495}
+      - {x: -8.662499, y: 6.0562496}
+      - {x: -8.549999, y: 6.0562496}
+      - {x: -8.30625, y: 6.0374994}
+      - {x: -7.9499993, y: 6.0374994}
+      - {x: -7.4624996, y: 5.9999995}
+      - {x: -6.5062494, y: 5.8875}
+      - {x: -6.2625, y: 5.8499994}
+      - {x: -6.0562496, y: 5.8124995}
+      - {x: -5.56875, y: 5.7187495}
+      - {x: -5.23125, y: 5.6437497}
+      - {x: -5.0249996, y: 5.56875}
+      - {x: -4.7062497, y: 5.5125}
+      - {x: -4.06875, y: 5.3624997}
+      - {x: -2.9999998, y: 5.0624995}
+      - {x: -2.8874998, y: 5.0249996}
+      - {x: -2.4187498, y: 4.85625}
+      - {x: -2.38125, y: 4.85625}
+      - {x: -1.7249999, y: 4.5187497}
+      - {x: -1.2187499, y: 4.0125}
+      - {x: -1.1249999, y: 3.8812497}
+      - {x: -0.88124996, y: 3.7687497}
+      - {x: -0.74999994, y: 3.7687497}
+      - {x: -0.65624994, y: 3.8062499}
+      - {x: -0.54375, y: 3.8999999}
+      - {x: -0.45, y: 4.0874996}
+    - - {x: -3.8812497, y: 5.4937496}
+      - {x: -3.9749997, y: 5.475}
+      - {x: -4.0499997, y: 5.475}
+      - {x: -4.06875, y: 5.4937496}
+      - {x: -4.1249995, y: 5.4937496}
+      - {x: -4.1437497, y: 5.5125}
+      - {x: -4.2, y: 5.5125}
+      - {x: -4.2187495, y: 5.5312495}
+      - {x: -4.2749996, y: 5.5312495}
+      - {x: -4.29375, y: 5.5499997}
+      - {x: -4.3875, y: 5.5499997}
+      - {x: -4.44375, y: 5.5874996}
+      - {x: -4.4999995, y: 5.5874996}
+      - {x: -4.5187497, y: 5.60625}
+      - {x: -4.6124997, y: 5.6249995}
+      - {x: -4.63125, y: 5.6812496}
+      - {x: -5.7, y: 5.9062495}
+      - {x: -5.9437494, y: 5.8875}
+      - {x: -4.6874995, y: 5.5499997}
+      - {x: -4.575, y: 5.60625}
+      - {x: -4.4999995, y: 5.60625}
+      - {x: -4.48125, y: 5.5874996}
+      - {x: -4.4249997, y: 5.5874996}
+      - {x: -4.4062495, y: 5.56875}
+      - {x: -4.3124995, y: 5.5499997}
+      - {x: -4.25625, y: 5.5499997}
+      - {x: -4.2374997, y: 5.5312495}
+      - {x: -4.1812496, y: 5.5312495}
+      - {x: -4.1625, y: 5.5125}
+      - {x: -4.0125, y: 5.4937496}
+      - {x: -3.8249998, y: 5.3999996}
+      - {x: -3.7687497, y: 5.38125}
+      - {x: -3.6749997, y: 5.38125}
+    - - {x: -5.2875, y: 7.0499997}
+      - {x: -5.3062496, y: 7.0687494}
+      - {x: -5.4937496, y: 7.0687494}
+      - {x: -5.5125, y: 7.0874996}
+      - {x: -5.79375, y: 7.1249995}
+      - {x: -6.16875, y: 7.1812496}
+      - {x: -6.2625, y: 7.1812496}
+      - {x: -6.2812495, y: 7.2}
+      - {x: -6.4124994, y: 7.2}
+      - {x: -6.4312496, y: 7.2187495}
+      - {x: -6.5999994, y: 7.2374997}
+      - {x: -7.2, y: 7.3124995}
+      - {x: -7.6124997, y: 7.2749996}
+      - {x: -6.6937494, y: 7.2187495}
+      - {x: -6.6562495, y: 7.2187495}
+      - {x: -6.4124994, y: 7.2}
+      - {x: -6.2625, y: 7.2}
+      - {x: -6.2437496, y: 7.1812496}
+      - {x: -6.0562496, y: 7.1812496}
+      - {x: -6.0374994, y: 7.1624994}
+      - {x: -5.9062495, y: 7.1437497}
+      - {x: -5.3624997, y: 7.0687494}
+      - {x: -5.2687497, y: 7.0687494}
+      - {x: -5.2499995, y: 7.0499997}
+      - {x: -5.1375, y: 7.0499997}
+      - {x: -5.1187496, y: 7.0312495}
+      - {x: -5.04375, y: 7.0312495}
+      - {x: -5.0249996, y: 7.0125}
+      - {x: -4.95, y: 7.0312495}
+      - {x: -5.1562495, y: 7.0312495}
+      - {x: -5.1749997, y: 7.0499997}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1977878166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977878164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd870851496e64e9327c8e93c7e97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 1
+  allPieceDistances:
+  - pieceName: Heart Puzzle Piece (5)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (8)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (12)
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
+  - pieceName: Puzzle Piece Note
+    distanceToPiece: 0
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
+  - pieceName: Heart Puzzle Piece (7)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (2)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (10)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (1)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (6)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (9)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  snapThreshold: 0.25
+--- !u!212 &1977878167
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977878164}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 05ba085b5be597e4a8394ac69d7aea97, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.58, y: 3.06}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1977878168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977878164}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1991937207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,34 +6065,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Heart Puzzle Piece (3)
+  - pieceName: Heart Puzzle Piece (5)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (13)
+  - pieceName: Heart Puzzle Piece (4)
+    distanceToPiece: 0
+    offsetToPiece: {x: 0, y: 0, z: 0}
+  - pieceName: Heart Puzzle Piece (3)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (8)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (11)
+  - pieceName: Heart Puzzle Piece (12)
     distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
+    offsetToPiece: {x: -0.02, y: 0, z: 0}
   - pieceName: Puzzle Piece Note
     distanceToPiece: 0
-    offsetToPiece: {x: 0.0031507164, y: -1.6210117, z: 0}
+    offsetToPiece: {x: -0.08, y: -1.61, z: 0}
   - pieceName: Heart Puzzle Piece (7)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (12)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (1)
+  - pieceName: Heart Puzzle Piece (2)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (10)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Heart Puzzle Piece (0)
+  - pieceName: Heart Puzzle Piece (1)
     distanceToPiece: 0
     offsetToPiece: {x: 0, y: 0, z: 0}
   - pieceName: Heart Puzzle Piece (6)
@@ -6270,8 +6139,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: c91d9ea8d9677ea408b9d2f1f24b314b, type: 3}
+  m_SortingOrder: 9
+  m_Sprite: {fileID: 21300000, guid: a25ce43762a411344a1457240e4390fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6291,7 +6160,7 @@ Transform:
   m_GameObject: {fileID: 2059409892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23315072, y: 0.4089883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6445,14 +6314,14 @@ SceneRoots:
   - {fileID: 1547843714}
   - {fileID: 1466042420}
   - {fileID: 68490996}
+  - {fileID: 1977878168}
+  - {fileID: 1020181676}
   - {fileID: 1734649717}
   - {fileID: 1309293663}
   - {fileID: 631536183}
   - {fileID: 2059409896}
   - {fileID: 1483613506}
   - {fileID: 825970639}
-  - {fileID: 1459689308}
-  - {fileID: 475519856}
   - {fileID: 214784304}
   - {fileID: 1084080918}
   - {fileID: 728145221}
