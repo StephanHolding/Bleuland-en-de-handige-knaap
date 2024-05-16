@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class GameStateManager : SingletonTemplateMono<GameStateManager>
 {
@@ -15,6 +16,8 @@ public class GameStateManager : SingletonTemplateMono<GameStateManager>
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+
         GoToGamestate<IntroState>();
     }
 

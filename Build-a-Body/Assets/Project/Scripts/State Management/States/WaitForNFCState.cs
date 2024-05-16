@@ -32,6 +32,8 @@ public class WaitForNFCState : GameState
 
     private void Scanner_OnNfcTagFound(string id, string payload)
     {
+        ScreenLogger.Log(payload);
+
         if (IsOrganName(payload))
         {
             if (CanPlayMinigame(payload))
