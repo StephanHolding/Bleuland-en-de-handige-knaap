@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - email_service
+      
 
 jobs:
   deploy:
