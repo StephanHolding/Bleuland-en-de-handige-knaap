@@ -19,11 +19,11 @@ jobs:
         run: sudo apt-get install -y sshpass
 
       - name: Copy Files to Remote Server
-        run: sshpass -p bladeandsoul. scp -r ./ admin@18.201.105.11:/root/Build-a-Body
+        run: sshpass -p 'bladeandsoul.' scp -r ./ admin@18.201.105.11:/root/Build-a-Body
 
       - name: SSH into Remote Server and Build Docker Image
         run: |
-          sshpass -p bladeandsoul. ssh admin@18.201.105.11 'cd /root/Build-a-Body && docker build -t hku_email_image .'
+          sshpass -p 'bladeandsoul.' ssh admin@18.201.105.11 'cd /root/Build-a-Body && docker build -t hku_email_image .'
 
       - name: Stop and Remove Old Docker Container
         run: |
