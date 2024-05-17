@@ -13,9 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
         with:
@@ -25,7 +22,6 @@ jobs:
           script: |
             cd /root/Build-a-Body
             git pull origin email_service
-            npm install
             docker stop $(docker ps -q --filter ancestor=hku_images) # 停止 hku_images 镜像生成的容器
             docker rm $(docker ps -aq --filter ancestor=hku_images)   # 删除 hku_images 镜像生成的容器
             docker rmi $(docker images -q hku_images) # 删除 hku_images 镜像
