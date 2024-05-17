@@ -1,35 +1,33 @@
-name: Deploy to Email Service
+name: Deploy to VPS
 
 on:
   push:
     branches:
       - email_service
-      
 
 jobs:
   deploy:
-    name: Deploy to Remote Server
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
+      - name: Install dependencies
+        run: npm install
 
-      - name: Copy Files to Remote Server
-        run: sshpass -p 'bladeandsoul.' scp -r ./ admin@18.201.105.11:/root/Build-a-Body
-
-      - name: SSH into Remote Server and Build Docker Image
-        run: |
-          sshpass -p 'bladeandsoul.' ssh admin@18.201.105.11 'cd /root/Build-a-Body && docker build -t hku_email_image .'
-
-      - name: Stop and Remove Old Docker Container
-        run: |
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh admin@18.201.105.11 'docker stop $(docker ps -q --filter ancestor=hku_email_image) || true'
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh admin@18.201.105.11 'docker rm $(docker ps -aq --filter ancestor=hku_email_image) || true'
-
-      - name: Run Docker Container
-        run: |
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh admin@18.201.105.11 'docker run -d -p 3030:3030 hku_email_image'
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: 18.201.105.11
+          username: admin
+          password: bladeandsoul. # Or use SSH key
+          script: |
+            cd /root/Build-a-Body
+            git pull origin email_service
+            npm install
+            docker stop $(docker ps -q --filter ancestor=hku_images) # 停止 hku_images 镜像生成的容器
+            docker rm $(docker ps -aq --filter ancestor=hku_images)   # 删除 hku_images 镜像生成的容器
+            docker rmi $(docker images -q hku_images) # 删除 hku_images 镜像
+            docker build -t hku_images .
+            docker run -d -p 3030:3030 hku_images
