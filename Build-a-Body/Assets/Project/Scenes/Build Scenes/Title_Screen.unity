@@ -886,8 +886,7 @@ MonoBehaviour:
   m_text: "Bleuland \n&\n De Handigen Knaap"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92eff32d83b78744682fcc1d159fd4f6, type: 2}
-  m_sharedMaterial: {fileID: -7922894439065557423, guid: 92eff32d83b78744682fcc1d159fd4f6,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: a55141697ccea3a41b51d5b3140c4f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1726,8 +1725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -535.64417, y: -112}
-  m_SizeDelta: {x: 1021.1483, y: 180.043}
+  m_AnchoredPosition: {x: -168.62183, y: -66.14209}
+  m_SizeDelta: {x: 287.1036, y: 88.3272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100836303
 MonoBehaviour:
@@ -1776,8 +1775,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 137.05
-  m_fontSizeBase: 137.05
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
