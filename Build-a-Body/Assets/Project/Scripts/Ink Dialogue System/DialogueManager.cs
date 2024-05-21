@@ -359,6 +359,10 @@ namespace Dialogue
             {
                 Camera.main.transform.GetComponent<CameraMovementController>()?.GoTo(targetTag);
             }));
+            AddCommand(new DialogueCommand<string>("sprite", delegate (string spriteName)
+            {
+                output.ShowSprite(spriteName);
+            }));
         }
 
         private void AddCommand(DialogueCommandBase toAdd)

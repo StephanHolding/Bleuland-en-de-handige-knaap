@@ -19,6 +19,7 @@ namespace Dialogue
         public Button[] choiceButtons;
         public TMP_InputField inputfield;
         public Image graphicSpace;
+        public Image showSprite;
 
         //other classes are allowed to make changes to this struct. it is reset after every dialogue line.
         public DialogueCharacter.DialogueCharacterSettings dialogueOverrides;
@@ -54,6 +55,8 @@ namespace Dialogue
 
                 DisableBackgroundGraphic();
                 HideChoiceUI();
+
+                showSprite.gameObject.SetActive(false);
 
                 isActive = toggle;
             }
@@ -145,6 +148,17 @@ namespace Dialogue
                 {
                     FMODAudioManager.instance.PlayOneShot("OK");
                 });
+            }
+        }
+
+        public void ShowSprite(string spriteName)
+        {
+            Sprite sprite = Resources.Load<Sprite>("Show Sprites/" + spriteName);
+            if (sprite != null)
+            {
+                showSprite.sprite = sprite;
+                showSprite.preserveAspect = true;
+                showSprite.gameObject.SetActive(true);
             }
         }
 

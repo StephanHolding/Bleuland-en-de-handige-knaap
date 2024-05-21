@@ -27,6 +27,6 @@ Geen zorgen als je onze ontledingssessies van die gore criminelen bent vergeten.
 Je hebt namelijk hartstikke goede aantekeningen gemaakt! #camera body
 
 Je zult ze wel even zelf terug moeten vinden.
-Dit logo stond op de kaft van je notitieboek waar je je aantekeningen van het hart in had geschreven. #display hart NFC Chip Logo 
+Dit logo stond op de kaft van je notitieboek waar je je aantekeningen van het hart in had geschreven. #sprite Heart_Logo
 Loop eens rond om te zien of je het terug kan vinden in de vitrines! 
 -> END
