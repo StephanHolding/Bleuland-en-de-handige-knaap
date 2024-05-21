@@ -8,7 +8,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000020ECB3F3728 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000020FB2E2A6D8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,69 +20,10 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] SystemI::createSound                     : filename = ../FMOD/Build-a-Body/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000020FD9E46748, queue head = 0000020EBF18CF88, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000020FD9E46748
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/Build-a-Body/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3216000
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3744
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000020FB37C2D20
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 600
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='autumn-waltz-174280', format=5, channels=2, frequency=48000, lengthbytes=1468832, lengthpcm=7677492, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.881134.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000020FD9E46748
-[LOG] SoundI::release                          : Cello Suite - Bach [COPYRIGHT FREE] (0000020FB3746988)
-[LOG] SoundI::release                          :     Cello Suite - Bach [COPYRIGHT FREE] (0000020FAF907548)
-[LOG] SoundI::release                          :     Cello Suite - Bach [COPYRIGHT FREE] (0000020EBFAA0FD8)
-[LOG] SystemI::createSound                     : filename = ../FMOD/Build-a-Body/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000020EC0DD08F8, queue head = 0000020EBF18CF88, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000020EC0DD08F8
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/Build-a-Body/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3216000
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3744
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000020EE07D6E50
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Cello Suite - Bach [COPYRIGHT FREE]', format=5, channels=2, frequency=48000, lengthbytes=1744608, lengthpcm=6622981, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.614197.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000020EC0DD08F8
-[LOG] SoundI::release                          : autumn-waltz-174280 (0000020FD9E46748)
-[LOG] SoundI::release                          :     autumn-waltz-174280 (0000020E9DBD8FC8)
-[LOG] SoundI::release                          :     autumn-waltz-174280 (0000020EBFA9F9E8)
-[LOG] SoundI::release                          : Cello Suite - Bach [COPYRIGHT FREE] (0000020EC0DD08F8)
-[LOG] SoundI::release                          :     Cello Suite - Bach [COPYRIGHT FREE] (0000020E9CD7DDA8)
-[LOG] SoundI::release                          :     Cello Suite - Bach [COPYRIGHT FREE] (0000020FDDAF6368)
-[LOG] SoundI::release                          :  (0000020CEB7C94E8)
-[LOG] SoundI::release                          :     pencil write 2 (0000020F859198B8)
-[LOG] SoundI::release                          :  (0000020CEB7C97C8)
-[LOG] SoundI::release                          :     pencil write 3 (0000020F85919718)
-[LOG] SoundI::release                          :  (0000020CEB7C9938)
-[LOG] SoundI::release                          :     pencil write 5 (0000020F85919BF8)
-[LOG] SoundI::release                          :  (0000020CEB7C9658)
-[LOG] SoundI::release                          :     pencil write (0000020F85919238)
-[LOG] SoundI::release                          :  (0000020CEB7C9378)
-[LOG] SoundI::release                          :     pencil write 4 (0000020EC24A9968)
-[LOG] SoundI::release                          :  (0000020FAF5E4D98)
-[LOG] SoundI::release                          :     iPhone Lock (Apple Sound) - Sound Effect for Editing (0000020E9CD7DC08)
-[LOG] SoundI::release                          :  (0000020EC0C03AE8)
-[LOG] SoundI::release                          :     stamp-81635 (0000020FAF907208)
-[LOG] SoundI::release                          :  (0000020EC2874398)
-[LOG] SoundI::release                          :     talk sound (0000020FB2BCB3B8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.

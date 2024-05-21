@@ -201,29 +201,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.907, y: -0.005000055, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 1161760662}
     offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 2069452899}
     offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.93799996, y: -2.7790003, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 483274534}
     offsetToPiece: {x: -0.877, y: -0.44500005, z: 0}
   snapThreshold: 0.75
 --- !u!120 &52402530
@@ -653,29 +635,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 1547843712}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 2069452899}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &98422970
@@ -1571,20 +1533,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
+  - otherPiece: {fileID: 0}
     offsetToPiece: {x: -2.0549998, y: -0.375, z: 0}
-  - pieceName: Puzzle Piece
-    distanceToPiece: 0
+  - otherPiece: {fileID: 0}
     offsetToPiece: {x: -1.1259999, y: 0.072999954, z: 0}
-  - pieceName: Puzzle Piece (2)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 0}
     offsetToPiece: {x: 0.65400004, y: 4.183, z: 0}
-  - pieceName: Puzzle Piece (3)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 0}
     offsetToPiece: {x: -2.326, y: 5.473, z: 0}
-  - pieceName: Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 0}
     offsetToPiece: {x: -2.336, y: 1.9430001, z: 0}
   snapThreshold: 0.75
 --- !u!120 &268930873
@@ -1847,29 +1804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &483274535
@@ -2348,29 +2283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.969, y: 2.7740002, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.93799996, y: 2.7790003, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.061, y: 2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.061, y: 2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.061, y: 2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.061, y: 2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.061, y: 2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0.061, y: 2.334, z: 0}
   snapThreshold: 0.75
 --- !u!120 &1147094787
@@ -2732,29 +2645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &1161760663
@@ -3428,29 +3319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &1414948050
@@ -3944,29 +3813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &1547843713
@@ -4115,29 +3962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 1.907, y: 0.005000055, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 1547843712}
     offsetToPiece: {x: 1.03, y: -0.44, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 1.03, y: -0.44, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.969, y: -2.7740002, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 1.03, y: -0.44, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 1.03, y: -0.44, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
-    offsetToPiece: {x: 1.03, y: -0.44, z: 0}
-  - pieceName: Lung Puzzle Piece (1)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 1414948049}
     offsetToPiece: {x: 1.03, y: -0.44, z: 0}
   snapThreshold: 0.75
 --- !u!120 &1611491384
@@ -4299,7 +4126,7 @@ Transform:
   m_GameObject: {fileID: 1685642651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: -2.07, z: 0.12564673}
+  m_LocalPosition: {x: -0.87, y: -1.97, z: 0.12564673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5068,29 +4895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggable: 1
   allPieceDistances:
-  - pieceName: Puzzle Piece Note (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: -1.03, y: 0.44, z: 0}
-  - pieceName: Puzzle Piece Note (1)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0.877, y: 0.44500005, z: 0}
-  - pieceName: Lung Puzzle Piece (3)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (2)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Puzzle Piece Note
-    distanceToPiece: 0
-    offsetToPiece: {x: -0.061, y: -2.334, z: 0}
-  - pieceName: Lung Puzzle Piece (8)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (7)
-    distanceToPiece: 0
-    offsetToPiece: {x: 0, y: 0, z: 0}
-  - pieceName: Lung Puzzle Piece (0)
-    distanceToPiece: 0
+  - otherPiece: {fileID: 98422969}
     offsetToPiece: {x: 0, y: 0, z: 0}
   snapThreshold: 0.25
 --- !u!212 &2069452900

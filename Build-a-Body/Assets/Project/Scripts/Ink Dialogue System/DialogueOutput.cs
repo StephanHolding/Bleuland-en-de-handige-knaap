@@ -85,11 +85,14 @@ namespace Dialogue
             inputfieldSubmitButton.onClick.RemoveAllListeners();
             inputfieldSubmitButton.onClick.AddListener(delegate
             {
-                onEndEdit.Invoke(inputfield.text);
-                inputfield.gameObject.SetActive(false);
+                if (!string.IsNullOrWhiteSpace(inputfield.text))
+                {
+                    onEndEdit.Invoke(inputfield.text);
+                    inputfield.gameObject.SetActive(false);
 
-                DialogueManager.instance.UnlockStory();
-                DialogueManager.instance.ContinueStory();
+                    DialogueManager.instance.UnlockStory();
+                    DialogueManager.instance.ContinueStory();
+                }
             });
 
             inputfieldSubmitButton.onClick.AddListener(delegate
