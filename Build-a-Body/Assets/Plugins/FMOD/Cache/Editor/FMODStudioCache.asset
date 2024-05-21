@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8475661787818052931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/OK
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/OK
+  Guid:
+    Data1: -1608833776
+    Data2: 1099328044
+    Data3: -859903599
+    Data4: 1626469016
+  Banks:
+  - {fileID: -3831303651496145019}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 578
 --- !u!114 &-5232315700995310197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +69,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638512193323548849
+  lastModified: 638518949757863089
   FileSizes:
   - Name: Desktop
-    Value: 22528
+    Value: 33472
   Exists: 1
 --- !u!114 &-3614433778913573411
 MonoBehaviour:
@@ -116,7 +143,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638489419651008955
+  lastModified: 638518939845333021
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -136,10 +163,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638512193323229682
+  lastModified: 638518939845348087
   FileSizes:
   - Name: Desktop
-    Value: 1062
+    Value: 1096
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -164,12 +191,13 @@ MonoBehaviour:
   - {fileID: 6371022008463490835}
   - {fileID: 8246422358893413792}
   - {fileID: -3467672754560160621}
+  - {fileID: -8475661787818052931}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2313193111049683425}
   StringsBanks:
   - {fileID: -1162286593148318676}
-  cacheTime: 638512193323548849
+  cacheTime: 638518949757863089
   cacheVersion: 131617
 --- !u!114 &1081184419095334253
 MonoBehaviour:
@@ -186,7 +214,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638512193323538891
+  lastModified: 638518937560940771
   FileSizes:
   - Name: Desktop
     Value: 3219744

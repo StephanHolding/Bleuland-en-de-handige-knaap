@@ -47,6 +47,11 @@ namespace FMOD_AudioManagement
             RuntimeManager.PlayOneShot(eventReference, worldPosition);
         }
 
+        public void PlayOneShot(string audioName)
+        {
+            PlayOneShot(audioName, Vector3.zero);
+        }
+
         public void PlayOneShot(string eventName, Vector3 worldPosition = default(Vector3))
         {
             PlayOneShot(GetEventReferenceFromDictionary(eventName), worldPosition);

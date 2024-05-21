@@ -76,3 +76,9 @@ MonoBehaviour:
       Data3: -348631891
       Data4: -959053552
     Path: event:/Music/main bg
+  - Guid:
+      Data1: -1608833776
+      Data2: 1099328044
+      Data3: -859903599
+      Data4: 1626469016
+    Path: event:/SFX/OK

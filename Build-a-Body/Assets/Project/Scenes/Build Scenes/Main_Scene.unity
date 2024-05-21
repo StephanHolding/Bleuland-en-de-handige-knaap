@@ -1496,6 +1496,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Box - Speech
       objectReference: {fileID: 0}
+    - target: {fileID: 5173060879949885148, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -81.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173060879949885148, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -23.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173060879949885148, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -34.55681
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173060879949885148, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.623001
+      objectReference: {fileID: 0}
     - target: {fileID: 8029877879128652476, guid: 07700ec4caef18949ba5835f39f22216,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1595,6 +1615,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169048043460331176, guid: 07700ec4caef18949ba5835f39f22216,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

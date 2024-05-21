@@ -36,6 +36,8 @@ namespace Dialogue
         {
             if (inputfield != null)
                 inputfieldSubmitButton = inputfield.transform.GetChild(0).GetComponent<Button>();
+
+            AddButtonSoundToButtons();
         }
 
         public void Toggle(bool toggle)
@@ -90,6 +92,11 @@ namespace Dialogue
                 DialogueManager.instance.ContinueStory();
             });
 
+            inputfieldSubmitButton.onClick.AddListener(delegate
+            {
+                FMODAudioManager.instance.PlayOneShot("OK");
+            });
+
             inputfield.gameObject.SetActive(true);
 
         }
@@ -129,6 +136,11 @@ namespace Dialogue
                 {
                     managerInstance.MakeChoice(index);
                     HideChoiceUI();
+                });
+
+                b.onClick.AddListener(delegate
+                {
+                    FMODAudioManager.instance.PlayOneShot("OK");
                 });
             }
         }
@@ -221,6 +233,22 @@ namespace Dialogue
         public void InputfieldOnInputChangedSoundEffect()
         {
             FMODAudioManager.instance.PlayOneShot("writing sound");
+        }
+
+        private void AddButtonSoundToButtons()
+        {
+            foreach (Button button in choiceButtons)
+            {
+                button.onClick.AddListener(delegate
+                {
+                    FMODAudioManager.instance.PlayOneShot("OK");
+                });
+            }
+
+            inputfieldSubmitButton?.onClick.AddListener(delegate
+            {
+                FMODAudioManager.instance.PlayOneShot("OK");
+            });
         }
 
     }
