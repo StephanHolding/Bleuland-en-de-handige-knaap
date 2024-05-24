@@ -22,13 +22,13 @@ const generatePDF = async (filePath, name, language) => {
     doc.moveDown(2);
 
     doc.fontSize(12).text(`This is to certify that`, {align: 'center'}).moveDown();
-    doc.fontSize(12).text(name, { align: 'center', oblique: true, bold: true }).moveDown();
+    doc.fontSize(16).text(name, { align: 'center', oblique: true, bold: true }).moveDown();
     doc.fontSize(12).text(`has successfully completed an internship at Utrecht University.`, {align: 'center'}).moveDown();
 
     doc.moveDown(5);
-    doc.fontSize(12).text(`Date: ${new Date().toDateString()}`, {align: 'right'}).moveDown();
-    doc.fontSize(12).text(`Jan Bleuland`, {align: 'right'});
-    doc.fontSize(12).text(`Rector Magnificus, Utrecht University`, {align: 'right'});
+    doc.fontSize(10).text(`Date: ${new Date().toDateString()}`, {align: 'right'}).moveDown();
+    doc.fontSize(10).text(`Jan Bleuland`, {align: 'right'});
+    doc.fontSize(10).text(`Rector Magnificus, Utrecht University`, {align: 'right'});
 
     // 结束并保存 PDF
     doc.end();
