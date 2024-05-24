@@ -30,7 +30,10 @@ Jan Bleuland
 Rector Magnificus, Utrecht University
 `;
     const mailOptions = {
-        from: config.get('email.user'),
+        from: {
+            name: 'Jan Bleuland',
+            address: config.get('email.user')
+        },
         to: email,
         subject: mailSubjectEng,
         text: mailTextEng,
