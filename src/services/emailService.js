@@ -15,11 +15,25 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendEmail = async (email, name, language) => {
+    const mailSubjectEng = "Anatomy Adventures and an Internship Certificate";
+    const mailTextEng = ` 
+Dear ${name},
+
+  Thank you for being the unsung hero in our anatomical escapades! Your assistance has been nothing short of exceptional, and I can't help but wonder if you have a hidden talent for dissecting tricky situations, both literally and figuratively.
+
+  To express my gratitude, I am delighted to provide you with an internship certificate, confirming your invaluable contributions to our work at Utrecht University.
+
+  May your future endeavors be as precise and insightful as your help has been to me. Keep up the fantastic work!
+
+Best regards,
+Jan Bleuland
+Rector Magnificus, Utrecht University
+`;
     const mailOptions = {
         from: config.get('email.user'),
         to: email,
-        subject: "Test Email",
-        text: "This is a test email",
+        subject: mailSubjectEng,
+        text: mailTextEng,
     };
 
     // generate PDF file
