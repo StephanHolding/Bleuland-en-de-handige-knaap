@@ -23,7 +23,7 @@ Oei! Dat is niet best! Ik heb nog wel ergens een koekje voor je, als ik het nog 
  Ik heb na m’n eigen lunchpauze een lezing waar ik de functie van het hart en de longen wil uitleggen aan mijn universiteitsstudenten. 
 
 Zou je dit wassen model even kunnen afmaken?
-Geen zorgen als je onze ontledingssessies van die gore criminelen bent vergeten.
+Geen zorgen als je onze ontledingssessies bent vergeten.
 Je hebt namelijk hartstikke goede aantekeningen gemaakt! #camera body
 
 Je zult ze wel even zelf terug moeten vinden.
