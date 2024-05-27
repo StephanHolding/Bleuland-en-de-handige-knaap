@@ -14,14 +14,34 @@ public class PuzzlePiece : Draggable2D
     private PuzzlePieceReference[] allPieceDistances;
 
     public float snapThreshold = 0.25f;
+    public bool locked;
+    public int spawnOrder;
 
     private SpriteRenderer spriteRenderer;
     private Collider2D collider;
+    private PuzzleManager puzzleManager;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
+        puzzleManager = FindObjectOfType<PuzzleManager>();
+    }
+
+    public override void OnInteract(Vector2 screenPosition)
+    {
+        if (!locked)
+        {
+            base.OnInteract(screenPosition);
+        }
+    }
+
+    public override void OnDeinteract()
+    {
+        if (!locked)
+        {
+            base.OnDeinteract();
+        }
     }
 
     protected override void OnDraggingEnd()
@@ -33,13 +53,22 @@ public class PuzzlePiece : Draggable2D
         }
     }
 
+
+    public override int GetLayerInfo()
+    {
+        if (spriteRenderer != null)
+            return spriteRenderer.sortingOrder;
+        else
+            return 99;
+    }
+
     public bool IsAtCorrectRelativePosition(out Vector3 snapToWorldPosition)
     {
         PuzzlePiece[] allPuzzlePieces = GameObject.FindObjectsOfType<PuzzlePiece>();
 
         foreach (PuzzlePiece piece in allPuzzlePieces)
         {
-            if (piece != this)
+            if (piece != this && piece.locked)
             {
                 PuzzlePieceReference savedDistance = GetSavedDistance(piece.gameObject.name);
                 if (savedDistance != null)
@@ -84,13 +113,11 @@ public class PuzzlePiece : Draggable2D
 
         FMODAudioManager.instance.PlayOneShot("Puzzle snap");
         ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", collider.bounds.center, Quaternion.identity);
+
+        locked = true;
+
+        puzzleManager.OnPuzzlePiecePlaced();
     }
 
-    public override int GetLayerInfo()
-    {
-        if (spriteRenderer != null)
-            return spriteRenderer.sortingOrder;
-        else
-            return 99;
-    }
+
 }

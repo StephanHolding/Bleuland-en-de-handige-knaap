@@ -82,3 +82,15 @@ MonoBehaviour:
       Data3: -859903599
       Data4: 1626469016
     Path: event:/SFX/OK
+  - Guid:
+      Data1: -1401276162
+      Data2: 1273675688
+      Data3: -1102371931
+      Data4: -106912933
+    Path: event:/SFX/Incorrect
+  - Guid:
+      Data1: 1361878357
+      Data2: 1282687221
+      Data3: 1683497638
+      Data4: -69428096
+    Path: event:/SFX/Book

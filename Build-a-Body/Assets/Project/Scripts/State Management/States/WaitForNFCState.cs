@@ -1,3 +1,4 @@
+using FMOD_AudioManagement;
 using UnityEngine;
 
 public class WaitForNFCState : GameState
@@ -48,6 +49,7 @@ public class WaitForNFCState : GameState
 
     private void StartBookAnimation()
     {
+        FMODAudioManager.instance.PlayOneShot("Book");
         book.StartOpeningAnimation(LoadNextScene);
     }
 
