@@ -20,12 +20,14 @@ public class PuzzlePiece : Draggable2D
     private SpriteRenderer spriteRenderer;
     private Collider2D collider;
     private PuzzleManager puzzleManager;
+    private SpriteHighlight[] spriteHighlights;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
         puzzleManager = FindObjectOfType<PuzzleManager>();
+        spriteHighlights = GetComponentsInChildren<SpriteHighlight>();
     }
 
     public override void OnInteract(Vector2 screenPosition)
@@ -119,5 +121,14 @@ public class PuzzlePiece : Draggable2D
         puzzleManager.OnPuzzlePiecePlaced();
     }
 
+    public void HighlightPuzzlePiece()
+    {
+        if (gameObject.activeInHierarchy == false) return;
+
+        foreach (SpriteHighlight highlight in spriteHighlights)
+        {
+            highlight.Highlight(new Color(2, 0, 0, 1), 5);
+        }
+    }
 
 }

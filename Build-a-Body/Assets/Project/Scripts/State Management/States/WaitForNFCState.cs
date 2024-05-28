@@ -1,6 +1,6 @@
 using FMOD_AudioManagement;
+using HintSystem;
 using UnityEngine;
-
 public class WaitForNFCState : GameState
 {
 
@@ -21,6 +21,8 @@ public class WaitForNFCState : GameState
 
         cheatButtons.transform.GetChild(0).gameObject.SetActive(true);
 
+        Hint.ShowHint("Gebruik de telefoon om een NFC tag te scannen", "nfcHint");
+
         scanner.EnableBackgroundScanning();
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;
     }
@@ -39,6 +41,8 @@ public class WaitForNFCState : GameState
         {
             if (CanPlayMinigame(payload))
             {
+                Hint.SendCompletionKey("nfcHint");
+
                 cheatButtons.transform.GetChild(0).gameObject.SetActive(false);
 
                 organName = payload;

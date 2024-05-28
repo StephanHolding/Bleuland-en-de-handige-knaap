@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 68490995}
   - component: {fileID: 68490994}
   - component: {fileID: 68490993}
+  - component: {fileID: 68490997}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (3)
   m_TagString: Untagged
@@ -454,7 +455,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -501,6 +502,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68490997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68490992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &70001875
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +527,7 @@ GameObject:
   - component: {fileID: 70001879}
   - component: {fileID: 70001878}
   - component: {fileID: 70001877}
+  - component: {fileID: 70001880}
   m_Layer: 0
   m_Name: 13
   m_TagString: Untagged
@@ -681,7 +696,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -713,6 +728,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &70001880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70001875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &122454226
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +752,7 @@ GameObject:
   - component: {fileID: 122454227}
   - component: {fileID: 122454229}
   - component: {fileID: 122454228}
+  - component: {fileID: 122454230}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -779,8 +808,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291348680
-  m_fontColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    rgba: 4294309365
+  m_fontColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -884,6 +913,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 99
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &122454230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122454226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &181346613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1414,7 @@ GameObject:
   - component: {fileID: 573937377}
   - component: {fileID: 573937379}
   - component: {fileID: 573937378}
+  - component: {fileID: 573937380}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1532,6 +1575,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 99
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &573937380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573937376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &578976934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1804,7 @@ GameObject:
   - component: {fileID: 631536182}
   - component: {fileID: 631536181}
   - component: {fileID: 631536180}
+  - component: {fileID: 631536184}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (8)
   m_TagString: Untagged
@@ -1944,7 +2001,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1991,6 +2048,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631536184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631536179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &717270045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2307,7 @@ GameObject:
   - component: {fileID: 825970638}
   - component: {fileID: 825970637}
   - component: {fileID: 825970636}
+  - component: {fileID: 825970640}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (12)
   m_TagString: Untagged
@@ -2440,7 +2511,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2488,6 +2559,19 @@ Transform:
   - {fileID: 70001876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &825970640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825970635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1020181672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2584,7 @@ GameObject:
   - component: {fileID: 1020181675}
   - component: {fileID: 1020181674}
   - component: {fileID: 1020181673}
+  - component: {fileID: 1020181677}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (5)
   m_TagString: Untagged
@@ -2673,7 +2758,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2720,6 +2805,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020181677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020181672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1035250785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,6 +3372,7 @@ GameObject:
   - component: {fileID: 1164950650}
   - component: {fileID: 1164950652}
   - component: {fileID: 1164950651}
+  - component: {fileID: 1164950653}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3434,6 +3533,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 99
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1164950653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164950649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1165831369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,6 +3558,7 @@ GameObject:
   - component: {fileID: 1165831372}
   - component: {fileID: 1165831371}
   - component: {fileID: 1165831373}
+  - component: {fileID: 1165831374}
   m_Layer: 0
   m_Name: 15
   m_TagString: Untagged
@@ -3715,7 +3828,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3760,6 +3873,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 0
+--- !u!114 &1165831374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165831369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1288261072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,6 +4035,7 @@ GameObject:
   - component: {fileID: 1309293662}
   - component: {fileID: 1309293661}
   - component: {fileID: 1309293660}
+  - component: {fileID: 1309293664}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (7)
   m_TagString: Untagged
@@ -4074,7 +4201,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4121,6 +4248,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309293664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309293659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1466042416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,6 +4273,7 @@ GameObject:
   - component: {fileID: 1466042419}
   - component: {fileID: 1466042418}
   - component: {fileID: 1466042417}
+  - component: {fileID: 1466042421}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (2)
   m_TagString: Untagged
@@ -4309,7 +4450,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4356,6 +4497,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466042421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466042416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1483613502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4368,6 +4522,7 @@ GameObject:
   - component: {fileID: 1483613505}
   - component: {fileID: 1483613504}
   - component: {fileID: 1483613503}
+  - component: {fileID: 1483613507}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (10)
   m_TagString: Untagged
@@ -4560,7 +4715,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4607,6 +4762,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483613507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483613502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1497212067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,6 +4905,7 @@ GameObject:
   - component: {fileID: 1547843713}
   - component: {fileID: 1547843712}
   - component: {fileID: 1547843711}
+  - component: {fileID: 1547843715}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (1)
   m_TagString: Untagged
@@ -4981,7 +5150,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5030,6 +5199,19 @@ Transform:
   - {fileID: 1838809598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1547843715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547843710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1685642651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,6 +5268,7 @@ GameObject:
   - component: {fileID: 1694160658}
   - component: {fileID: 1694160657}
   - component: {fileID: 1694160656}
+  - component: {fileID: 1694160659}
   m_Layer: 0
   m_Name: 14
   m_TagString: Untagged
@@ -5402,7 +5585,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5434,6 +5617,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1694160659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694160654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1734649713
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,6 +5642,7 @@ GameObject:
   - component: {fileID: 1734649716}
   - component: {fileID: 1734649715}
   - component: {fileID: 1734649714}
+  - component: {fileID: 1734649718}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (6)
   m_TagString: Untagged
@@ -5559,7 +5756,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5607,6 +5804,19 @@ Transform:
   - {fileID: 1694160655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734649718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734649713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1747004990
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,6 +5934,7 @@ GameObject:
   - component: {fileID: 1838809600}
   - component: {fileID: 1838809599}
   - component: {fileID: 1838809601}
+  - component: {fileID: 1838809602}
   m_Layer: 0
   m_Name: 11
   m_TagString: Untagged
@@ -5862,7 +6073,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5907,6 +6118,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 0
+--- !u!114 &1838809602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838809597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1901069086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6278,7 @@ GameObject:
   - component: {fileID: 1977878167}
   - component: {fileID: 1977878166}
   - component: {fileID: 1977878165}
+  - component: {fileID: 1977878169}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (4)
   m_TagString: Untagged
@@ -6282,7 +6507,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6329,6 +6554,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977878169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977878164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &1991937207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6409,6 +6647,7 @@ GameObject:
   - component: {fileID: 2059409895}
   - component: {fileID: 2059409894}
   - component: {fileID: 2059409893}
+  - component: {fileID: 2059409897}
   m_Layer: 0
   m_Name: Heart Puzzle Piece (9)
   m_TagString: Untagged
@@ -6596,7 +6835,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: afbd2833030c4bc4cbb76ffd403b0d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6643,6 +6882,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059409897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059409892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3ab8392c605c04c87f1968ae054bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _Color
 --- !u!1 &2145084937
 GameObject:
   m_ObjectHideFlags: 0
