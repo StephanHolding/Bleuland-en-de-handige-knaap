@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpriteHighlight : MonoBehaviour
 {
-    public string colorProperty = "_Color";
+    private string colorProperty = "_Color";
 
     private Renderer spriteRenderer;
     private Material spriteEmissiveMaterial;

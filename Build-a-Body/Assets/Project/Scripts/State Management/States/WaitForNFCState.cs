@@ -41,8 +41,6 @@ public class WaitForNFCState : GameState
         {
             if (CanPlayMinigame(payload))
             {
-                Hint.SendCompletionKey("nfcHint");
-
                 cheatButtons.transform.GetChild(0).gameObject.SetActive(false);
 
                 organName = payload;
@@ -53,6 +51,7 @@ public class WaitForNFCState : GameState
 
     private void StartBookAnimation()
     {
+        Hint.SendCompletionKey("nfcHint");
         FMODAudioManager.instance.PlayOneShot("Book");
         book.StartOpeningAnimation(LoadNextScene);
     }

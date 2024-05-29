@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{22fbfd50-6fec-44f1-974e-ed5c264adb40}">
+	<object class="AudioFile" id="{5587012d-6160-4515-9059-34a8af0d8d5e}">
 		<property name="assetPath">
-			<value>Pencil Write/pencil write 2.4.wav</value>
+			<value>Pencil Write/pencil write.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.51074829931972787</value>
+			<value>0.23154195011337869</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{f71ec785-5a18-4646-aef8-4d816c6d064f}</destination>
