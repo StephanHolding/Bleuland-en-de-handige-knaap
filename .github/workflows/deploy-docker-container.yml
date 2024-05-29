@@ -1,0 +1,29 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - email_service
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: 18.201.105.11
+          username: root
+          password: bladeandsoul. # Or use SSH key
+          script: |
+            cd /root/Build-a-Body
+            git pull origin email_service
+            docker stop $(docker ps -q --filter ancestor=hku_images) # 停止 hku_images 镜像生成的容器
+            docker rm $(docker ps -aq --filter ancestor=hku_images)   # 删除 hku_images 镜像生成的容器
+            docker rmi $(docker images -q hku_images) # 删除 hku_images 镜像
+            docker build -t hku_images .
+            docker run -d -p 3030:3030 hku_images
