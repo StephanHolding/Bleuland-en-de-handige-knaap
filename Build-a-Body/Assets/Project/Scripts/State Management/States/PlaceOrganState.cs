@@ -9,6 +9,7 @@ public class PlaceOrganState : GameState
     private OrganSpawner organSpawner;
     private CameraMovementController camController;
     private string lastCompletedMinigame;
+    private bool taskCompleted = false;
 
     private const int ORGAN_AMOUNT_FOR_COMPLETION = 2;
 
@@ -42,7 +43,11 @@ public class PlaceOrganState : GameState
 
     public override void PlayerCompletedTask()
     {
+        if (taskCompleted) return;
+        taskCompleted = true;
+
         List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
+
         if (lockedOrgans.Count >= ORGAN_AMOUNT_FOR_COMPLETION)
         {
             DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("GAME_END"), CheckSendEmail);
@@ -57,6 +62,7 @@ public class PlaceOrganState : GameState
                 case "Lungs":
                     DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("LUNGS_PLACED"), delegate { GameStateManager.instance.GoToGamestate<WaitForNFCState>(); });
                     break;
+
             }
         }
     }
@@ -66,6 +72,7 @@ public class PlaceOrganState : GameState
         if (DialogueBlackboard.HasKey("email"))
         {
             string emailAdress = DialogueBlackboard.GetVariable<string>("email");
+
             if (!string.IsNullOrEmpty(emailAdress))
             {
                 string playerName = DialogueBlackboard.GetVariable<string>("player_name");

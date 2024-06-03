@@ -25,7 +25,7 @@ public class WaitForNFCState : GameState
 
         cheatButtons.transform.GetChild(0).gameObject.SetActive(true);
 
-        Hint.ShowHint("Gebruik de telefoon om een NFC tag te scannen", "nfcHint");
+        Hint.ShowHint(LocalizationHandler.GetLocalizedString("nfc_tip"), "nfcHint");
 
         scanner.EnableBackgroundScanning();
         scanner.OnNfcTagFound += Scanner_OnNfcTagFound;

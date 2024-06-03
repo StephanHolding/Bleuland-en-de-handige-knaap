@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LocaleTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LocaleTable
+  m_TableCollectionNameGuidString: 9cabf4aa4d90a2e498a9a0f344b80671
+  m_Entries:
+  - m_Id: 23443922944
+    m_Key: start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 736924393472
+    m_Key: enter text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036020211712
+    m_Key: heart objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1195651227648
+    m_Key: Done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1287464542208
+    m_Key: heart tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1482478706688
+    m_Key: heart title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1528133705728
+    m_Key: lungs objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1782061064192
+    m_Key: lungs tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957231976448
+    m_Key: lungs title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206069215232
+    m_Key: luchtpijp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304396283904
+    m_Key: linker long
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3359605907456
+    m_Key: rechter long
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3909802123264
+    m_Key: mitrialisklep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4025380364288
+    m_Key: onderste holle ader
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5801986875392
+    m_Key: nfc_tip
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8402064417645395970
+  references:
+    version: 2
+    RefIds:
+    - rid: 8402064417645395970
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1717416439446

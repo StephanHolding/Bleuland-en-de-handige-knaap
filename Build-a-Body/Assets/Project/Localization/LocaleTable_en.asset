@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LocaleTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 9cabf4aa4d90a2e498a9a0f344b80671, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23443922944
+    m_Localized: Start Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 736924393472
+    m_Localized: Enter text here...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036020211712
+    m_Localized: Complete the blueprint of the heart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1195651227648
+    m_Localized: Done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1287464542208
+    m_Localized: 'Tip: Look for the paper scroll with info about the heart...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1482478706688
+    m_Localized: The Heart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1528133705728
+    m_Localized: Complete the blueprint of the lungs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1782061064192
+    m_Localized: 'Tip: Look for the paper scroll with info about the lungs...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957231976448
+    m_Localized: The Lungs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206069215232
+    m_Localized: Trachea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304396283904
+    m_Localized: Left Lung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3359605907456
+    m_Localized: Right Lung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3909802123264
+    m_Localized: Mitral Valve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4025380364288
+    m_Localized: Inferior Vena Cava
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5801986875392
+    m_Localized: Use your phone to scan an NFC tag
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
