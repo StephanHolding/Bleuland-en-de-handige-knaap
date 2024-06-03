@@ -8,6 +8,10 @@ public class IntroState : GameState
 
     private CameraMovementController camController;
 
+    public IntroState(GameStateManager gameStateManager) : base(gameStateManager)
+    {
+    }
+
     public override void OnStateEnter()
     {
         camController = Camera.main.transform.GetComponent<CameraMovementController>();

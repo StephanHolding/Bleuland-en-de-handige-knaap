@@ -2,6 +2,10 @@ using FMOD_AudioManagement;
 
 public class HeartMinigameState : GameState
 {
+    public HeartMinigameState(GameStateManager gameStateManager) : base(gameStateManager)
+    {
+    }
+
     public override void OnStateEnter()
     {
         FMODAudioManager.instance.Play("puzzle bg");

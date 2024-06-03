@@ -11,6 +11,10 @@ public class WaitForNFCState : GameState
 
     private GameObject cheatButtons;
 
+    public WaitForNFCState(GameStateManager gameStateManager) : base(gameStateManager)
+    {
+    }
+
     public override void OnStateEnter()
     {
         scanner = GameObject.FindObjectOfType<NFCScanner>();

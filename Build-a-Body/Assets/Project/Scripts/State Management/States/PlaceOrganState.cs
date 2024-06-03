@@ -1,4 +1,5 @@
 using Dialogue;
+using Dialogue.Blackboard;
 using FMOD_AudioManagement;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class PlaceOrganState : GameState
     private string lastCompletedMinigame;
 
     private const int ORGAN_AMOUNT_FOR_COMPLETION = 2;
+
+    public PlaceOrganState(GameStateManager gameStateManager) : base(gameStateManager)
+    {
+    }
 
     public override void OnStateEnter()
     {
@@ -40,7 +45,7 @@ public class PlaceOrganState : GameState
         List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
         if (lockedOrgans.Count >= ORGAN_AMOUNT_FOR_COMPLETION)
         {
-            DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("GAME_END"));
+            DialogueManager.instance.Say(DialogueManager.LoadStoryFromResources("GAME_END"), CheckSendEmail);
         }
         else
         {
@@ -54,5 +59,21 @@ public class PlaceOrganState : GameState
                     break;
             }
         }
+    }
+
+    private void CheckSendEmail()
+    {
+        if (DialogueBlackboard.HasKey("email"))
+        {
+            string emailAdress = DialogueBlackboard.GetVariable<string>("email");
+            if (!string.IsNullOrEmpty(emailAdress))
+            {
+                string playerName = DialogueBlackboard.GetVariable<string>("player_name");
+
+                HttpPostRequestManager.PostRequest(playerName, emailAdress, "en", stateManager);
+            }
+        }
+
+        SceneHandler.instance.LoadScene(0);
     }
 }

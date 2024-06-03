@@ -45,11 +45,11 @@ public class GameStateManager : SingletonTemplateMono<GameStateManager>
 
     private void GenerateGameStates()
     {
-        AddStateToDictionary(new IntroState());
-        AddStateToDictionary(new WaitForNFCState());
-        AddStateToDictionary(new LungsMinigameState());
-        AddStateToDictionary(new PlaceOrganState());
-        AddStateToDictionary(new HeartMinigameState());
+        AddStateToDictionary(new IntroState(this));
+        AddStateToDictionary(new WaitForNFCState(this));
+        AddStateToDictionary(new LungsMinigameState(this));
+        AddStateToDictionary(new PlaceOrganState(this));
+        AddStateToDictionary(new HeartMinigameState(this));
     }
 
     private void AddStateToDictionary(GameState newState)

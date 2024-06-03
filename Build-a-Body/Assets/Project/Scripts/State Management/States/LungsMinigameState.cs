@@ -2,6 +2,11 @@ using FMOD_AudioManagement;
 
 public class LungsMinigameState : GameState
 {
+    public LungsMinigameState(GameStateManager gameStateManager) : base(gameStateManager)
+    {
+
+    }
+
     public override void OnStateEnter()
     {
         FMODAudioManager.instance.Play("puzzle bg");
