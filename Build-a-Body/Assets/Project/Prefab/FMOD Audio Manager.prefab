@@ -94,3 +94,9 @@ MonoBehaviour:
       Data3: 1683497638
       Data4: -69428096
     Path: event:/SFX/Book
+  - Guid:
+      Data1: -321980567
+      Data2: 1329080128
+      Data3: -1671193946
+      Data4: 1123192024
+    Path: event:/SFX/eat

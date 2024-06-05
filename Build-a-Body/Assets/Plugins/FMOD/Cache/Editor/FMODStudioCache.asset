@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638525773823031205
+  lastModified: 638532007529154640
   FileSizes:
   - Name: Desktop
-    Value: 59328
+    Value: 75584
   Exists: 1
 --- !u!114 &-3614433778913573411
 MonoBehaviour:
@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638524092075424901
+  lastModified: 638532007526518246
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -163,10 +163,10 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638525773822788388
+  lastModified: 638532007526528515
   FileSizes:
   - Name: Desktop
-    Value: 1170
+    Value: 1204
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -194,12 +194,13 @@ MonoBehaviour:
   - {fileID: -8475661787818052931}
   - {fileID: 2047758724739743373}
   - {fileID: 4144914668907256661}
+  - {fileID: 7979507174556288974}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2313193111049683425}
   StringsBanks:
   - {fileID: -1162286593148318676}
-  cacheTime: 638525773823031205
+  cacheTime: 638532007529154640
   cacheVersion: 131617
 --- !u!114 &1081184419095334253
 MonoBehaviour:
@@ -216,7 +217,7 @@ MonoBehaviour:
   Path: ../FMOD/Build-a-Body/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638525773823021231
+  lastModified: 638532007527493757
   FileSizes:
   - Name: Desktop
     Value: 3219744
@@ -302,6 +303,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 159347
+--- !u!114 &7979507174556288974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/eat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/eat
+  Guid:
+    Data1: -321980567
+    Data2: 1329080128
+    Data3: -1671193946
+    Data4: 1123192024
+  Banks:
+  - {fileID: -3831303651496145019}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1600
 --- !u!114 &8246422358893413792
 MonoBehaviour:
   m_ObjectHideFlags: 0

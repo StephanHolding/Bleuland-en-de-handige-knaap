@@ -16,6 +16,10 @@ Fijn om te horen! Nu kunnen we weer lekker op een volle maag aan de slag!
 
 === NO ===
 Oei! Dat is niet best! Ik heb nog wel ergens een koekje voor je, als ik het nog kan vinden. 
+...
+...
+Ah! Hier heb ik hem! #spritesheet Cookie_Show
+Geniet ervan. #spritesheet Cookie_Eaten #playoneshot eat
 -> CONV
 
 === CONV ===

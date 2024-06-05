@@ -16,6 +16,10 @@ That's great to hear! Now we can get back to work with a full stomach!
 
 === NO ===
 Oh no, how unfortunate! I have a biscuit for you here somewhere, if I can find it.
+...
+...
+Ah! Here it is! #spritesheet Cookie_Show
+Enjoy! #spritesheet Cookie_Eaten #playoneshot eat
 -> CONV
 
 === CONV ===

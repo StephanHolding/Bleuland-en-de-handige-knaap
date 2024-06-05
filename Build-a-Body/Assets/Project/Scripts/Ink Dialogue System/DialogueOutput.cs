@@ -12,7 +12,6 @@ namespace Dialogue
 {
     public class DialogueOutput : MonoBehaviour
     {
-
         public TextMeshProUGUI uiText;
         public TextMeshProUGUI characterNameText;
         public Image spriteOutput;
@@ -159,6 +158,34 @@ namespace Dialogue
                 showSprite.sprite = sprite;
                 showSprite.preserveAspect = true;
                 showSprite.gameObject.SetActive(true);
+            }
+        }
+
+        public void SpritesheetAnimation(SpriteArray spriteArray)
+        {
+            StartCoroutine(SpritesheetAnimationRoutine(spriteArray));
+        }
+
+        private IEnumerator SpritesheetAnimationRoutine(SpriteArray spriteArray)
+        {
+            showSprite.gameObject.SetActive(true);
+
+            float frameWaitTime = 1 / spriteArray.animationFps;
+
+            for (int i = 0; i < spriteArray.sprites.Length; i++)
+            {
+                showSprite.sprite = spriteArray.sprites[i];
+                yield return new WaitForSeconds(frameWaitTime);
+            }
+
+            if (spriteArray.lingerOnLastSprite)
+            {
+                showSprite.sprite = spriteArray.sprites[^1];
+            }
+            else
+            {
+                showSprite.gameObject.SetActive(false);
+                showSprite.sprite = null;
             }
         }
 

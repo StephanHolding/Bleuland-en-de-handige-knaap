@@ -363,6 +363,11 @@ namespace Dialogue
             {
                 output.ShowSprite(spriteName);
             }));
+            AddCommand(new DialogueCommand<string>("spritesheet", delegate (string spritesheetName)
+            {
+                SpriteArray spriteArray = Resources.Load<SpriteArray>("Spritesheets/" + spritesheetName);
+                output.SpritesheetAnimation(spriteArray);
+            }));
         }
 
         private void AddCommand(DialogueCommandBase toAdd)
