@@ -71,7 +71,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4025380364288
-    m_Localized: Inferior Vena Cava
+    m_Localized: 'Inferior
+
+      Vena Cava'
     m_Metadata:
       m_Items: []
   - m_Id: 5801986875392
