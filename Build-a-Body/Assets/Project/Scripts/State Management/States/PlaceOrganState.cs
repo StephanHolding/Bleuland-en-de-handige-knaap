@@ -28,7 +28,7 @@ public class PlaceOrganState : GameState
         camController.GoTo("bookcase", gradual: false);
 
         lastCompletedMinigame = Blackboard.Read<string>(BlackboardKeys.LAST_FINISHED_MINIGAME);
-
+        taskCompleted = false;
 
         switch (lastCompletedMinigame)
         {
