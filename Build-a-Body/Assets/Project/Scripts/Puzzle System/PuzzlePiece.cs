@@ -18,16 +18,21 @@ public class PuzzlePiece : Draggable2D
     public int spawnOrder;
 
     private SpriteRenderer spriteRenderer;
-    private Collider2D collider;
+    private Collider2D collider2d;
     private PuzzleManager puzzleManager;
     private SpriteHighlight[] spriteHighlights;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<Collider2D>();
+        collider2d = GetComponent<Collider2D>();
         puzzleManager = FindObjectOfType<PuzzleManager>();
         spriteHighlights = GetComponentsInChildren<SpriteHighlight>();
+
+        if (locked)
+        {
+            ToggleAllColliders(false);
+        }
     }
 
     public override void OnInteract(Vector2 screenPosition)
@@ -114,9 +119,11 @@ public class PuzzlePiece : Draggable2D
         transform.position = targetPosition;
 
         FMODAudioManager.instance.PlayOneShot("Puzzle snap");
-        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", collider.bounds.center, Quaternion.identity);
+        ParticleEffectHandler.instance.PlayParticle("Puzzle Snap Particle", collider2d.bounds.center, Quaternion.identity);
 
         locked = true;
+
+        ToggleAllColliders(false);
 
         puzzleManager.OnPuzzlePiecePlaced();
     }
@@ -128,6 +135,16 @@ public class PuzzlePiece : Draggable2D
         foreach (SpriteHighlight highlight in spriteHighlights)
         {
             highlight.Highlight(new Color(2, 0, 0, 1), 5);
+        }
+    }
+
+    private void ToggleAllColliders(bool toggle)
+    {
+        Collider2D[] allColliders = GetComponentsInChildren<Collider2D>();
+
+        foreach (Collider2D c in allColliders)
+        {
+            c.enabled = toggle;
         }
     }
 

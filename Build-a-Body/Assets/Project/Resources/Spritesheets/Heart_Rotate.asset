@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af33f5688fd1b7745ac4a4be87561490, type: 3}
+  m_Name: Heart_Rotate
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: f5e76f0d271b4034cb230fc96defd731, type: 3}
+  - {fileID: 21300000, guid: dc6ec325faa3c8549b0ae9f67cd2562a, type: 3}
+  - {fileID: 21300000, guid: a58ead1fd545cae4bbb5578b297d567a, type: 3}
+  - {fileID: 21300000, guid: 6064d91ebd0edd744bc6b966eec718e9, type: 3}
+  - {fileID: 21300000, guid: b2f227570f9b9e347a3aeb79ef069d27, type: 3}
+  - {fileID: 21300000, guid: a6d5c235bb877374ebdbbb776070fc23, type: 3}
+  - {fileID: 21300000, guid: 7a1ccc31ed637d147b90941dca0e864e, type: 3}
+  - {fileID: 21300000, guid: 3b990cd779d052a4f9954187a9346138, type: 3}
+  - {fileID: 21300000, guid: 138032c631129d042805311327b0946e, type: 3}
+  - {fileID: 21300000, guid: 03a01f3198efddb4d84d6a7adbcdae64, type: 3}
+  - {fileID: 21300000, guid: 22486c911a5bda24d8bf1eaa29c788aa, type: 3}
+  - {fileID: 21300000, guid: fa199531d1eda8b4fb0be14e4c469717, type: 3}
+  - {fileID: 21300000, guid: 639ab56bc95f983479e274a55ae18570, type: 3}
+  - {fileID: 21300000, guid: 69f0fd2614d2d6643bdc67a797869928, type: 3}
+  - {fileID: 21300000, guid: 5aa35fc055f49064a9e8e64da76b9204, type: 3}
+  - {fileID: 21300000, guid: 4487024013ca24d4e83f0e37023bb773, type: 3}
+  - {fileID: 21300000, guid: e51aec8bb27dbed45b7dcb2c458f0b17, type: 3}
+  - {fileID: 21300000, guid: ae2bda1d1836d3c4ea210874fb43342a, type: 3}
+  - {fileID: 21300000, guid: bf89e2e2dcd453d49986f1ee533af882, type: 3}
+  - {fileID: 21300000, guid: cf255d3b876295048b95b6e7b634285f, type: 3}
+  animationFps: 15
+  lingerOnLastSprite: 0
+  loop: 1

@@ -31,6 +31,8 @@ namespace Dialogue
         private Button inputfieldSubmitButton;
         private EventInstance talkingSoundReference;
         private bool isActive;
+        private Coroutine writingAnimationCoroutine;
+        private Coroutine spriteSheetAnimationRoutine;
 
         private void Awake()
         {
@@ -65,7 +67,12 @@ namespace Dialogue
         {
             if (canSkip)
             {
-                StopAllCoroutines();
+                if (writingAnimationCoroutine != null)
+                {
+                    StopCoroutine(writingAnimationCoroutine);
+                    writingAnimationCoroutine = null;
+                }
+
                 uiText.text = currentlyWriting;
                 IsWriting = false;
                 ResetOverrides();
@@ -126,7 +133,7 @@ namespace Dialogue
 
             uiText.font = dialogueOverrides.fontAsset;
 
-            StartCoroutine(WritingAnimation());
+            writingAnimationCoroutine = StartCoroutine(WritingAnimation());
         }
 
         public void ShowChoiceUI(List<Choice> choices, DialogueManager managerInstance)
@@ -163,19 +170,43 @@ namespace Dialogue
 
         public void SpritesheetAnimation(SpriteArray spriteArray)
         {
-            StartCoroutine(SpritesheetAnimationRoutine(spriteArray));
+            if (spriteSheetAnimationRoutine != null)
+            {
+                StopCoroutine(spriteSheetAnimationRoutine);
+                spriteSheetAnimationRoutine = null;
+            }
+
+            spriteSheetAnimationRoutine = StartCoroutine(SpritesheetAnimationRoutine(spriteArray));
+        }
+
+        public void StopSpritesheetAnimation()
+        {
+            if (spriteSheetAnimationRoutine != null)
+            {
+                StopCoroutine(spriteSheetAnimationRoutine);
+                spriteSheetAnimationRoutine = null;
+                showSprite.gameObject.SetActive(false);
+                showSprite.sprite = null;
+            }
         }
 
         private IEnumerator SpritesheetAnimationRoutine(SpriteArray spriteArray)
         {
             showSprite.gameObject.SetActive(true);
+            showSprite.type = Image.Type.Simple;
 
             float frameWaitTime = 1 / spriteArray.animationFps;
+            bool once = false;
 
-            for (int i = 0; i < spriteArray.sprites.Length; i++)
+            while (spriteArray.loop || !once)
             {
-                showSprite.sprite = spriteArray.sprites[i];
-                yield return new WaitForSeconds(frameWaitTime);
+                for (int i = 0; i < spriteArray.sprites.Length; i++)
+                {
+                    showSprite.sprite = spriteArray.sprites[i];
+                    yield return new WaitForSeconds(frameWaitTime);
+                }
+
+                once = true;
             }
 
             if (spriteArray.lingerOnLastSprite)

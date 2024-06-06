@@ -23,7 +23,8 @@ public class WaitForNFCState : GameState
 
         cheatButtons = GameObject.Find("CHEAT BUTTONS");
 
-        cheatButtons.transform.GetChild(0).gameObject.SetActive(true);
+        if (Application.isEditor)
+            cheatButtons.transform.GetChild(0).gameObject.SetActive(true);
 
         Hint.ShowHint(LocalizationHandler.GetLocalizedString("nfc_tip"), "nfcHint");
 
@@ -45,7 +46,8 @@ public class WaitForNFCState : GameState
         {
             if (CanPlayMinigame(payload))
             {
-                cheatButtons.transform.GetChild(0).gameObject.SetActive(false);
+                if (Application.isEditor)
+                    cheatButtons.transform.GetChild(0).gameObject.SetActive(false);
 
                 organName = payload;
                 camController.GoTo("bookcase", OnMoveFinished: StartBookAnimation);

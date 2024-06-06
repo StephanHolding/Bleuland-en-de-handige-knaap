@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af33f5688fd1b7745ac4a4be87561490, type: 3}
+  m_Name: Lungs_Rotate
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4c39d7d82c0f36f45ba162089155933a, type: 3}
+  - {fileID: 21300000, guid: d31f57bea4f4e2a42acd1d345b17db4d, type: 3}
+  - {fileID: 21300000, guid: 8865efbc3cde8ca40ae6da3bc9e11421, type: 3}
+  - {fileID: 21300000, guid: 4a40c73c40a6f3f44af14f5b4f0e472e, type: 3}
+  - {fileID: 21300000, guid: bb41fb8402e8a204e8aa89ce3bcaf453, type: 3}
+  - {fileID: 21300000, guid: 9a7b5a72790dd964b87f8eb50d0767e9, type: 3}
+  - {fileID: 21300000, guid: c3eb43219eb17354cb7369911b9a9752, type: 3}
+  - {fileID: 21300000, guid: 18cae2582d9138a4f857c556daf0967f, type: 3}
+  - {fileID: 21300000, guid: 17d3729352f1b1e4584054bcc1f564f6, type: 3}
+  - {fileID: 21300000, guid: 0b13cfd340d4ffb418357876551d40f1, type: 3}
+  - {fileID: 21300000, guid: 84d6f05a3358fe94fb8fec6aa116c66d, type: 3}
+  - {fileID: 21300000, guid: 1e0e55e8eec55a844b57d9b517e92c25, type: 3}
+  - {fileID: 21300000, guid: a50f6c3c0332c2346ad18513b6763d68, type: 3}
+  - {fileID: 21300000, guid: 2cc684eec5322c04482855cdab151a11, type: 3}
+  - {fileID: 21300000, guid: c3df358f770e64b498e3fdbe5a6d2d67, type: 3}
+  - {fileID: 21300000, guid: ff32620f6aba4ce49be50df5d9872e66, type: 3}
+  - {fileID: 21300000, guid: 071fa449eaa6b764495d063317449ab4, type: 3}
+  - {fileID: 21300000, guid: f81ddb2f44564cf4d9fe4969b409d6f9, type: 3}
+  - {fileID: 21300000, guid: 665a962853d77a243b5a771f28799fd6, type: 3}
+  - {fileID: 21300000, guid: 94b760b787542cd4181a61a93db01788, type: 3}
+  animationFps: 15
+  lingerOnLastSprite: 0
+  loop: 1

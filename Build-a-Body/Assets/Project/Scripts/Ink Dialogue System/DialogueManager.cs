@@ -365,8 +365,15 @@ namespace Dialogue
             }));
             AddCommand(new DialogueCommand<string>("spritesheet", delegate (string spritesheetName)
             {
-                SpriteArray spriteArray = Resources.Load<SpriteArray>("Spritesheets/" + spritesheetName);
-                output.SpritesheetAnimation(spriteArray);
+                if (spritesheetName == "stop")
+                {
+                    output.StopSpritesheetAnimation();
+                }
+                else
+                {
+                    SpriteArray spriteArray = Resources.Load<SpriteArray>("Spritesheets/" + spritesheetName);
+                    output.SpritesheetAnimation(spriteArray);
+                }
             }));
         }
 
