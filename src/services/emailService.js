@@ -29,18 +29,32 @@ Best regards,
 Jan Bleuland
 Rector Magnificus, Utrecht University
 `;
+    const mailSubjectNl = "Anatomische Avonturen en een Certificaat";
+    const mailTextNl =  ` 
+Beste ${name},
+
+  Bedankt voor uw broodnodige hulp met het afmaken van het anatomische model! Uw hulp was uitzonderlijk geweldig, ik vraag me af of u misschien een verbogen talent hebt voor het ontleden van lastige situaties; zowel letterlijk als figuurlijk.
+
+  Om mijn dankbaarheid te uiten, overhandig ik u met veel genoegen een certificaat, waarmee uw waardevolle bijdrage aan ons werk aan de Universiteit Utrecht wordt bevestigd.
+
+  Mogen uw toekomstige inspanningen net zo nauwkeurig en inzichtelijk zijn als dat het voor mij is geweest. Ga zo door met het fantastische werk!
+
+Vriendelijke groet,
+Jan Bleuland
+Rector Magnificus, Universiteit Utrecht
+`;
     const mailOptions = {
         from: {
             name: 'Jan Bleuland',
             address: config.get('email.user')
         },
         to: email,
-        subject: mailSubjectEng,
-        text: mailTextEng,
+        subject: language === 'en' ? mailSubjectEng : mailSubjectNl,
+        text: language === 'en' ? mailTextEng : mailTextNl,
     };
 
     // generate PDF file
-    const pdfFilePath = `${email}.pdf`;
+    const pdfFilePath = `${email}_${new Date().getTime()}.pdf`;
     await generatePDF(pdfFilePath, name, language); // 生成 PDF 文件
 
     // attach the PDF file to the email
@@ -61,7 +75,7 @@ Rector Magnificus, Utrecht University
         // delete the PDF file whether sending the email
         try {
             fs.unlinkSync(pdfFilePath);
-            console.log('PDF file deleted successfully');
+            console.log(`PDF file deleted successfully ${pdfFilePath}`);
         } catch (err) {
             console.error('Error deleting PDF file: ', err);
         }

@@ -1,36 +1,56 @@
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
+const sizeOf = require('image-size');
 
 // 生成 PDF 函数
 const generatePDF = async (filePath, name, language) => {
-    const doc = new PDFDocument();
+    let imagePath = language === 'en' ? `en-template.png` : `nl-template.png`;
+    // 获取图片的尺寸
+    const dimensions = sizeOf(imagePath);
+    const { width, height } = dimensions;
+
+    const doc = new PDFDocument({
+        size: [width, height] // 根据图片的尺寸设置PDF页面大小
+    });
     const stream = fs.createWriteStream(filePath);
 
     // 将 PDF 文件保存到本地
     doc.pipe(stream);
 
-    // 添加标题图片
-    doc.image('header.png', {
-        fit: [500, 250], // 图片尺寸调整为适合的大小
-        align: 'center', // 图片居中
-        valign: 'top'    // 图片位于页面顶部
+    // 将图片占满整个页面
+    doc.image(imagePath, 0, 0, {
+        width: width,
+        height: height
     });
-    // 留出空白空间
-    doc.moveDown(20);
-    // 添加姓名到 PDF
-    doc.fontSize(20).text(`Internship Certificate`, {align: 'center'}).moveDown();
-    doc.moveDown(2);
+    // 设置字体
+    doc.registerFont('CursiveFont', 'Monotype Corsiva.ttf');
+    doc.fontSize(48)
+        .font('CursiveFont') // 设置字体为 Helvetica 斜体加粗
+        .fillColor('#595959'); // 设置字体颜色
 
-    doc.fontSize(12).text(`This is to certify that`, {align: 'center'}).moveDown();
-    doc.fontSize(16).text(name, { align: 'center', oblique: true, bold: true }).moveDown();
-    doc.fontSize(12).text(`has successfully completed an internship at Utrecht University.`, {align: 'center'}).moveDown();
+    // 计算文本的位置
+    const textWidth = doc.widthOfString(name);
+    const textHeight = doc.heightOfString(name);
+    const x = (width - textWidth) / 2;
+    const y = (height - textHeight) / 2 - 20;
 
-    doc.moveDown(5);
-    doc.fontSize(10).text(`Date: ${new Date().toDateString()}`, {align: 'right'}).moveDown();
-    doc.fontSize(10).text(`Jan Bleuland`, {align: 'right'});
-    doc.fontSize(10).text(`Rector Magnificus, Utrecht University`, {align: 'right'});
+    // 添加文字到图片上
+    doc.text(name, x, y);
 
-    // 结束并保存 PDF
+    //添加日期
+    const date = new Date();
+    const day = date.getDate();
+    const locale = language === 'en' ? 'en-US' : 'nl-NL';
+    const month = date.toLocaleString(locale, { month: 'long' });
+    const year = date.getFullYear();
+    const dateString = `${day} ${month} ${year}`;
+    const dateWidth = doc.widthOfString(dateString);
+    const dateHeight = doc.heightOfString(dateString);
+    const x_date = (width - dateWidth) / 2;
+    const y_date = (height - dateHeight) / 2 - 20;
+    doc.fontSize(32).text(dateString, x_date + 105, y_date + 128);
+
+    // 结束文档
     doc.end();
 
     // 返回 Promise
