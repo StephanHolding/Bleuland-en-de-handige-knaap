@@ -8,6 +8,8 @@ public class ScreenLogger : SingletonTemplateMono<ScreenLogger>
 
     private GUIStyle style;
 
+    private const bool ENABLE_LOGGING = false;
+
     private void Start()
     {
         style = new GUIStyle();
@@ -16,16 +18,22 @@ public class ScreenLogger : SingletonTemplateMono<ScreenLogger>
 
     public static void Log(string message)
     {
+        if (!ENABLE_LOGGING) return;
+
         logQueue.Enqueue("<color=white> [Log] " + message + " </color>");
     }
 
     public static void LogError(string message)
     {
+        if (!ENABLE_LOGGING) return;
+
         logQueue.Enqueue("<color=red> [ERROR] " + message + " </color>");
     }
 
     public static void LogWarning(string message)
     {
+        if (!ENABLE_LOGGING) return;
+
         logQueue.Enqueue("<color=yellow> [Warning!] " + message + " </color>");
     }
 

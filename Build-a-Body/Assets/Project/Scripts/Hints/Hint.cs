@@ -63,7 +63,8 @@ namespace HintSystem
         public static void ClearHintQueue()
         {
             hintQueue.Clear();
-            Output.HideHint();
+            Output?.HideHint();
+            activeHint = null;
         }
 
         private static void TryHintDequeue()
