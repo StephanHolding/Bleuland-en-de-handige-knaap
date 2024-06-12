@@ -19,6 +19,7 @@ namespace Dialogue
         public TMP_InputField inputfield;
         public Image graphicSpace;
         public Image showSprite;
+        public Button fullScreenButton;
 
         //other classes are allowed to make changes to this struct. it is reset after every dialogue line.
         public DialogueCharacter.DialogueCharacterSettings dialogueOverrides;
@@ -47,6 +48,9 @@ namespace Dialogue
             if (isActive != toggle)
             {
                 transform.GetChild(0).gameObject.SetActive(toggle);
+
+                if (fullScreenButton != null)
+                    fullScreenButton.gameObject.SetActive(toggle);
 
                 uiText.transform.parent.gameObject.SetActive(toggle);
                 characterNameText.transform.parent.gameObject.SetActive(toggle);
@@ -81,7 +85,6 @@ namespace Dialogue
 
         public void SetCharacter(DialogueCharacter character)
         {
-            print(character.name);
             currentCharacter = character;
             dialogueOverrides = currentCharacter.characterSettings; //characterSettings is a struct, so this works.
         }
@@ -194,6 +197,7 @@ namespace Dialogue
         {
             showSprite.gameObject.SetActive(true);
             showSprite.type = Image.Type.Simple;
+            showSprite.color = spriteArray.uiImageColor;
 
             float frameWaitTime = 1 / spriteArray.animationFps;
             bool once = false;
@@ -217,6 +221,7 @@ namespace Dialogue
             {
                 showSprite.gameObject.SetActive(false);
                 showSprite.sprite = null;
+                showSprite.color = Color.white;
             }
         }
 

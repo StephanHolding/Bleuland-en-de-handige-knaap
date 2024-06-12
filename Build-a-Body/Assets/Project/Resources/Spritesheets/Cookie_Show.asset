@@ -36,3 +36,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5f6c28bf0ea1fc943849c701b77f3050, type: 3}
   animationFps: 15
   lingerOnLastSprite: 1
+  loop: 0
+  uiImageColor: {r: 0.8980392, g: 0.8509804, b: 0.8509804, a: 1}

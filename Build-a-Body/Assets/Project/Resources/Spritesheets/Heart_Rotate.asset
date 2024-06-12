@@ -36,3 +36,4 @@ MonoBehaviour:
   animationFps: 15
   lingerOnLastSprite: 0
   loop: 1
+  uiImageColor: {r: 1, g: 1, b: 1, a: 1}

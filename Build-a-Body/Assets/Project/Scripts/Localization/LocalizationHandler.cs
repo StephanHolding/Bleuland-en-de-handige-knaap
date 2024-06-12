@@ -30,4 +30,9 @@ public static class LocalizationHandler
     {
         return LocalizationSettings.StringDatabase.GetLocalizedString(TABLE_COLLECTION_NAME, key);
     }
+
+    public static string GetCurrentLocaleID()
+    {
+        return LocalizationSettings.SelectedLocale.Identifier.Code;
+    }
 }

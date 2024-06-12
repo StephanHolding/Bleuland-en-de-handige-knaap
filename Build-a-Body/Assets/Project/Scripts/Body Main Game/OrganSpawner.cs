@@ -19,17 +19,22 @@ public class OrganSpawner : MonoBehaviour
 
         if (!Blackboard.HasKey(BlackboardKeys.LOCKED_ORGANS)) return;
 
+        print("spawn locked organs");
+
         List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
         if (lockedOrgans != null)
         {
             foreach (string organ in lockedOrgans)
             {
+                print("spawning " + organ);
+
                 GameObject prefab = Resources.Load<GameObject>("Prefabs/" + organ);
                 Organ prefabComponent = prefab.GetComponent<Organ>();
                 GameObject spawnedObject = Instantiate(prefab, prefabComponent.targetPosition, prefab.transform.rotation);
                 Organ spawnedComponent = spawnedObject.GetComponent<Organ>();
 
                 spawnedComponent.draggable = false;
+                spawnedComponent.lockedOrgan = true;
             }
         }
     }

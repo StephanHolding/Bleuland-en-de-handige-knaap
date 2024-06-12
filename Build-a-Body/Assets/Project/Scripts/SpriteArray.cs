@@ -8,5 +8,6 @@ public class SpriteArray : ScriptableObject
     public float animationFps = 30;
     public bool lingerOnLastSprite = false;
     public bool loop;
+    public Color uiImageColor;
 
 }

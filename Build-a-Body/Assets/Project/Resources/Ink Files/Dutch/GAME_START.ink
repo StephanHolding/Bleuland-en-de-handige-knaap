@@ -1,6 +1,6 @@
 Goedemorgen! #character bleuland
 Ik herken u niet meteen... wat is uw naam ook al weer? #inputfield player_name
-Ah natuulijk! [player_name], mijn geliefde leerling! 
+Ah natuurlijk! [player_name], mijn geliefde leerling! 
 Welkom terug bij mijn kantoor! 
 Heb je een fijne lunchpauze gehad? 
 

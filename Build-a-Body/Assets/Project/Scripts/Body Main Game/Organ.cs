@@ -9,6 +9,7 @@ public class Organ : Draggable3D
     public Vector3 targetCameraPosition;
 
     public string organID;
+    public bool lockedOrgan = false;
 
 
     private const float DISTANCE_THRESHOLD = 0.1f;
@@ -23,6 +24,8 @@ public class Organ : Draggable3D
 
     protected override void OnDraggingEnd()
     {
+        if (lockedOrgan) return;
+
         if (IsInCorrectPosition())
         {
             OnOrganPlacedCorrectly();
@@ -40,9 +43,12 @@ public class Organ : Draggable3D
     [ContextMenu("Override Organ Placing")]
     private void OnOrganPlacedCorrectly()
     {
+        if (lockedOrgan) return;
+
         transform.position = targetPosition;
         transform.rotation = targetOrientation;
         draggable = false;
+        lockedOrgan = true;
 
         if (GameStateManager.instance.IsGamestate<PlaceOrganState>())
         {

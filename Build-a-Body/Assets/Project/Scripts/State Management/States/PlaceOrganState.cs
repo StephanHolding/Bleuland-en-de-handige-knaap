@@ -19,6 +19,8 @@ public class PlaceOrganState : GameState
 
     public override void OnStateEnter()
     {
+        Debug.Log("PlaceOrganState OnEnter");
+
         organSpawner = GameObject.FindObjectOfType<OrganSpawner>();
         camController = Camera.main.GetComponent<CameraMovementController>();
 
@@ -44,6 +46,7 @@ public class PlaceOrganState : GameState
     public override void PlayerCompletedTask()
     {
         if (taskCompleted) return;
+
         taskCompleted = true;
 
         List<string> lockedOrgans = Blackboard.Read<List<string>>(BlackboardKeys.LOCKED_ORGANS);
@@ -76,8 +79,11 @@ public class PlaceOrganState : GameState
             if (!string.IsNullOrEmpty(emailAdress))
             {
                 string playerName = DialogueBlackboard.GetVariable<string>("player_name");
+                string localeId = LocalizationHandler.GetCurrentLocaleID();
 
-                HttpPostRequestManager.PostRequest(playerName, emailAdress, "en", stateManager);
+                Debug.Log(localeId);
+
+                HttpPostRequestManager.PostRequest(playerName, emailAdress, localeId, stateManager);
             }
         }
 
