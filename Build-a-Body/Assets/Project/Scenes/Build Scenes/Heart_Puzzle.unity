@@ -473,7 +473,7 @@ MonoBehaviour:
   allPieceDistances:
   - otherPiece: {fileID: 2059409894}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 2
 --- !u!212 &68490995
@@ -2056,7 +2056,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 1020181674}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 0
 --- !u!212 &631536182
@@ -2606,7 +2606,7 @@ MonoBehaviour:
   allPieceDistances:
   - otherPiece: {fileID: 631536181}
     offsetToPiece: {x: 0.02, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 1
 --- !u!212 &825970638
@@ -2852,7 +2852,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 631536181}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 1
   spawnOrder: 0
 --- !u!212 &1020181675
@@ -4374,7 +4374,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 631536181}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 0
 --- !u!212 &1309293662
@@ -4622,7 +4622,7 @@ MonoBehaviour:
   allPieceDistances:
   - otherPiece: {fileID: 1309293661}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 1
 --- !u!212 &1466042419
@@ -4886,7 +4886,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 2059409894}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 0
 --- !u!212 &1483613505
@@ -5320,7 +5320,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 2059409894}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 1
 --- !u!212 &1547843713
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   allPieceDistances:
   - otherPiece: {fileID: 1309293661}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 1
 --- !u!212 &1734649716
@@ -6714,7 +6714,7 @@ MonoBehaviour:
   allPieceDistances:
   - otherPiece: {fileID: 2059409894}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 2
 --- !u!212 &1977878167
@@ -7041,7 +7041,7 @@ MonoBehaviour:
     offsetToPiece: {x: 0, y: 0, z: 0}
   - otherPiece: {fileID: 1309293661}
     offsetToPiece: {x: 0, y: 0, z: 0}
-  snapThreshold: 0.25
+  snapThreshold: 0.6
   locked: 0
   spawnOrder: 0
 --- !u!212 &2059409895
